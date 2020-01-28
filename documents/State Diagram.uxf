@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>384</x>
+      <y>360</y>
+      <w>672</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>Book Cylinder
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>444</x>
+      <y>504</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>504</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>540</x>
+      <y>492</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Searched
+Customer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>636</x>
+      <y>492</y>
+      <w>216</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+Booking Cylinder
+[enough stock]</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>528</y>
+      <w>120</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+Booking 
+Cylinder
+[not enough 
+stock]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>540</x>
+      <y>720</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Cancelled
+Booking</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>828</x>
+      <y>492</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Booked 
+Cylinder</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>924</x>
+      <y>504</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>984</x>
+      <y>504</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=flow_final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>636</x>
+      <y>528</y>
+      <w>336</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+ Cancelling
+Booking</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;180.0;10.0;180.0</additional_attributes>
+  </element>
+</diagram>
