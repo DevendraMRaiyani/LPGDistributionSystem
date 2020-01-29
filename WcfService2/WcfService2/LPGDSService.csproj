@@ -72,30 +72,43 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CustomerMgnt.svc" />
+    <Content Include="StockMgnt.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerContext.cs" />
+    <Compile Include="LPGContext.cs" />
     <Compile Include="CustomerMgnt.svc.cs">
       <DependentUpon>CustomerMgnt.svc</DependentUpon>
     </Compile>
     <Compile Include="ICustomerMgnt.cs" />
+    <Compile Include="IStockMgnt.cs" />
+    <Compile Include="Migrations\202001291541149_LPGDB-v1.cs" />
+    <Compile Include="Migrations\202001291541149_LPGDB-v1.designer.cs">
+      <DependentUpon>202001291541149_LPGDB-v1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StockMgnt.svc.cs">
+      <DependentUpon>StockMgnt.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202001291541149_LPGDB-v1.resx">
+      <DependentUpon>202001291541149_LPGDB-v1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

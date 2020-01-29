@@ -61,7 +61,8 @@ namespace LPG_Distribution_System
                 else if (isChecked3)
                     value = radioButton3.Text;
 
-                LPGDSServiceRef.Customer c = new LPGDSServiceRef.Customer();
+                CustomerMgntRef.Customer c = new CustomerMgntRef.Customer();
+                
                 //c.CustomerId = 2;
                 c.CustomerName = textBox1.Text + " " + textBox2.Text + " " + textBox12.Text;
                 c.CustomerType = comboBox1.Text;
@@ -79,9 +80,9 @@ namespace LPG_Distribution_System
                 c.BankAccountNo = textBox11.Text;
                 c.Address = textBox13.Text;
 
-                using (LPGDSServiceRef.CustomerMgntClient client = new LPGDSServiceRef.CustomerMgntClient())
+                using (CustomerMgntRef.CustomerMgntClient client = new CustomerMgntRef.CustomerMgntClient())
                 {
-                    LPGDSServiceRef.Customer customer = client.AddCustomer(c);
+                    CustomerMgntRef.Customer customer = client.AddCustomer(c);
                     int id = customer.CustomerId;
                     MessageBox.Show("Success Fully Created New Customer!! Customer Id is: " + id + " Please, Note this Id for future customer interactions.");
                     PrintNewCustomerReciept(customer);
@@ -99,7 +100,7 @@ namespace LPG_Distribution_System
             doc.Save(customer.CustomerName + ".pdf");
         }
         */
-        public void PrintNewCustomerReciept(LPGDSServiceRef.Customer c)
+        public void PrintNewCustomerReciept(CustomerMgntRef.Customer c)
         {
             Document doc = new Document();
             Page p = doc.Pages.Add();

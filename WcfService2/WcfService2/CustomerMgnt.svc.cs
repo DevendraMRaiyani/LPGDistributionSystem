@@ -12,7 +12,7 @@ namespace WcfService2
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : ICustomerMgnt
     {
-        CustomerContext cc = new CustomerContext();
+        LPGContext cc = new LPGContext();
         public Customer AddCustomer(Customer customer)
         {
             Customer c = cc.Customers.Add(customer);

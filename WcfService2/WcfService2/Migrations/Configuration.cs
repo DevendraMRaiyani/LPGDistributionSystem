@@ -5,15 +5,15 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WcfService2.CustomerContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<WcfService2.LPGContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
             ContextKey = "WcfService2.CustomerContext";
         }
 
-        protected override void Seed(WcfService2.CustomerContext context)
+        protected override void Seed(WcfService2.LPGContext context)
         {
             //  This method will be called after migrating to the latest version.
 
