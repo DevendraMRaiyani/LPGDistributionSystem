@@ -75,7 +75,12 @@
     <Compile Include="ChangeCustomerDetails.Designer.cs">
       <DependentUpon>ChangeCustomerDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\LPGDSServiceRef\Reference.cs">
+    <Compile Include="Connected Services\CustomerMgntRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\StockMgntRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -137,19 +142,23 @@
     <EmbeddedResource Include="TransferCustomer.resx">
       <DependentUpon>TransferCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\LPGDSServiceRef\CustomerMgnt.xsd">
+    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LPGDSServiceRef\CustomerMgnt1.xsd">
+    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LPGDSServiceRef\CustomerMgnt2.xsd">
+    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LPGDSServiceRef\LPG_Distribution_System.LPGDSServiceRef.Customer.datasource">
+    <None Include="Connected Services\CustomerMgntRef\LPG_Distribution_System.CustomerMgntRef.Customer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LPGDSServiceRef\Service1.wsdl" />
+    <None Include="Connected Services\CustomerMgntRef\Service1.wsdl" />
+    <None Include="Connected Services\StockMgntRef\StockMgnt.wsdl" />
+    <None Include="Connected Services\StockMgntRef\StockMgnt.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -174,16 +183,32 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\LPGDSServiceRef\" />
+    <WCFMetadataStorage Include="Connected Services\CustomerMgntRef\" />
+    <WCFMetadataStorage Include="Connected Services\StockMgntRef\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\LPGDSServiceRef\configuration91.svcinfo" />
+    <None Include="Connected Services\CustomerMgntRef\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\LPGDSServiceRef\configuration.svcinfo" />
+    <None Include="Connected Services\CustomerMgntRef\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\LPGDSServiceRef\Reference.svcmap">
+    <None Include="Connected Services\CustomerMgntRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StockMgntRef\StockMgnt.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StockMgntRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StockMgntRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StockMgntRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
