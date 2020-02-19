@@ -36,3 +36,4 @@ C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\De
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.pdb
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.LPGDBv1.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\LPGDSService.csproj.GenerateResource.cache
+C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.v2.resources

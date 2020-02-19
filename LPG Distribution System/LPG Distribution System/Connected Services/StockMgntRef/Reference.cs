@@ -9,17 +9,252 @@
 //------------------------------------------------------------------------------
 
 namespace LPG_Distribution_System.StockMgntRef {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Cylinder", Namespace="http://schemas.datacontract.org/2004/07/WcfService2")]
+    [System.SerializableAttribute()]
+    public partial class Cylinder : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CylinderTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuentityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Cylinder Type")]
+        public string CylinderType {
+            get {
+                return this.CylinderTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CylinderTypeField, value) != true)) {
+                    this.CylinderTypeField = value;
+                    this.RaisePropertyChanged("CylinderType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Quentity {
+            get {
+                return this.QuentityField;
+            }
+            set {
+                if ((this.QuentityField.Equals(value) != true)) {
+                    this.QuentityField = value;
+                    this.RaisePropertyChanged("Quentity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Stove", Namespace="http://schemas.datacontract.org/2004/07/WcfService2")]
+    [System.SerializableAttribute()]
+    public partial class Stove : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuentityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Product {
+            get {
+                return this.ProductField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductField, value) != true)) {
+                    this.ProductField = value;
+                    this.RaisePropertyChanged("Product");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Quentity {
+            get {
+                return this.QuentityField;
+            }
+            set {
+                if ((this.QuentityField.Equals(value) != true)) {
+                    this.QuentityField = value;
+                    this.RaisePropertyChanged("Quentity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Regulator", Namespace="http://schemas.datacontract.org/2004/07/WcfService2")]
+    [System.SerializableAttribute()]
+    public partial class Regulator : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuentityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Quentity {
+            get {
+                return this.QuentityField;
+            }
+            set {
+                if ((this.QuentityField.Equals(value) != true)) {
+                    this.QuentityField = value;
+                    this.RaisePropertyChanged("Quentity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="StockMgntRef.IStockMgnt")]
     public interface IStockMgnt {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/DoWork", ReplyAction="http://tempuri.org/IStockMgnt/DoWorkResponse")]
-        void DoWork();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/GetCylinders", ReplyAction="http://tempuri.org/IStockMgnt/GetCylindersResponse")]
+        LPG_Distribution_System.StockMgntRef.Cylinder[] GetCylinders();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/DoWork", ReplyAction="http://tempuri.org/IStockMgnt/DoWorkResponse")]
-        System.Threading.Tasks.Task DoWorkAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/GetCylinders", ReplyAction="http://tempuri.org/IStockMgnt/GetCylindersResponse")]
+        System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Cylinder[]> GetCylindersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/GetStoves", ReplyAction="http://tempuri.org/IStockMgnt/GetStovesResponse")]
+        LPG_Distribution_System.StockMgntRef.Stove[] GetStoves();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/GetStoves", ReplyAction="http://tempuri.org/IStockMgnt/GetStovesResponse")]
+        System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Stove[]> GetStovesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/GetRegulators", ReplyAction="http://tempuri.org/IStockMgnt/GetRegulatorsResponse")]
+        LPG_Distribution_System.StockMgntRef.Regulator[] GetRegulators();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/GetRegulators", ReplyAction="http://tempuri.org/IStockMgnt/GetRegulatorsResponse")]
+        System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Regulator[]> GetRegulatorsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetCylinders", ReplyAction="http://tempuri.org/IStockMgnt/SetCylindersResponse")]
+        string SetCylinders(LPG_Distribution_System.StockMgntRef.Cylinder[] cylinders);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetCylinders", ReplyAction="http://tempuri.org/IStockMgnt/SetCylindersResponse")]
+        System.Threading.Tasks.Task<string> SetCylindersAsync(LPG_Distribution_System.StockMgntRef.Cylinder[] cylinders);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +284,36 @@ namespace LPG_Distribution_System.StockMgntRef {
                 base(binding, remoteAddress) {
         }
         
-        public void DoWork() {
-            base.Channel.DoWork();
+        public LPG_Distribution_System.StockMgntRef.Cylinder[] GetCylinders() {
+            return base.Channel.GetCylinders();
         }
         
-        public System.Threading.Tasks.Task DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
+        public System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Cylinder[]> GetCylindersAsync() {
+            return base.Channel.GetCylindersAsync();
+        }
+        
+        public LPG_Distribution_System.StockMgntRef.Stove[] GetStoves() {
+            return base.Channel.GetStoves();
+        }
+        
+        public System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Stove[]> GetStovesAsync() {
+            return base.Channel.GetStovesAsync();
+        }
+        
+        public LPG_Distribution_System.StockMgntRef.Regulator[] GetRegulators() {
+            return base.Channel.GetRegulators();
+        }
+        
+        public System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Regulator[]> GetRegulatorsAsync() {
+            return base.Channel.GetRegulatorsAsync();
+        }
+        
+        public string SetCylinders(LPG_Distribution_System.StockMgntRef.Cylinder[] cylinders) {
+            return base.Channel.SetCylinders(cylinders);
+        }
+        
+        public System.Threading.Tasks.Task<string> SetCylindersAsync(LPG_Distribution_System.StockMgntRef.Cylinder[] cylinders) {
+            return base.Channel.SetCylindersAsync(cylinders);
         }
     }
 }

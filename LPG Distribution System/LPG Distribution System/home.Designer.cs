@@ -189,6 +189,7 @@
             this.viewStockToolStripMenuItem.Name = "viewStockToolStripMenuItem";
             this.viewStockToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
             this.viewStockToolStripMenuItem.Text = "View Stock";
+            this.viewStockToolStripMenuItem.Click += new System.EventHandler(this.viewStockToolStripMenuItem_Click);
             // 
             // setPriceToolStripMenuItem
             // 

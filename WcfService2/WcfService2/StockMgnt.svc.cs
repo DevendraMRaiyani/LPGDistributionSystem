@@ -11,8 +11,30 @@ namespace WcfService2
     // NOTE: In order to launch WCF Test Client for testing this service, please select StockMgnt.svc or StockMgnt.svc.cs at the Solution Explorer and start debugging.
     public class StockMgnt : IStockMgnt
     {
-        public void DoWork()
+        LPGContext db = new LPGContext();
+        
+        public List<Cylinder> GetCylinders()
         {
+             return db.Cylinders.Select(x => x).ToList();
+        }
+
+        public List<Regulator> GetRegulators()
+        {
+            return db.Regulators.Select(x => x).ToList();
+        }
+
+        public List<Stove> GetStoves()
+        {
+            return db.Stoves.Select(x => x).ToList();
+        }
+
+        public string SetCylinders(List<Cylinder> cylinders)
+        {
+            var result = db.Cylinders.Select(x => x).ToList();
+             result = cylinders;
+            db.SaveChanges();
+            
+            return "Ok Done";
         }
     }
 }
