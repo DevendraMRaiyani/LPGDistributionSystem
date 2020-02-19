@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService2" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCylinder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cylinder" nillable="true" type="tns:Cylinder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCylinder" nillable="true" type="tns:ArrayOfCylinder" />
+  <xs:complexType name="Cylinder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cylinder_x0020_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Quentity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cylinder" nillable="true" type="tns:Cylinder" />
+  <xs:complexType name="ArrayOfStove">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Stove" nillable="true" type="tns:Stove" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStove" nillable="true" type="tns:ArrayOfStove" />
+  <xs:complexType name="Stove">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quentity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Stove" nillable="true" type="tns:Stove" />
+  <xs:complexType name="ArrayOfRegulator">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Regulator" nillable="true" type="tns:Regulator" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegulator" nillable="true" type="tns:ArrayOfRegulator" />
+  <xs:complexType name="Regulator">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Quentity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Regulator" nillable="true" type="tns:Regulator" />
+</xs:schema>

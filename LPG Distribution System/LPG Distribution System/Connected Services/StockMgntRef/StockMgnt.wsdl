@@ -3,24 +3,83 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:54601/StockMgnt.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54601/StockMgnt.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54601/StockMgnt.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService2" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IStockMgnt_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
+  <wsdl:message name="IStockMgnt_GetCylinders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCylinders" />
   </wsdl:message>
-  <wsdl:message name="IStockMgnt_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  <wsdl:message name="IStockMgnt_GetCylinders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCylindersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_GetStoves_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoves" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_GetStoves_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStovesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_GetRegulators_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegulators" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_GetRegulators_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegulatorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetCylinders_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCylinders" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetCylinders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCylindersResponse" />
   </wsdl:message>
   <wsdl:portType name="IStockMgnt">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/DoWork" message="tns:IStockMgnt_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/DoWorkResponse" message="tns:IStockMgnt_DoWork_OutputMessage" />
+    <wsdl:operation name="GetCylinders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/GetCylinders" message="tns:IStockMgnt_GetCylinders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/GetCylindersResponse" message="tns:IStockMgnt_GetCylinders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoves">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/GetStoves" message="tns:IStockMgnt_GetStoves_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/GetStovesResponse" message="tns:IStockMgnt_GetStoves_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegulators">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/GetRegulators" message="tns:IStockMgnt_GetRegulators_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/GetRegulatorsResponse" message="tns:IStockMgnt_GetRegulators_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCylinders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/SetCylinders" message="tns:IStockMgnt_SetCylinders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/SetCylindersResponse" message="tns:IStockMgnt_SetCylinders_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IStockMgnt" type="tns:IStockMgnt">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/IStockMgnt/DoWork" style="document" />
+    <wsdl:operation name="GetCylinders">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/GetCylinders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoves">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/GetStoves" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegulators">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/GetRegulators" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCylinders">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/SetCylinders" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

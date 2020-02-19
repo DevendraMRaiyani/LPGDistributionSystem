@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Aspose.Pdf;
+//using Aspose.Pdf;
 
 namespace LPG_Distribution_System
 {
@@ -85,7 +85,7 @@ namespace LPG_Distribution_System
                     CustomerMgntRef.Customer customer = client.AddCustomer(c);
                     int id = customer.CustomerId;
                     MessageBox.Show("Success Fully Created New Customer!! Customer Id is: " + id + " Please, Note this Id for future customer interactions.");
-                    PrintNewCustomerReciept(customer);
+                    //PrintNewCustomerReciept(customer);
                 }
             }
             else
@@ -100,7 +100,7 @@ namespace LPG_Distribution_System
             doc.Save(customer.CustomerName + ".pdf");
         }
         */
-        public void PrintNewCustomerReciept(CustomerMgntRef.Customer c)
+        /*public void PrintNewCustomerReciept(CustomerMgntRef.Customer c)
         {
             Document doc = new Document();
             Page p = doc.Pages.Add();
@@ -128,7 +128,7 @@ namespace LPG_Distribution_System
 
 
         }
-
+        */
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = null;

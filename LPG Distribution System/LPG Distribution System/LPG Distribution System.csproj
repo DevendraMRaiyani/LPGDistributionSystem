@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PDF, Version=20.1.0.0, Culture=neutral, PublicKeyToken=f0262d67fe233d63, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PDF.20.1.0\lib\net4.0\Aspose.PDF.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -117,6 +114,15 @@
     <Compile Include="TransferCustomer.Designer.cs">
       <DependentUpon>TransferCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStock.Designer.cs">
+      <DependentUpon>ViewStock.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCylinder.resx">
+      <DependentUpon>AddCylinder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddNewCustomer.resx">
       <DependentUpon>AddNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +154,9 @@
     <EmbeddedResource Include="TransferCustomer.resx">
       <DependentUpon>TransferCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewStock.resx">
+      <DependentUpon>ViewStock.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Connected Services\CustomerMgntRef\CustomerMgnt.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -161,8 +170,23 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CustomerMgntRef\Service1.wsdl" />
+    <None Include="Connected Services\StockMgntRef\LPG_Distribution_System.StockMgntRef.Cylinder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StockMgntRef\LPG_Distribution_System.StockMgntRef.Regulator.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StockMgntRef\LPG_Distribution_System.StockMgntRef.Stove.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\StockMgntRef\StockMgnt.wsdl" />
     <None Include="Connected Services\StockMgntRef\StockMgnt.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StockMgntRef\StockMgnt1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StockMgntRef\StockMgnt11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
