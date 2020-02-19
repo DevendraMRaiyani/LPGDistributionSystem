@@ -88,3 +88,21 @@ C:\Users\Devendra\Desktop\PROJECTS SEM-VI\oose\LPG Distribution System\LPG Distr
 C:\Users\Devendra\Desktop\PROJECTS SEM-VI\oose\LPG Distribution System\LPG Distribution System\bin\Debug\Aspose.PDF.xml
 C:\Users\Devendra\Desktop\PROJECTS SEM-VI\oose\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csproj.CopyComplete
 C:\Users\Devendra\Desktop\PROJECTS SEM-VI\oose\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.AddStoveRegulator.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.exe.config
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.exe
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.pdb
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.AddNewCustomer.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.AddStoveRegulator.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.ChangeCustomerDetails.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.GetCustomerDetails.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.home.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Properties.Resources.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.RemoveCustomer.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.TransferCustomer.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csproj.GenerateResource.cache
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csproj.CoreCompileInputs.cache
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.exe
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.pdb
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.AddCylinder.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.ViewStock.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csprojAssemblyReference.cache

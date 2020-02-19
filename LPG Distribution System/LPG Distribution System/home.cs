@@ -54,7 +54,7 @@ namespace LPG_Distribution_System
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+            this.Close();
         }
 
         private void addCylindersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,6 +67,12 @@ namespace LPG_Distribution_System
         {
             AddStoveRegulator addStoveRegulator = new AddStoveRegulator();
             addStoveRegulator.Show();
+        }
+
+        private void viewStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewStock viewStock = new ViewStock();
+            viewStock.Show();
         }
     }
 }

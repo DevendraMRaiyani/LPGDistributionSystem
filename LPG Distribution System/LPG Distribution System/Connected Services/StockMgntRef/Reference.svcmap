@@ -24,7 +24,9 @@
   <Metadata>
     <MetadataFile FileName="StockMgnt.xsd" MetadataType="Schema" ID="5e027468-64d2-4e7f-8e90-b696b52b93af" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt.svc?xsd=xsd0" />
     <MetadataFile FileName="StockMgnt.wsdl" MetadataType="Wsdl" ID="68723bda-8cae-4355-b619-dec3c38cce62" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt.svc?wsdl" />
+    <MetadataFile FileName="StockMgnt1.xsd" MetadataType="Schema" ID="24c583e7-8f3b-41b4-b60d-a42941276823" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt.svc?xsd=xsd1" />
     <MetadataFile FileName="StockMgnt.disco" MetadataType="Disco" ID="5e87fea8-063c-4dbf-96d7-648defa08238" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt.svc?disco" />
+    <MetadataFile FileName="StockMgnt11.xsd" MetadataType="Schema" ID="c1ff59ed-4413-46c7-8f94-dce8d220269d" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

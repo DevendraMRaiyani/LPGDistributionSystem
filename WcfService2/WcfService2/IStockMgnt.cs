@@ -14,14 +14,25 @@ namespace WcfService2
     public interface IStockMgnt
     {
         [OperationContract]
-        void DoWork();
+        List<Cylinder> GetCylinders();
+
+        [OperationContract]
+        List<Stove> GetStoves();
+
+        [OperationContract]
+        List<Regulator> GetRegulators();
+
+        [OperationContract]
+        string SetCylinders(List<Cylinder> cylinders);
+
+        
     }
 
 
     [DataContract]
     public class Cylinder
     {
-        [DataMember]
+        [DataMember(Name = "Cylinder Type")]
         [Key]
         public string type { get; set; }
         [DataMember]
@@ -33,7 +44,7 @@ namespace WcfService2
     [DataContract]
     public class Stove
     {
-        [DataMember]
+        [DataMember(Name = "Product")]
         [Key]
         public string type { get; set; }
         [DataMember]
