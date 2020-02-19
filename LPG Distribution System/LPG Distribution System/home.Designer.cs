@@ -195,6 +195,7 @@
             this.setPriceToolStripMenuItem.Name = "setPriceToolStripMenuItem";
             this.setPriceToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
             this.setPriceToolStripMenuItem.Text = "Set Price";
+            this.setPriceToolStripMenuItem.Click += new System.EventHandler(this.setPriceToolStripMenuItem_Click);
             // 
             // sToolStripMenuItem
             // 

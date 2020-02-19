@@ -68,5 +68,20 @@ namespace LPG_Distribution_System
             AddStoveRegulator addStoveRegulator = new AddStoveRegulator();
             addStoveRegulator.Show();
         }
+<<<<<<< Updated upstream
+=======
+
+        private void viewStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewStock viewStock = new ViewStock();
+            viewStock.Show();
+        }
+
+        private void setPriceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetPrice setPrice = new SetPrice();
+            setPrice.Show();
+        }
+>>>>>>> Stashed changes
     }
 }
