@@ -32,13 +32,11 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.distributorInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeCustomerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transferCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.getCustomerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCylindersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,8 +77,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.distributorInformationToolStripMenuItem,
-            this.changePasswordToolStripMenuItem,
-            this.quitToolStripMenuItem});
+            this.changePasswordToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(47, 27);
             this.fileToolStripMenuItem.Text = "File";
@@ -97,21 +94,13 @@
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(262, 28);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             // 
-            // quitToolStripMenuItem
-            // 
-            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(262, 28);
-            this.quitToolStripMenuItem.Text = "Quit";
-            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
-            // 
             // customerManagementToolStripMenuItem
             // 
             this.customerManagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createCustomerToolStripMenuItem,
             this.changeCustomerDetailsToolStripMenuItem,
             this.removeCustomerToolStripMenuItem,
-            this.transferCustomerToolStripMenuItem,
-            this.getCustomerDetailsToolStripMenuItem});
+            this.transferCustomerToolStripMenuItem});
             this.customerManagementToolStripMenuItem.Name = "customerManagementToolStripMenuItem";
             this.customerManagementToolStripMenuItem.Size = new System.Drawing.Size(203, 27);
             this.customerManagementToolStripMenuItem.Text = "Customer Management";
@@ -134,7 +123,7 @@
             // 
             this.removeCustomerToolStripMenuItem.Name = "removeCustomerToolStripMenuItem";
             this.removeCustomerToolStripMenuItem.Size = new System.Drawing.Size(280, 28);
-            this.removeCustomerToolStripMenuItem.Text = "Remove Customer";
+            this.removeCustomerToolStripMenuItem.Text = "Close Connection";
             this.removeCustomerToolStripMenuItem.Click += new System.EventHandler(this.removeCustomerToolStripMenuItem_Click);
             // 
             // transferCustomerToolStripMenuItem
@@ -143,13 +132,6 @@
             this.transferCustomerToolStripMenuItem.Size = new System.Drawing.Size(280, 28);
             this.transferCustomerToolStripMenuItem.Text = "Transfer Customer";
             this.transferCustomerToolStripMenuItem.Click += new System.EventHandler(this.transferCustomerToolStripMenuItem_Click);
-            // 
-            // getCustomerDetailsToolStripMenuItem
-            // 
-            this.getCustomerDetailsToolStripMenuItem.Name = "getCustomerDetailsToolStripMenuItem";
-            this.getCustomerDetailsToolStripMenuItem.Size = new System.Drawing.Size(280, 28);
-            this.getCustomerDetailsToolStripMenuItem.Text = "Get Customer Details";
-            this.getCustomerDetailsToolStripMenuItem.Click += new System.EventHandler(this.getCustomerDetailsToolStripMenuItem_Click);
             // 
             // stockManagementToolStripMenuItem
             // 
@@ -167,7 +149,7 @@
             this.addCylindersToolStripMenuItem,
             this.addStovesAndRegulatorsToolStripMenuItem});
             this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
-            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(243, 28);
             this.addStockToolStripMenuItem.Text = "Add Stock";
             // 
             // addCylindersToolStripMenuItem
@@ -187,15 +169,16 @@
             // viewStockToolStripMenuItem
             // 
             this.viewStockToolStripMenuItem.Name = "viewStockToolStripMenuItem";
-            this.viewStockToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
-            this.viewStockToolStripMenuItem.Text = "View Stock";
+            this.viewStockToolStripMenuItem.Size = new System.Drawing.Size(243, 28);
+            this.viewStockToolStripMenuItem.Text = "View Stock and Price";
             this.viewStockToolStripMenuItem.Click += new System.EventHandler(this.viewStockToolStripMenuItem_Click);
             // 
             // setPriceToolStripMenuItem
             // 
             this.setPriceToolStripMenuItem.Name = "setPriceToolStripMenuItem";
-            this.setPriceToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.setPriceToolStripMenuItem.Size = new System.Drawing.Size(243, 28);
             this.setPriceToolStripMenuItem.Text = "Set Price";
+            this.setPriceToolStripMenuItem.Click += new System.EventHandler(this.setPriceToolStripMenuItem_Click);
             // 
             // sToolStripMenuItem
             // 
@@ -218,6 +201,7 @@
             this.bookCylinderToolStripMenuItem.Name = "bookCylinderToolStripMenuItem";
             this.bookCylinderToolStripMenuItem.Size = new System.Drawing.Size(375, 28);
             this.bookCylinderToolStripMenuItem.Text = "Book Cylinder";
+            this.bookCylinderToolStripMenuItem.Click += new System.EventHandler(this.bookCylinderToolStripMenuItem_Click);
             // 
             // printBillForCylinderToolStripMenuItem
             // 
@@ -230,6 +214,7 @@
             this.generateBillForStovesAndRegulatorToolStripMenuItem.Name = "generateBillForStovesAndRegulatorToolStripMenuItem";
             this.generateBillForStovesAndRegulatorToolStripMenuItem.Size = new System.Drawing.Size(375, 28);
             this.generateBillForStovesAndRegulatorToolStripMenuItem.Text = "Generate Bill for Stoves and Regulator";
+            this.generateBillForStovesAndRegulatorToolStripMenuItem.Click += new System.EventHandler(this.generateBillForStovesAndRegulatorToolStripMenuItem_Click);
             // 
             // accountingToolStripMenuItem
             // 
@@ -270,6 +255,7 @@
             this.Name = "home";
             this.Text = "LPG Distribution System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.home_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -301,11 +287,9 @@
         private System.Windows.Forms.ToolStripMenuItem summaryReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cylinderReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stoveAndRegulatorReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem getCustomerDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem distributorInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
     }
 }
 

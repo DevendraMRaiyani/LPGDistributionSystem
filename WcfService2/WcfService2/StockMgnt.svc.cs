@@ -11,30 +11,128 @@ namespace WcfService2
     // NOTE: In order to launch WCF Test Client for testing this service, please select StockMgnt.svc or StockMgnt.svc.cs at the Solution Explorer and start debugging.
     public class StockMgnt : IStockMgnt
     {
-        LPGContext db = new LPGContext();
+        
         
         public List<Cylinder> GetCylinders()
         {
-             return db.Cylinders.Select(x => x).ToList();
+            using (LPGContext db = new LPGContext())
+            {
+                return db.Cylinders.Select(x => x).ToList();
+            }
         }
 
-        public List<Regulator> GetRegulators()
+        public Stove GetRegulators()
         {
-            return db.Regulators.Select(x => x).ToList();
+            using (LPGContext db = new LPGContext())
+            {
+                return db.Stoves.Where(x => x.type=="Regulator").FirstOrDefault();
+            }
         }
 
         public List<Stove> GetStoves()
         {
-            return db.Stoves.Select(x => x).ToList();
+            using (LPGContext db = new LPGContext())
+            {
+                return db.Stoves.Where(x=>x.type!="Regulator").Select(x => x).ToList();
+            }
         }
 
-        public string SetCylinders(List<Cylinder> cylinders)
+        public string SetFCylinders(string a, int c)
         {
-            var result = db.Cylinders.Select(x => x).ToList();
-             result = cylinders;
-            db.SaveChanges();
-            
-            return "Ok Done";
+            using (LPGContext db = new LPGContext())
+            {
+                var r = db.Cylinders.ToList();
+                //ra.Quentity += c;
+                r.Where(x => x.type == a).ToList().ForEach(s => s.Quentity = s.Quentity + c);
+                db.SaveChanges();
+            }
+            return "OKF";
+        }
+        public string SetECylinders(string a, int c)
+        {
+            using (LPGContext db = new LPGContext())
+            {
+                var r = db.Cylinders.ToList();
+                r.Where(x => x.type == a).ToList().ForEach(s => s.Quentity = s.Quentity - c);
+                db.SaveChanges();
+            }
+            return "OKE";
+        }
+
+        public string SetRegulators(int a)
+        {
+            using (LPGContext db = new LPGContext())
+            {
+                var r = db.Stoves.Where(x=>x.type=="Regulator").ToList();
+                r.ForEach(s => s.Quentity = a);
+                db.SaveChanges();
+            }
+            return "OK";
+        }
+
+        public string AddStove(Stove s)
+        {
+            using (LPGContext db = new LPGContext())
+            {
+                db.Stoves.Add(s);
+                db.SaveChanges();
+                return "OK";
+            }
+        }
+
+        public string RemoveStove(string s)
+        {
+            using (LPGContext db = new LPGContext())
+            {
+                var r = db.Stoves.Where(x=>x.type==s).FirstOrDefault();
+                db.Stoves.Remove(r);
+                db.SaveChanges();
+                return "OK";
+            }
+        }
+
+        public string SetStoves(string a, int c)
+        {
+            using (LPGContext db = new LPGContext())
+            {
+                var r = db.Stoves.Where(x => x.type == a).FirstOrDefault();
+                r.Quentity = c;
+                db.SaveChanges();
+                return "OK";
+            }
+        }
+
+        public string SetRegPrice(double a)
+        {
+            using (LPGContext db = new LPGContext())
+            {
+                var r = db.Stoves.Where(x => x.type == "Regulator").ToList();
+                r.ForEach(s => s.Price = a);
+                db.SaveChanges();
+            }
+            return "OK";
+        }
+
+        public string SetCylPrice(string s, double a)
+        {
+            using (LPGContext db = new LPGContext())
+            {
+                var r = db.Cylinders.ToList();
+                r.Where(x => x.type == s).ToList().ForEach(x => x.Price = a);
+                db.SaveChanges();
+            }
+            return "OK";
+        }
+
+        public string SetStovePrice(string s, double a)
+        {
+            using (LPGContext db = new LPGContext())
+            {
+                var r = db.Stoves.Where(x => x.type == s).FirstOrDefault();
+                r.Price = a;
+                db.SaveChanges();
+                return "OK";
+            }
         }
     }
 }

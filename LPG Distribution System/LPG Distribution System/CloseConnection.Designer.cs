@@ -1,6 +1,6 @@
 ﻿namespace LPG_Distribution_System
 {
-    partial class RemoveCustomer
+    partial class CloseConnection
     {
         /// <summary>
         /// Required designer variable.

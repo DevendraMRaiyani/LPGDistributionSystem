@@ -36,7 +36,7 @@ namespace LPG_Distribution_System
 
         private void removeCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RemoveCustomer removeCustomer = new RemoveCustomer();
+            CloseConnection removeCustomer = new CloseConnection();
             removeCustomer.Show();
         }
 
@@ -44,17 +44,6 @@ namespace LPG_Distribution_System
         {
             TransferCustomer transferCustomer = new TransferCustomer();
             transferCustomer.Show();
-        }
-
-        private void getCustomerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GetCustomerDetails getCustomerDetails = new GetCustomerDetails();
-            getCustomerDetails.Show();
-        }
-
-        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void addCylindersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,6 +62,33 @@ namespace LPG_Distribution_System
         {
             ViewStock viewStock = new ViewStock();
             viewStock.Show();
+        }
+
+        private void setPriceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetPrice setPrice = new SetPrice();
+            setPrice.Show();
+        }
+
+        private void home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            /*if (e.CloseReason == CloseReason.UserClosing)
+            {
+                if (MessageBox.Show("About to exit program?", "Confirm Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+                    e.Cancel = true;
+            }*/
+        }
+
+        private void generateBillForStovesAndRegulatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BillStoveRegulator billStoveRegulator = new BillStoveRegulator();
+            billStoveRegulator.Show();
+        }
+
+        private void bookCylinderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookCylinder bookCylinder = new BookCylinder();
+            bookCylinder.Show();
         }
     }
 }

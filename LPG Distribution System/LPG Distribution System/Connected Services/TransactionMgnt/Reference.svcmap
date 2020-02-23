@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c0ffba8e-0fcb-4195-b33d-96756f6ce1e9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54601/TransactionMgnt.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TransactionMgnt.wsdl" MetadataType="Wsdl" ID="5fd3ed33-49d4-404b-ad4a-7e19701137be" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt.svc?wsdl" />
+    <MetadataFile FileName="TransactionMgnt.disco" MetadataType="Disco" ID="cc29fe77-c94f-4605-af75-5d8aaecc485e" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt.svc?disco" />
+    <MetadataFile FileName="TransactionMgnt.xsd" MetadataType="Schema" ID="4d534575-7a8b-4a34-9972-350833b727c8" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt.svc?xsd=xsd0" />
+    <MetadataFile FileName="TransactionMgnt1.xsd" MetadataType="Schema" ID="c57e42a6-5877-47f6-97db-0c0926ad38f8" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -31,7 +31,7 @@ namespace LPG_Distribution_System
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -66,6 +66,9 @@ namespace LPG_Distribution_System
             this.regulatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label17 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource)).BeginInit();
@@ -105,6 +108,7 @@ namespace LPG_Distribution_System
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(445, 28);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // stoveBindingSource1
             // 
@@ -127,9 +131,10 @@ namespace LPG_Distribution_System
             this.textBox1.Location = new System.Drawing.Point(237, 194);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 26);
+            this.textBox1.Size = new System.Drawing.Size(99, 26);
             this.textBox1.TabIndex = 4;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // button1
             // 
@@ -149,7 +154,7 @@ namespace LPG_Distribution_System
             this.label4.Location = new System.Drawing.Point(1216, 41);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1, 778);
+            this.label4.Size = new System.Drawing.Size(1, 781);
             this.label4.TabIndex = 6;
             // 
             // label5
@@ -228,9 +233,9 @@ namespace LPG_Distribution_System
             this.label10.Location = new System.Drawing.Point(204, 859);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(302, 17);
+            this.label10.Size = new System.Drawing.Size(297, 17);
             this.label10.TabIndex = 15;
-            this.label10.Text = "2. Once added new stock you can\'t rollback it.)";
+            this.label10.Text = "2. Once added new stock you can\'t rollback it.";
             // 
             // label11
             // 
@@ -254,12 +259,13 @@ namespace LPG_Distribution_System
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Location = new System.Drawing.Point(237, 754);
+            this.button3.Location = new System.Drawing.Point(321, 770);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 33);
             this.button3.TabIndex = 18;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label12
             // 
@@ -276,7 +282,7 @@ namespace LPG_Distribution_System
             this.textBox4.Location = new System.Drawing.Point(252, 644);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(160, 26);
+            this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 21;
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
@@ -297,7 +303,7 @@ namespace LPG_Distribution_System
             this.textBox5.Location = new System.Drawing.Point(252, 704);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(160, 26);
+            this.textBox5.Size = new System.Drawing.Size(100, 26);
             this.textBox5.TabIndex = 23;
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
@@ -373,14 +379,14 @@ namespace LPG_Distribution_System
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -408,10 +414,6 @@ namespace LPG_Distribution_System
             // 
             this.stoveBindingSource.DataSource = typeof(LPG_Distribution_System.StockMgntRef.Stove);
             // 
-            // regulatorBindingSource
-            // 
-            this.regulatorBindingSource.DataSource = typeof(LPG_Distribution_System.StockMgntRef.Regulator);
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -432,12 +434,49 @@ namespace LPG_Distribution_System
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             this.textBox6.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyUp);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(204, 876);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(511, 17);
+            this.label18.TabIndex = 31;
+            this.label18.Text = "3. You have at max 10 products and at max 100 quantity for each in Sove stock.";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(204, 893);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(304, 17);
+            this.label19.TabIndex = 32;
+            this.label19.Text = "4. You have at max 500 quantity of Regulators.";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.Red;
+            this.label20.Location = new System.Drawing.Point(204, 910);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(275, 17);
+            this.label20.TabIndex = 33;
+            this.label20.Text = "5. Price must be without inclusion of taxes)";
+            // 
             // AddStoveRegulator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1924, 943);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.dataGridView1);
@@ -523,5 +562,8 @@ namespace LPG_Distribution_System
         private System.Windows.Forms.BindingSource regulatorBindingSource;
         private System.Windows.Forms.Label label17;
         private TextBox textBox6;
+        private Label label18;
+        private Label label19;
+        private Label label20;
     }
 }

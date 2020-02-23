@@ -167,67 +167,6 @@ namespace LPG_Distribution_System.StockMgntRef {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Regulator", Namespace="http://schemas.datacontract.org/2004/07/WcfService2")]
-    [System.SerializableAttribute()]
-    public partial class Regulator : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double PriceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int QuentityField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double Price {
-            get {
-                return this.PriceField;
-            }
-            set {
-                if ((this.PriceField.Equals(value) != true)) {
-                    this.PriceField = value;
-                    this.RaisePropertyChanged("Price");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Quentity {
-            get {
-                return this.QuentityField;
-            }
-            set {
-                if ((this.QuentityField.Equals(value) != true)) {
-                    this.QuentityField = value;
-                    this.RaisePropertyChanged("Quentity");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="StockMgntRef.IStockMgnt")]
     public interface IStockMgnt {
@@ -245,16 +184,64 @@ namespace LPG_Distribution_System.StockMgntRef {
         System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Stove[]> GetStovesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/GetRegulators", ReplyAction="http://tempuri.org/IStockMgnt/GetRegulatorsResponse")]
-        LPG_Distribution_System.StockMgntRef.Regulator[] GetRegulators();
+        LPG_Distribution_System.StockMgntRef.Stove GetRegulators();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/GetRegulators", ReplyAction="http://tempuri.org/IStockMgnt/GetRegulatorsResponse")]
-        System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Regulator[]> GetRegulatorsAsync();
+        System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Stove> GetRegulatorsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetCylinders", ReplyAction="http://tempuri.org/IStockMgnt/SetCylindersResponse")]
-        string SetCylinders(LPG_Distribution_System.StockMgntRef.Cylinder[] cylinders);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetECylinders", ReplyAction="http://tempuri.org/IStockMgnt/SetECylindersResponse")]
+        string SetECylinders(string a, int c);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetCylinders", ReplyAction="http://tempuri.org/IStockMgnt/SetCylindersResponse")]
-        System.Threading.Tasks.Task<string> SetCylindersAsync(LPG_Distribution_System.StockMgntRef.Cylinder[] cylinders);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetECylinders", ReplyAction="http://tempuri.org/IStockMgnt/SetECylindersResponse")]
+        System.Threading.Tasks.Task<string> SetECylindersAsync(string a, int c);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetFCylinders", ReplyAction="http://tempuri.org/IStockMgnt/SetFCylindersResponse")]
+        string SetFCylinders(string a, int c);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetFCylinders", ReplyAction="http://tempuri.org/IStockMgnt/SetFCylindersResponse")]
+        System.Threading.Tasks.Task<string> SetFCylindersAsync(string a, int c);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetStoves", ReplyAction="http://tempuri.org/IStockMgnt/SetStovesResponse")]
+        string SetStoves(string a, int c);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetStoves", ReplyAction="http://tempuri.org/IStockMgnt/SetStovesResponse")]
+        System.Threading.Tasks.Task<string> SetStovesAsync(string a, int c);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetRegulators", ReplyAction="http://tempuri.org/IStockMgnt/SetRegulatorsResponse")]
+        string SetRegulators(int a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetRegulators", ReplyAction="http://tempuri.org/IStockMgnt/SetRegulatorsResponse")]
+        System.Threading.Tasks.Task<string> SetRegulatorsAsync(int a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/AddStove", ReplyAction="http://tempuri.org/IStockMgnt/AddStoveResponse")]
+        string AddStove(LPG_Distribution_System.StockMgntRef.Stove s);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/AddStove", ReplyAction="http://tempuri.org/IStockMgnt/AddStoveResponse")]
+        System.Threading.Tasks.Task<string> AddStoveAsync(LPG_Distribution_System.StockMgntRef.Stove s);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/RemoveStove", ReplyAction="http://tempuri.org/IStockMgnt/RemoveStoveResponse")]
+        string RemoveStove(string s);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/RemoveStove", ReplyAction="http://tempuri.org/IStockMgnt/RemoveStoveResponse")]
+        System.Threading.Tasks.Task<string> RemoveStoveAsync(string s);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetRegPrice", ReplyAction="http://tempuri.org/IStockMgnt/SetRegPriceResponse")]
+        string SetRegPrice(double a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetRegPrice", ReplyAction="http://tempuri.org/IStockMgnt/SetRegPriceResponse")]
+        System.Threading.Tasks.Task<string> SetRegPriceAsync(double a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetCylPrice", ReplyAction="http://tempuri.org/IStockMgnt/SetCylPriceResponse")]
+        string SetCylPrice(string s, double a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetCylPrice", ReplyAction="http://tempuri.org/IStockMgnt/SetCylPriceResponse")]
+        System.Threading.Tasks.Task<string> SetCylPriceAsync(string s, double a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetStovePrice", ReplyAction="http://tempuri.org/IStockMgnt/SetStovePriceResponse")]
+        string SetStovePrice(string s, double a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStockMgnt/SetStovePrice", ReplyAction="http://tempuri.org/IStockMgnt/SetStovePriceResponse")]
+        System.Threading.Tasks.Task<string> SetStovePriceAsync(string s, double a);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -300,20 +287,84 @@ namespace LPG_Distribution_System.StockMgntRef {
             return base.Channel.GetStovesAsync();
         }
         
-        public LPG_Distribution_System.StockMgntRef.Regulator[] GetRegulators() {
+        public LPG_Distribution_System.StockMgntRef.Stove GetRegulators() {
             return base.Channel.GetRegulators();
         }
         
-        public System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Regulator[]> GetRegulatorsAsync() {
+        public System.Threading.Tasks.Task<LPG_Distribution_System.StockMgntRef.Stove> GetRegulatorsAsync() {
             return base.Channel.GetRegulatorsAsync();
         }
         
-        public string SetCylinders(LPG_Distribution_System.StockMgntRef.Cylinder[] cylinders) {
-            return base.Channel.SetCylinders(cylinders);
+        public string SetECylinders(string a, int c) {
+            return base.Channel.SetECylinders(a, c);
         }
         
-        public System.Threading.Tasks.Task<string> SetCylindersAsync(LPG_Distribution_System.StockMgntRef.Cylinder[] cylinders) {
-            return base.Channel.SetCylindersAsync(cylinders);
+        public System.Threading.Tasks.Task<string> SetECylindersAsync(string a, int c) {
+            return base.Channel.SetECylindersAsync(a, c);
+        }
+        
+        public string SetFCylinders(string a, int c) {
+            return base.Channel.SetFCylinders(a, c);
+        }
+        
+        public System.Threading.Tasks.Task<string> SetFCylindersAsync(string a, int c) {
+            return base.Channel.SetFCylindersAsync(a, c);
+        }
+        
+        public string SetStoves(string a, int c) {
+            return base.Channel.SetStoves(a, c);
+        }
+        
+        public System.Threading.Tasks.Task<string> SetStovesAsync(string a, int c) {
+            return base.Channel.SetStovesAsync(a, c);
+        }
+        
+        public string SetRegulators(int a) {
+            return base.Channel.SetRegulators(a);
+        }
+        
+        public System.Threading.Tasks.Task<string> SetRegulatorsAsync(int a) {
+            return base.Channel.SetRegulatorsAsync(a);
+        }
+        
+        public string AddStove(LPG_Distribution_System.StockMgntRef.Stove s) {
+            return base.Channel.AddStove(s);
+        }
+        
+        public System.Threading.Tasks.Task<string> AddStoveAsync(LPG_Distribution_System.StockMgntRef.Stove s) {
+            return base.Channel.AddStoveAsync(s);
+        }
+        
+        public string RemoveStove(string s) {
+            return base.Channel.RemoveStove(s);
+        }
+        
+        public System.Threading.Tasks.Task<string> RemoveStoveAsync(string s) {
+            return base.Channel.RemoveStoveAsync(s);
+        }
+        
+        public string SetRegPrice(double a) {
+            return base.Channel.SetRegPrice(a);
+        }
+        
+        public System.Threading.Tasks.Task<string> SetRegPriceAsync(double a) {
+            return base.Channel.SetRegPriceAsync(a);
+        }
+        
+        public string SetCylPrice(string s, double a) {
+            return base.Channel.SetCylPrice(s, a);
+        }
+        
+        public System.Threading.Tasks.Task<string> SetCylPriceAsync(string s, double a) {
+            return base.Channel.SetCylPriceAsync(s, a);
+        }
+        
+        public string SetStovePrice(string s, double a) {
+            return base.Channel.SetStovePrice(s, a);
+        }
+        
+        public System.Threading.Tasks.Task<string> SetStovePriceAsync(string s, double a) {
+            return base.Channel.SetStovePriceAsync(s, a);
         }
     }
 }

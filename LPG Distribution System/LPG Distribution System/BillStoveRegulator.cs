@@ -10,13 +10,22 @@ using System.Windows.Forms;
 
 namespace LPG_Distribution_System
 {
-    public partial class GetCustomerDetails : Form
+    public partial class BillStoveRegulator : Form
     {
-        public GetCustomerDetails()
+        public BillStoveRegulator()
         {
             InitializeComponent();
         }
-        protected override void WndProc(ref Message message)
+
+        private void BillStoveRegulator_Load(object sender, EventArgs e)
+        {
+            Location = new Point(-7, 50);
+            int w = SystemInformation.VirtualScreen.Width + 14;
+            int h = SystemInformation.VirtualScreen.Height - 43;
+            Size = new Size(w, h);
+        }
+
+        /*protected override void WndProc(ref Message message)
         {
             const int WM_SYSCOMMAND = 0x0112;
             const int SC_MOVE = 0xF010;
@@ -31,19 +40,6 @@ namespace LPG_Distribution_System
             }
 
             base.WndProc(ref message);
-        }
-
-        private void GetCustomerDetails_Load(object sender, EventArgs e)
-        {
-            Location = new Point(-7, 50);
-            int w = SystemInformation.VirtualScreen.Width + 14;
-            int h = SystemInformation.VirtualScreen.Height - 43;
-            Size = new Size(w, h);
-        }
-
-        private void FindCustomer(object sender, KeyEventArgs e)
-        {
-            label2.Text=textBox1.Text;
-        }
+        }*/
     }
 }

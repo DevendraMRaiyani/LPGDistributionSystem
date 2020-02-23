@@ -35,25 +35,34 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quentityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stoveBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.stoveBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cylinderTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quentityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cylinderBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.cylinderBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.stoveBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cylinderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stoveBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.stoveBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quentityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cylinderTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quentityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cylinderBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cylinderBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cylinderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -62,19 +71,19 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.Location = new System.Drawing.Point(188, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 29);
+            this.label1.Size = new System.Drawing.Size(150, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cylinder Stock";
+            this.label1.Text = "For Cylinder";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.Location = new System.Drawing.Point(829, 83);
+            this.label2.Location = new System.Drawing.Point(1088, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 29);
+            this.label2.Size = new System.Drawing.Size(122, 29);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Stove Stock";
+            this.label2.Text = "For Stove";
             // 
             // dataGridView2
             // 
@@ -88,9 +97,10 @@
             this.dataGridView2.ColumnHeadersHeight = 28;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productDataGridViewTextBoxColumn,
-            this.quentityDataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.stoveBindingSource2;
-            this.dataGridView2.Location = new System.Drawing.Point(707, 129);
+            this.quentityDataGridViewTextBoxColumn1,
+            this.priceDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.stoveBindingSource4;
+            this.dataGridView2.Location = new System.Drawing.Point(966, 129);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -107,23 +117,12 @@
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.ShowEditingIcon = false;
-            this.dataGridView2.Size = new System.Drawing.Size(429, 270);
+            this.dataGridView2.Size = new System.Drawing.Size(531, 270);
             this.dataGridView2.TabIndex = 3;
             // 
-            // productDataGridViewTextBoxColumn
+            // stoveBindingSource4
             // 
-            this.productDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
-            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
-            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
-            this.productDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quentityDataGridViewTextBoxColumn1
-            // 
-            this.quentityDataGridViewTextBoxColumn1.DataPropertyName = "Quentity";
-            this.quentityDataGridViewTextBoxColumn1.HeaderText = "Quentity";
-            this.quentityDataGridViewTextBoxColumn1.Name = "quentityDataGridViewTextBoxColumn1";
-            this.quentityDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.stoveBindingSource4.DataSource = typeof(LPG_Distribution_System.StockMgntRef.Stove);
             // 
             // stoveBindingSource2
             // 
@@ -132,7 +131,7 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(563, 84);
+            this.label4.Location = new System.Drawing.Point(760, 84);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(1, 490);
@@ -157,9 +156,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cylinderTypeDataGridViewTextBoxColumn,
-            this.quentityDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.cylinderBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(87, 129);
+            this.quentityDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.cylinderBindingSource2;
+            this.dataGridView1.Location = new System.Drawing.Point(96, 129);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -175,23 +175,12 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(431, 270);
+            this.dataGridView1.Size = new System.Drawing.Size(599, 270);
             this.dataGridView1.TabIndex = 13;
             // 
-            // cylinderTypeDataGridViewTextBoxColumn
+            // cylinderBindingSource2
             // 
-            this.cylinderTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cylinderTypeDataGridViewTextBoxColumn.DataPropertyName = "CylinderType";
-            this.cylinderTypeDataGridViewTextBoxColumn.HeaderText = "CylinderType";
-            this.cylinderTypeDataGridViewTextBoxColumn.Name = "cylinderTypeDataGridViewTextBoxColumn";
-            this.cylinderTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quentityDataGridViewTextBoxColumn
-            // 
-            this.quentityDataGridViewTextBoxColumn.DataPropertyName = "Quentity";
-            this.quentityDataGridViewTextBoxColumn.HeaderText = "Quentity";
-            this.quentityDataGridViewTextBoxColumn.Name = "quentityDataGridViewTextBoxColumn";
-            this.quentityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cylinderBindingSource2.DataSource = typeof(LPG_Distribution_System.StockMgntRef.Cylinder);
             // 
             // cylinderBindingSource1
             // 
@@ -213,17 +202,77 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label3.Location = new System.Drawing.Point(717, 471);
+            this.label3.Location = new System.Drawing.Point(961, 459);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(214, 29);
             this.label3.TabIndex = 14;
             this.label3.Text = "Regulator Stock : ";
             // 
+            // stoveBindingSource3
+            // 
+            this.stoveBindingSource3.DataSource = typeof(LPG_Distribution_System.StockMgntRef.Stove);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label5.Location = new System.Drawing.Point(961, 502);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(269, 29);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Regulator Price (Rs.) : ";
+            // 
+            // productDataGridViewTextBoxColumn
+            // 
+            this.productDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
+            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
+            this.productDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quentityDataGridViewTextBoxColumn1
+            // 
+            this.quentityDataGridViewTextBoxColumn1.DataPropertyName = "Quentity";
+            this.quentityDataGridViewTextBoxColumn1.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn1.Name = "quentityDataGridViewTextBoxColumn1";
+            this.quentityDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn1
+            // 
+            this.priceDataGridViewTextBoxColumn1.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn1.HeaderText = "Price (Rs.)";
+            this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
+            this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cylinderTypeDataGridViewTextBoxColumn
+            // 
+            this.cylinderTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cylinderTypeDataGridViewTextBoxColumn.DataPropertyName = "CylinderType";
+            this.cylinderTypeDataGridViewTextBoxColumn.HeaderText = "Cylinder Type";
+            this.cylinderTypeDataGridViewTextBoxColumn.Name = "cylinderTypeDataGridViewTextBoxColumn";
+            this.cylinderTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quentityDataGridViewTextBoxColumn
+            // 
+            this.quentityDataGridViewTextBoxColumn.DataPropertyName = "Quentity";
+            this.quentityDataGridViewTextBoxColumn.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn.Name = "quentityDataGridViewTextBoxColumn";
+            this.quentityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price (Rs.)";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn.Width = 120;
+            // 
             // ViewStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 653);
+            this.ClientSize = new System.Drawing.Size(1509, 653);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
@@ -231,15 +280,18 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ViewStock";
-            this.Text = "ViewStock";
+            this.Text = "View Stock & Price";
             this.Load += new System.EventHandler(this.ViewStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cylinderBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cylinderBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cylinderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,14 +305,20 @@
         private System.Windows.Forms.BindingSource cylinderBindingSource;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cylinderTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quentityDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource cylinderBindingSource1;
         private System.Windows.Forms.BindingSource stoveBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quentityDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource stoveBindingSource2;
         private System.Windows.Forms.BindingSource stoveBindingSource1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.BindingSource stoveBindingSource4;
+        private System.Windows.Forms.BindingSource cylinderBindingSource2;
+        private System.Windows.Forms.BindingSource stoveBindingSource3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quentityDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cylinderTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quentityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
     }
 }

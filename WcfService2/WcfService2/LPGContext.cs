@@ -14,7 +14,10 @@ namespace WcfService2
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Cylinder> Cylinders { get; set; }
         public DbSet<Stove> Stoves { get; set; }
-        public DbSet<Regulator> Regulators { get; set; }
-
+        public DbSet<DistributorUser> DistributorUsers { get; set; }
+        public DbSet<TxCylinder> txCylinders { get; set; }
+        public DbSet<TxStove> txStoves { get; set; }
+        public DbSet<TxRegulator> txRegulators { get; set; }
+        public DbSet<GSTRates> GSTRates { get; set; }
     }
 }
