@@ -20,12 +20,35 @@ namespace WcfService2
         List<Stove> GetStoves();
 
         [OperationContract]
-        List<Regulator> GetRegulators();
+        Stove GetRegulators();
 
         [OperationContract]
-        string SetCylinders(List<Cylinder> cylinders);
+        string SetECylinders(string a, int c);
 
-        
+        [OperationContract]
+        string SetFCylinders(string a, int c);
+
+        [OperationContract]
+        string SetStoves(string a, int c);
+
+        [OperationContract]
+        string SetRegulators(int a);
+
+        [OperationContract]
+        string AddStove(Stove s);
+
+        [OperationContract]
+        string RemoveStove(string s);
+
+        [OperationContract]
+        string SetRegPrice(double a);
+
+        [OperationContract]
+        string SetCylPrice(string s,double a);
+
+        [OperationContract]
+        string SetStovePrice(string s,double a);
+
     }
 
 
@@ -48,16 +71,6 @@ namespace WcfService2
         [Key]
         public string type { get; set; }
         [DataMember]
-        public int Quentity { get; set; }
-        [DataMember]
-        public double Price { get; set; }
-    }
-
-    [DataContract]
-    public class Regulator
-    {
-        [DataMember]
-        [Key]
         public int Quentity { get; set; }
         [DataMember]
         public double Price { get; set; }

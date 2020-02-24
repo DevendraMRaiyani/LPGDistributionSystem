@@ -25,11 +25,59 @@
   <wsdl:message name="IStockMgnt_GetRegulators_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetRegulatorsResponse" />
   </wsdl:message>
-  <wsdl:message name="IStockMgnt_SetCylinders_InputMessage">
-    <wsdl:part name="parameters" element="tns:SetCylinders" />
+  <wsdl:message name="IStockMgnt_SetECylinders_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetECylinders" />
   </wsdl:message>
-  <wsdl:message name="IStockMgnt_SetCylinders_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetCylindersResponse" />
+  <wsdl:message name="IStockMgnt_SetECylinders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetECylindersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetFCylinders_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetFCylinders" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetFCylinders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetFCylindersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetStoves_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStoves" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetStoves_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStovesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetRegulators_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegulators" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetRegulators_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegulatorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_AddStove_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStove" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_AddStove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_RemoveStove_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveStove" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_RemoveStove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveStoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetRegPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegPrice" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetRegPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetCylPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCylPrice" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetCylPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCylPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetStovePrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStovePrice" />
+  </wsdl:message>
+  <wsdl:message name="IStockMgnt_SetStovePrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStovePriceResponse" />
   </wsdl:message>
   <wsdl:portType name="IStockMgnt">
     <wsdl:operation name="GetCylinders">
@@ -44,9 +92,41 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/GetRegulators" message="tns:IStockMgnt_GetRegulators_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/GetRegulatorsResponse" message="tns:IStockMgnt_GetRegulators_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="SetCylinders">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/SetCylinders" message="tns:IStockMgnt_SetCylinders_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/SetCylindersResponse" message="tns:IStockMgnt_SetCylinders_OutputMessage" />
+    <wsdl:operation name="SetECylinders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/SetECylinders" message="tns:IStockMgnt_SetECylinders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/SetECylindersResponse" message="tns:IStockMgnt_SetECylinders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFCylinders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/SetFCylinders" message="tns:IStockMgnt_SetFCylinders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/SetFCylindersResponse" message="tns:IStockMgnt_SetFCylinders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStoves">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/SetStoves" message="tns:IStockMgnt_SetStoves_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/SetStovesResponse" message="tns:IStockMgnt_SetStoves_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRegulators">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/SetRegulators" message="tns:IStockMgnt_SetRegulators_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/SetRegulatorsResponse" message="tns:IStockMgnt_SetRegulators_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/AddStove" message="tns:IStockMgnt_AddStove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/AddStoveResponse" message="tns:IStockMgnt_AddStove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveStove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/RemoveStove" message="tns:IStockMgnt_RemoveStove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/RemoveStoveResponse" message="tns:IStockMgnt_RemoveStove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRegPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/SetRegPrice" message="tns:IStockMgnt_SetRegPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/SetRegPriceResponse" message="tns:IStockMgnt_SetRegPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCylPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/SetCylPrice" message="tns:IStockMgnt_SetCylPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/SetCylPriceResponse" message="tns:IStockMgnt_SetCylPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStovePrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockMgnt/SetStovePrice" message="tns:IStockMgnt_SetStovePrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStockMgnt/SetStovePriceResponse" message="tns:IStockMgnt_SetStovePrice_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IStockMgnt" type="tns:IStockMgnt">
@@ -78,8 +158,80 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SetCylinders">
-      <soap:operation soapAction="http://tempuri.org/IStockMgnt/SetCylinders" style="document" />
+    <wsdl:operation name="SetECylinders">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/SetECylinders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFCylinders">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/SetFCylinders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetStoves">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/SetStoves" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegulators">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/SetRegulators" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStove">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/AddStove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveStove">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/RemoveStove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegPrice">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/SetRegPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCylPrice">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/SetCylPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetStovePrice">
+      <soap:operation soapAction="http://tempuri.org/IStockMgnt/SetStovePrice" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

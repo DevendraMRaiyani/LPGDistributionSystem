@@ -7,13 +7,13 @@ namespace WcfService2.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class LPGDBv1 : IMigrationMetadata
+    public sealed partial class v2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(LPGDBv1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(v2));
         
         string IMigrationMetadata.Id
         {
-            get { return "202001291541149_LPGDB-v1"; }
+            get { return "202002231359128_v2"; }
         }
         
         string IMigrationMetadata.Source

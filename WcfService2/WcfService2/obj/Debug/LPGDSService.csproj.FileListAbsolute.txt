@@ -29,11 +29,11 @@ C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\bin\En
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\bin\EntityFramework.SqlServer.dll
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\bin\EntityFramework.xml
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\bin\EntityFramework.SqlServer.xml
-C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\LPGDSService.csprojAssemblyReference.cache
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\LPGDSService.csproj.CoreCompileInputs.cache
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\LPGDSService.csproj.CopyComplete
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.dll
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.pdb
-C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.LPGDBv1.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.v1.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\LPGDSService.csproj.GenerateResource.cache
+C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\LPGDSService.csprojAssemblyReference.cache
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.v2.resources

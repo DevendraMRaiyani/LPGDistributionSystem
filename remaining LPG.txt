@@ -1,0 +1,17 @@
+
+1. when textbox is empty then press save button , it will throw 	exception in stock mgnt All
+
+2. Check Connection to service
+3. login
+4. conformation messages in stock mgnt
+5. For SOC add Get Costomer Details
+6. Remove Icon from forms
+7. Deposite in New Customer
+8. PDF in Transections and close Connection
+Uncomment: 1. in all forms a method for prevent drag and resizing
+		2. conformation hile closing home
+
+Smit Bro:---
+ViewStock form properties
+SetPrice positions of tools
+PDF design improvement in "new Customer"

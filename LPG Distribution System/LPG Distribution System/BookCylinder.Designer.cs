@@ -1,6 +1,6 @@
 ﻿namespace LPG_Distribution_System
 {
-    partial class GetCustomerDetails
+    partial class BookCylinder
     {
         /// <summary>
         /// Required designer variable.
@@ -64,7 +64,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(632, 26);
             this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.GetCustomerDetails_Load);
+            this.textBox1.TextChanged += new System.EventHandler(this.BookCylinder_Load);
             this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FindCustomer);
             // 
             // label2
@@ -217,7 +217,7 @@
             this.label16.TabIndex = 16;
             this.label16.Text = "Bank Account No.";
             // 
-            // GetCustomerDetails
+            // BookCylinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -243,13 +243,13 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "GetCustomerDetails";
+            this.Name = "BookCylinder";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Customer Details";
+            this.Text = "Cylinder Booking";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.GetCustomerDetails_Load);
+            this.Load += new System.EventHandler(this.BookCylinder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

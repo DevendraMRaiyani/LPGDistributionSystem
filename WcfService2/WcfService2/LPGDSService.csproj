@@ -52,6 +52,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -72,30 +73,40 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CustomerMgnt.svc" />
+    <Content Include="MainService.svc" />
     <Content Include="StockMgnt.svc" />
+    <Content Include="TransactionMgnt.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMainService.cs" />
+    <Compile Include="ITransactionMgnt.cs" />
     <Compile Include="LPGContext.cs" />
     <Compile Include="CustomerMgnt.svc.cs">
       <DependentUpon>CustomerMgnt.svc</DependentUpon>
     </Compile>
     <Compile Include="ICustomerMgnt.cs" />
     <Compile Include="IStockMgnt.cs" />
-    <Compile Include="Migrations\202001291541149_LPGDB-v1.cs" />
-    <Compile Include="Migrations\202001291541149_LPGDB-v1.designer.cs">
-      <DependentUpon>202001291541149_LPGDB-v1.cs</DependentUpon>
+    <Compile Include="MainService.svc.cs">
+      <DependentUpon>MainService.svc</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002181302398_v2.cs" />
-    <Compile Include="Migrations\202002181302398_v2.designer.cs">
-      <DependentUpon>202002181302398_v2.cs</DependentUpon>
+    <Compile Include="Migrations\202002221602345_v1.cs" />
+    <Compile Include="Migrations\202002221602345_v1.designer.cs">
+      <DependentUpon>202002221602345_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002231359128_v2.cs" />
+    <Compile Include="Migrations\202002231359128_v2.designer.cs">
+      <DependentUpon>202002231359128_v2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StockMgnt.svc.cs">
       <DependentUpon>StockMgnt.svc</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionMgnt.svc.cs">
+      <DependentUpon>TransactionMgnt.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -110,11 +121,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202001291541149_LPGDB-v1.resx">
-      <DependentUpon>202001291541149_LPGDB-v1.cs</DependentUpon>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002221602345_v1.resx">
+      <DependentUpon>202002221602345_v1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002181302398_v2.resx">
-      <DependentUpon>202002181302398_v2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002231359128_v2.resx">
+      <DependentUpon>202002231359128_v2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

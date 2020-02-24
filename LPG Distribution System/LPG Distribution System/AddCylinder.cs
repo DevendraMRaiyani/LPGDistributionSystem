@@ -13,7 +13,8 @@ namespace LPG_Distribution_System
     public partial class AddCylinder : Form
     {
         List<StockMgntRef.Cylinder> cylinders = null;
-        int oldQty=0, newQty=0,emptyQty=0;
+        int fQty = 0, eQty = 0;
+        string selectedEType="", selectedFType="";
         public AddCylinder()
         {
             InitializeComponent();
@@ -30,7 +31,6 @@ namespace LPG_Distribution_System
             {
                 dataGridView1.DataSource = client.GetCylinders();
                 cylinders = client.GetCylinders().ToList();
-               // cylinders1 = client.GetCylinders().ToList();
                 string[] cyTypes = cylinders.Where(x=>x.Price!=0).Select(x => x.CylinderType).ToArray();
                 comboBox1.Items.AddRange(cyTypes);
             }
@@ -53,86 +53,63 @@ namespace LPG_Distribution_System
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedtype = cylinders.Where(x=>x.CylinderType==comboBox1.Text).Select(x => x.Quentity);
+            var selectedtype = cylinders.Where(x => x.CylinderType == comboBox1.Text).Select(x => x.Quentity);
             string result = string.Join(",", selectedtype);
-            oldQty = int.Parse(result);
-            textBox1.Text = result;
-                
+            fQty= int.Parse(result);
+
+            selectedFType = string.Join(",", cylinders.Where(x => x.CylinderType == comboBox1.Text).Select(x => x.CylinderType));
+            string[] spearator = { "(F)" };
+            selectedEType = string.Join(",", selectedFType.Split(spearator, StringSplitOptions.RemoveEmptyEntries)) + "(E)";
+            string streqty = string.Join(",", cylinders.Where(x => x.CylinderType == selectedEType).Select(x => x.Quentity));
+            eQty = int.Parse(streqty);
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            string selectedtype = string.Join(",", cylinders.Where(x => x.CylinderType == comboBox1.Text).Select(x => x.CylinderType));
-            string[] spearator = { "(F)" };
-            string selectedEType = string.Join(",", selectedtype.Split(spearator, StringSplitOptions.RemoveEmptyEntries))+"(E)";
-            string streqty = string.Join(",", cylinders.Where(x => x.CylinderType == selectedEType).Select(x => x.Quentity));
-            int EQty = int.Parse(streqty);
-            string result = string.Join(",", cylinders.Where(x => x.CylinderType == comboBox1.Text).Select(x => x.Quentity));
-            int loldQty = int.Parse(result);
-            int imageWidth,lnewQty=0;
+            int imageWidth,tbQty = 0;
             if (Int32.TryParse(textBox1.Text, out imageWidth))
             {
-                lnewQty = imageWidth;
+                tbQty = imageWidth;
             }
-
-            if (oldQty > lnewQty)
+            if (tbQty > eQty)
             {
-                //dataGridView1.DataSource = null;
+                label3.Text = "You have not suficient empty cylinder stock!!";
                 dataGridView1.DataSource = cylinders;
-                label3.Text = "You cant Remove Cylinders " + oldQty + " " + newQty + " " + EQty;
+                button1.Enabled = false;
             }
             else
             {
-                if ((lnewQty - oldQty) > EQty)
+                label3.Text = " ";
+                button1.Enabled = true;
+                foreach (DataGridViewRow dr in dataGridView1.Rows)
                 {
-                    //dataGridView1.DataSource = null;
-                    dataGridView1.DataSource = cylinders;
-                    label3.Text = "You have not enough empty quentity!!";
-                }
-                else
-                {
-                    //cylinders.Where(x => x.CylinderType == selectedtype).ToList().ForEach(s => s.Quentity = newQty);
-                    //cylinders.Where(x => x.CylinderType == selectedEType).ToList().ForEach(s => s.Quentity = EQty - (newQty - oldQty));
-                    //dataGridView1.DataSource = cylinders;
-                    foreach (DataGridViewRow dr in dataGridView1.Rows)
+                    if ((string)dr.Cells[0].Value == selectedEType)
                     {
-                        if ((string)dr.Cells[0].Value==selectedEType)
-                        {
-                            dr.Cells[1].Value = EQty - (lnewQty - oldQty);
-                        }
-                        if ((string)dr.Cells[0].Value == selectedtype)
-                        {
-                            dr.Cells[1].Value = lnewQty;
-                            break;
-                        }
-                        //pl.Quentity = (int)dr.Cells[2].Value;
+                        dr.Cells[1].Value = eQty-tbQty;
                     }
-                    label3.Text = "ok " + " " + lnewQty +" "+ oldQty + " " + " " + EQty; 
+                    if ((string)dr.Cells[0].Value == selectedFType)
+                    {
+                        dr.Cells[1].Value = fQty+tbQty;
+                        break;
+                    }
+                    //pl.Quentity = (int)dr.Cells[2].Value;
                 }
             }
-            lnewQty = 0;
-            loldQty = 0;
-            EQty = 0;
+            //label3.Text = "You cant Remove Cylinders " + fQty + " " + eQty;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             StockMgntRef.StockMgntClient client = new StockMgntRef.StockMgntClient();
-
-            List<StockMgntRef.Cylinder> cylist = new List<StockMgntRef.Cylinder>();
-            foreach (DataGridViewRow dr in dataGridView1.Rows)
-            {
-                //Create object of your list type pl
-                StockMgntRef.Cylinder pl = new StockMgntRef.Cylinder();
-                pl.CylinderType = (string)dr.Cells[0].Value;
-                pl.Quentity = (int)dr.Cells[1].Value;
-//                pl.Property3 = dr.Cells[3].Value;
-
-                //Add pl to your List  
-                cylist.Add(pl);
-            }
-
-            label3.Text=client.SetCylinders(cylist.ToArray());
+            TransactionMgnt.TransactionMgntClient client1 = new TransactionMgnt.TransactionMgntClient();
+            var fr = client.SetFCylinders(selectedFType, int.Parse(textBox1.Text));
+            var er = client.SetECylinders(selectedEType, int.Parse(textBox1.Text));
+            var msg1 = client1.AddCylenderTx(comboBox1.Text, int.Parse(textBox1.Text));
+            if (fr.Equals("OKF") && er.Equals("OKE") && msg1.Equals("OK"))
+                MessageBox.Show("Stock is Updated");
+            cylinders = client.GetCylinders().ToList();
+            dataGridView1.DataSource = cylinders;
+            textBox1.Text = "";
         }
 
 

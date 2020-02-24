@@ -66,6 +66,12 @@
     <Compile Include="AddStoveRegulator.Designer.cs">
       <DependentUpon>AddStoveRegulator.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillStoveRegulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillStoveRegulator.Designer.cs">
+      <DependentUpon>BillStoveRegulator.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangeCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,16 +83,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\MainService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\StockMgntRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="GetCustomerDetails.cs">
+    <Compile Include="Connected Services\TransactionMgnt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="BookCylinder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GetCustomerDetails.Designer.cs">
-      <DependentUpon>GetCustomerDetails.cs</DependentUpon>
+    <Compile Include="BookCylinder.Designer.cs">
+      <DependentUpon>BookCylinder.cs</DependentUpon>
     </Compile>
     <Compile Include="home.cs">
       <SubType>Form</SubType>
@@ -96,11 +112,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoveCustomer.cs">
+    <Compile Include="CloseConnection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveCustomer.Designer.cs">
-      <DependentUpon>RemoveCustomer.cs</DependentUpon>
+    <Compile Include="CloseConnection.Designer.cs">
+      <DependentUpon>CloseConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPrice.Designer.cs">
+      <DependentUpon>SetPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="TransferCustomer.cs">
       <SubType>Form</SubType>
@@ -123,11 +145,14 @@
     <EmbeddedResource Include="AddStoveRegulator.resx">
       <DependentUpon>AddStoveRegulator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BillStoveRegulator.resx">
+      <DependentUpon>BillStoveRegulator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangeCustomerDetails.resx">
       <DependentUpon>ChangeCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GetCustomerDetails.resx">
-      <DependentUpon>GetCustomerDetails.cs</DependentUpon>
+    <EmbeddedResource Include="BookCylinder.resx">
+      <DependentUpon>BookCylinder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
@@ -142,8 +167,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RemoveCustomer.resx">
-      <DependentUpon>RemoveCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="CloseConnection.resx">
+      <DependentUpon>CloseConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPrice.resx">
+      <DependentUpon>SetPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransferCustomer.resx">
       <DependentUpon>TransferCustomer.cs</DependentUpon>
@@ -164,10 +192,20 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CustomerMgntRef\Service1.wsdl" />
-    <None Include="Connected Services\StockMgntRef\LPG_Distribution_System.StockMgntRef.Cylinder.datasource">
+    <None Include="Connected Services\MainService\LPG_Distribution_System.MainService.DistributorUser.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\StockMgntRef\LPG_Distribution_System.StockMgntRef.Regulator.datasource">
+    <None Include="Connected Services\MainService\MainService.wsdl" />
+    <None Include="Connected Services\MainService\MainService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MainService\MainService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MainService\MainService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StockMgntRef\LPG_Distribution_System.StockMgntRef.Cylinder.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\StockMgntRef\LPG_Distribution_System.StockMgntRef.Stove.datasource">
@@ -181,6 +219,13 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\StockMgntRef\StockMgnt11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TransactionMgnt\TransactionMgnt.wsdl" />
+    <None Include="Connected Services\TransactionMgnt\TransactionMgnt.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TransactionMgnt\TransactionMgnt1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -208,7 +253,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\CustomerMgntRef\" />
+    <WCFMetadataStorage Include="Connected Services\MainService\" />
     <WCFMetadataStorage Include="Connected Services\StockMgntRef\" />
+    <WCFMetadataStorage Include="Connected Services\TransactionMgnt\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CustomerMgntRef\configuration91.svcinfo" />
@@ -233,6 +280,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\StockMgntRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainService\MainService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TransactionMgnt\TransactionMgnt.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TransactionMgnt\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TransactionMgnt\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TransactionMgnt\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
