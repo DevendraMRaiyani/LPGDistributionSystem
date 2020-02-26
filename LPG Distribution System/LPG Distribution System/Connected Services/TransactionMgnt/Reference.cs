@@ -32,6 +32,12 @@ namespace LPG_Distribution_System.TransactionMgnt {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/AddCylenderTx", ReplyAction="http://tempuri.org/ITransactionMgnt/AddCylenderTxResponse")]
         System.Threading.Tasks.Task<string> AddCylenderTxAsync(string details, int qty);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/BookingCylinderTx", ReplyAction="http://tempuri.org/ITransactionMgnt/BookingCylinderTxResponse")]
+        string BookingCylinderTx(int cid, int qty);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/BookingCylinderTx", ReplyAction="http://tempuri.org/ITransactionMgnt/BookingCylinderTxResponse")]
+        System.Threading.Tasks.Task<string> BookingCylinderTxAsync(int cid, int qty);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +89,14 @@ namespace LPG_Distribution_System.TransactionMgnt {
         
         public System.Threading.Tasks.Task<string> AddCylenderTxAsync(string details, int qty) {
             return base.Channel.AddCylenderTxAsync(details, qty);
+        }
+        
+        public string BookingCylinderTx(int cid, int qty) {
+            return base.Channel.BookingCylinderTx(cid, qty);
+        }
+        
+        public System.Threading.Tasks.Task<string> BookingCylinderTxAsync(int cid, int qty) {
+            return base.Channel.BookingCylinderTxAsync(cid, qty);
         }
     }
 }

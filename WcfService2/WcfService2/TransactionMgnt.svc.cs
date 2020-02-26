@@ -69,5 +69,74 @@ namespace WcfService2
             db.SaveChanges();
             return "OK";
         }
+
+        public string BookingCylinderTx(int cid, int qty)
+        {
+            Customer c = db.Customers.Where(x => x.CustomerId == cid).FirstOrDefault();
+            DistributorUser du = db.DistributorUsers.FirstOrDefault();
+            TxCylinder tc = new TxCylinder();
+            tc.CustomerId = c.CustomerId;
+            tc.CustomerName = c.CustomerName;
+            tc.TxDate = DateTime.Now;
+            string details = null;
+            int q = 0;
+            if (c.CustomerType.Equals("Industrial"))
+            {
+                q = qty;
+                details = db.CylCustMappings.Where(x => x.CustomerType.Equals("Industrial")).Select(s => s.CylenderType).FirstOrDefault();
+                tc.CylinderDetails = details;
+                tc.Quentity = qty;
+                tc.Price = db.Cylinders.Where(x => x.type == details).FirstOrDefault().Price;
+                tc.Amount = qty * tc.Price;
+                var gst = db.GSTRates.Where(x => x.Comodity.Equals("Industrial Cylender")).FirstOrDefault();
+                tc.CGST = (tc.Amount * gst.CGST) / 100;
+                tc.SGST = (tc.Amount * gst.SGST) / 100;
+            }
+            else
+            {
+                CylCustMapping ccm = null;
+                
+                if (c.BankAccountNo == "")
+                {
+                    ccm = db.CylCustMappings.Where(x => x.CustomerType.Equals(c.CustomerType) && x.CylenderType.Equals("14.2 KG Without Subsidy (F)")).FirstOrDefault();
+                    details = ccm.CylenderType;
+                    q = ccm.NoCylender;
+                }
+                else
+                {
+                    ccm = db.CylCustMappings.Where(x => x.CustomerType.Equals(c.CustomerType) && x.CylenderType.Equals("14.2 KG With Subsidy (F)")).FirstOrDefault();
+                    details = ccm.CylenderType;
+                    q = ccm.NoCylender;
+                }
+                tc.CylinderDetails = details;
+                tc.Quentity = q;
+                tc.Price = db.Cylinders.Where(x => x.type == details).FirstOrDefault().Price;
+                tc.Amount = q * tc.Price;
+                var gst = db.GSTRates.Where(x => x.Comodity.Equals("Domestic Cylender")).FirstOrDefault();
+                tc.CGST = (tc.Amount * gst.CGST) / 100;
+                tc.SGST = (tc.Amount * gst.SGST) / 100;
+            }
+           
+            tc.Total = tc.Amount + tc.CGST + tc.SGST;
+            db.txCylinders.Add(tc);
+            db.SaveChanges();
+
+            using (LPGContext dbo = new LPGContext())
+            {
+                var result = dbo.Cylinders.Where(x => x.type.Equals(details)).FirstOrDefault();
+                result.Quentity = result.Quentity - q;
+                dbo.SaveChanges();
+            }
+            using (LPGContext dbo1 = new LPGContext())
+            {
+                details = details.Substring(0, details.Length - 2);
+                details = details + "E)";
+                var result = dbo1.Cylinders.Where(x => x.type.Equals(details)).FirstOrDefault();
+                result.Quentity = result.Quentity + q;
+                dbo1.SaveChanges();
+            }
+
+            return "OK";
+        }
     }
 }

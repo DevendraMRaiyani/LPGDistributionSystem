@@ -24,6 +24,10 @@ namespace LPG_Distribution_System
 
         private void SetPrice_Load(object sender, EventArgs e)
         {
+            Location = new Point(-7, 50);
+            int w = SystemInformation.VirtualScreen.Width + 14;
+            int h = SystemInformation.VirtualScreen.Height - 43;
+            Size = new Size(w, h);
             using (StockMgntRef.StockMgntClient client = new StockMgntRef.StockMgntClient())
             {
                 cylinders = client.GetCylinders().ToList();

@@ -19,5 +19,6 @@ namespace WcfService2
         public DbSet<TxStove> txStoves { get; set; }
         public DbSet<TxRegulator> txRegulators { get; set; }
         public DbSet<GSTRates> GSTRates { get; set; }
+        public DbSet<CylCustMapping> CylCustMappings { get; set; }
     }
 }

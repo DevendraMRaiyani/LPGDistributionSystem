@@ -16,7 +16,16 @@ namespace WcfService2
     {
         [OperationContract]
         Customer AddCustomer(Customer customer);
-        
+
+        [OperationContract]
+        Customer GetCustomer(string name);
+
+        [OperationContract]
+        string[] GetCustomersName();
+
+        [OperationContract]
+        string[] GetCustomersTypes();
+
         // TODO: Add your service operations here
     }
 

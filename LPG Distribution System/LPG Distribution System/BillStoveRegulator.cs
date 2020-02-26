@@ -12,6 +12,7 @@ namespace LPG_Distribution_System
 {
     public partial class BillStoveRegulator : Form
     {
+        List<StockMgntRef.Stove> stoves = null;
         public BillStoveRegulator()
         {
             InitializeComponent();
@@ -23,8 +24,32 @@ namespace LPG_Distribution_System
             int w = SystemInformation.VirtualScreen.Width + 14;
             int h = SystemInformation.VirtualScreen.Height - 43;
             Size = new Size(w, h);
+            dataGridView1.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10);
+            dataGridView2.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10);
+            using (StockMgntRef.StockMgntClient client = new StockMgntRef.StockMgntClient())
+            {
+                stoves = client.GetStoves().ToList();
+                List<StockMgntRef.Stove> stoveTypes = stoves.Where(x => x.Price != 0).Select(x => x).ToList();
+                dataGridView2.DataSource = stoveTypes;
+            }
         }
 
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+        
         /*protected override void WndProc(ref Message message)
         {
             const int WM_SYSCOMMAND = 0x0112;
