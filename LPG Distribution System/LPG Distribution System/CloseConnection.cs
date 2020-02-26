@@ -12,6 +12,7 @@ namespace LPG_Distribution_System
 {
     public partial class CloseConnection : Form
     {
+        List<StockMgntRef.Stove> stoves = null;
         public CloseConnection()
         {
             InitializeComponent();
@@ -39,6 +40,18 @@ namespace LPG_Distribution_System
             int w = SystemInformation.VirtualScreen.Width + 14;
             int h = SystemInformation.VirtualScreen.Height - 43;
             Size = new Size(w, h);
+            AutoCompleteStringCollection acsc = new AutoCompleteStringCollection();
+            using (StockMgntRef.StockMgntClient client = new StockMgntRef.StockMgntClient())
+            {
+                stoves = client.GetStoves().ToList();
+                string[] stoveTypes = stoves.Where(x => x.Price != 0).Select(x => x.Product).ToArray();
+                acsc.AddRange(stoveTypes);
+                textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
+                textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                textBox1.AutoCompleteCustomSource = acsc;
+
+            }
+
         }
     }
 }

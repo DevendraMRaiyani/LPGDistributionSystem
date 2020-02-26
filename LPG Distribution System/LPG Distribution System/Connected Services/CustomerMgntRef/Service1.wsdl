@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:54601/CustomerMgnt.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:54601/CustomerMgnt.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:54601/CustomerMgnt.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService2" />
+      <xsd:import schemaLocation="http://localhost:54601/CustomerMgnt.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICustomerMgnt_AddCustomer_InputMessage">
@@ -13,16 +14,73 @@
   <wsdl:message name="ICustomerMgnt_AddCustomer_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddCustomerResponse" />
   </wsdl:message>
+  <wsdl:message name="ICustomerMgnt_GetCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerMgnt_GetCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerMgnt_GetCustomersName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersName" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerMgnt_GetCustomersName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerMgnt_GetCustomersTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersTypes" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerMgnt_GetCustomersTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersTypesResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICustomerMgnt">
     <wsdl:operation name="AddCustomer">
       <wsdl:input wsaw:Action="http://tempuri.org/ICustomerMgnt/AddCustomer" message="tns:ICustomerMgnt_AddCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICustomerMgnt/AddCustomerResponse" message="tns:ICustomerMgnt_AddCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerMgnt/GetCustomer" message="tns:ICustomerMgnt_GetCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerMgnt/GetCustomerResponse" message="tns:ICustomerMgnt_GetCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomersName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerMgnt/GetCustomersName" message="tns:ICustomerMgnt_GetCustomersName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerMgnt/GetCustomersNameResponse" message="tns:ICustomerMgnt_GetCustomersName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomersTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerMgnt/GetCustomersTypes" message="tns:ICustomerMgnt_GetCustomersTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerMgnt/GetCustomersTypesResponse" message="tns:ICustomerMgnt_GetCustomersTypes_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICustomerMgnt" type="tns:ICustomerMgnt">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AddCustomer">
       <soap:operation soapAction="http://tempuri.org/ICustomerMgnt/AddCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap:operation soapAction="http://tempuri.org/ICustomerMgnt/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomersName">
+      <soap:operation soapAction="http://tempuri.org/ICustomerMgnt/GetCustomersName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomersTypes">
+      <soap:operation soapAction="http://tempuri.org/ICustomerMgnt/GetCustomersTypes" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

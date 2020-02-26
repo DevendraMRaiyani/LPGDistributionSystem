@@ -8,10 +8,13 @@
 6. Remove Icon from forms
 7. Deposite in New Customer
 8. PDF in Transections and close Connection
+9. help menu tool
+10.Add new Customer only digits field method (pincode contectnumber etc)
+11. Booking Cylinder Check for same day tx
+12. Testing for Mapping Table Id 10 & 11
+
 Uncomment: 1. in all forms a method for prevent drag and resizing
 		2. conformation hile closing home
 
 Smit Bro:---
-ViewStock form properties
-SetPrice positions of tools
 PDF design improvement in "new Customer"

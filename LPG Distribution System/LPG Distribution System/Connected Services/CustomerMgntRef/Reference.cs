@@ -323,6 +323,24 @@ namespace LPG_Distribution_System.CustomerMgntRef {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/AddCustomer", ReplyAction="http://tempuri.org/ICustomerMgnt/AddCustomerResponse")]
         System.Threading.Tasks.Task<LPG_Distribution_System.CustomerMgntRef.Customer> AddCustomerAsync(LPG_Distribution_System.CustomerMgntRef.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomer", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomerResponse")]
+        LPG_Distribution_System.CustomerMgntRef.Customer GetCustomer(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomer", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomerResponse")]
+        System.Threading.Tasks.Task<LPG_Distribution_System.CustomerMgntRef.Customer> GetCustomerAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomersName", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomersNameResponse")]
+        string[] GetCustomersName();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomersName", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomersNameResponse")]
+        System.Threading.Tasks.Task<string[]> GetCustomersNameAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomersTypes", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomersTypesResponse")]
+        string[] GetCustomersTypes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomersTypes", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomersTypesResponse")]
+        System.Threading.Tasks.Task<string[]> GetCustomersTypesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -358,6 +376,30 @@ namespace LPG_Distribution_System.CustomerMgntRef {
         
         public System.Threading.Tasks.Task<LPG_Distribution_System.CustomerMgntRef.Customer> AddCustomerAsync(LPG_Distribution_System.CustomerMgntRef.Customer customer) {
             return base.Channel.AddCustomerAsync(customer);
+        }
+        
+        public LPG_Distribution_System.CustomerMgntRef.Customer GetCustomer(string name) {
+            return base.Channel.GetCustomer(name);
+        }
+        
+        public System.Threading.Tasks.Task<LPG_Distribution_System.CustomerMgntRef.Customer> GetCustomerAsync(string name) {
+            return base.Channel.GetCustomerAsync(name);
+        }
+        
+        public string[] GetCustomersName() {
+            return base.Channel.GetCustomersName();
+        }
+        
+        public System.Threading.Tasks.Task<string[]> GetCustomersNameAsync() {
+            return base.Channel.GetCustomersNameAsync();
+        }
+        
+        public string[] GetCustomersTypes() {
+            return base.Channel.GetCustomersTypes();
+        }
+        
+        public System.Threading.Tasks.Task<string[]> GetCustomersTypesAsync() {
+            return base.Channel.GetCustomersTypesAsync();
         }
     }
 }

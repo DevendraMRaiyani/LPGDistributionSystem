@@ -24,9 +24,11 @@ namespace LPG_Distribution_System
             int w = SystemInformation.VirtualScreen.Width + 14;
             int h = SystemInformation.VirtualScreen.Height - 43;
             Size = new Size(w, h);
-
-            string[] installs = new string[] {"APL - Single Cylinder", "APL - Double Cylinder", "BPL - Single Cylinder", "BPL - Double Cylinder", "Ujjavala - Single Cylinder", "Industrial" };
-            comboBox1.Items.AddRange(installs);
+            using (CustomerMgntRef.CustomerMgntClient client = new CustomerMgntRef.CustomerMgntClient())
+            {
+                string[] installs = client.GetCustomersTypes().Distinct().ToArray();
+                comboBox1.Items.AddRange(installs);
+            }
         }
 
         /*protected override void WndProc(ref Message message)

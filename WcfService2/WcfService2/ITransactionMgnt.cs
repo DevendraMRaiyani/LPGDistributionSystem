@@ -20,6 +20,9 @@ namespace WcfService2
 
         [OperationContract]
         string AddCylenderTx(string details, int qty);
+
+        [OperationContract]
+        string BookingCylinderTx(int cid , int qty);
     }
 
     [DataContract]
@@ -116,5 +119,19 @@ namespace WcfService2
         public double CGST { get; set; }
         [DataMember]
         public double SGST { get; set; }
+    }
+
+    [DataContract]
+    public class CylCustMapping
+    {
+        [DataMember]
+        [Key]
+        public int id { get; set; }
+        [DataMember]
+        public string CylenderType { get; set; }
+        [DataMember]
+        public string CustomerType { get; set; }
+        [DataMember]
+        public int NoCylender { get; set; }
     }
 }

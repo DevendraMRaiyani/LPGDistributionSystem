@@ -19,5 +19,20 @@ namespace WcfService2
             cc.SaveChanges();
             return c;
         }
+
+        public Customer GetCustomer(string name)
+        {
+            return cc.Customers.Where(x => x.CustomerName.Equals(name)).FirstOrDefault();
+        }
+
+        public string[] GetCustomersName()
+        {
+            return cc.Customers.Select(x => x.CustomerName).ToArray();
+        }
+
+        public string[] GetCustomersTypes()
+        {
+            return cc.CylCustMappings.Select(x=>x.CustomerType).ToArray();
+        }
     }
 }

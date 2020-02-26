@@ -188,6 +188,9 @@
     <None Include="Connected Services\CustomerMgntRef\CustomerMgnt2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CustomerMgntRef\LPG_Distribution_System.CustomerMgntRef.Customer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
