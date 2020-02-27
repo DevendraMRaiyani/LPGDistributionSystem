@@ -34,10 +34,22 @@ namespace LPG_Distribution_System.TransactionMgnt {
         System.Threading.Tasks.Task<string> AddCylenderTxAsync(string details, int qty);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/BookingCylinderTx", ReplyAction="http://tempuri.org/ITransactionMgnt/BookingCylinderTxResponse")]
-        string BookingCylinderTx(int cid, int qty);
+        int BookingCylinderTx(int cid, int qty);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/BookingCylinderTx", ReplyAction="http://tempuri.org/ITransactionMgnt/BookingCylinderTxResponse")]
-        System.Threading.Tasks.Task<string> BookingCylinderTxAsync(int cid, int qty);
+        System.Threading.Tasks.Task<int> BookingCylinderTxAsync(int cid, int qty);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/RegulatorTx", ReplyAction="http://tempuri.org/ITransactionMgnt/RegulatorTxResponse")]
+        int RegulatorTx(string cname, int qty);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/RegulatorTx", ReplyAction="http://tempuri.org/ITransactionMgnt/RegulatorTxResponse")]
+        System.Threading.Tasks.Task<int> RegulatorTxAsync(string cname, int qty);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/StoveTx", ReplyAction="http://tempuri.org/ITransactionMgnt/StoveTxResponse")]
+        int StoveTx(string cname, string prod, int qty, int cmno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/StoveTx", ReplyAction="http://tempuri.org/ITransactionMgnt/StoveTxResponse")]
+        System.Threading.Tasks.Task<int> StoveTxAsync(string cname, string prod, int qty, int cmno);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -91,12 +103,28 @@ namespace LPG_Distribution_System.TransactionMgnt {
             return base.Channel.AddCylenderTxAsync(details, qty);
         }
         
-        public string BookingCylinderTx(int cid, int qty) {
+        public int BookingCylinderTx(int cid, int qty) {
             return base.Channel.BookingCylinderTx(cid, qty);
         }
         
-        public System.Threading.Tasks.Task<string> BookingCylinderTxAsync(int cid, int qty) {
+        public System.Threading.Tasks.Task<int> BookingCylinderTxAsync(int cid, int qty) {
             return base.Channel.BookingCylinderTxAsync(cid, qty);
+        }
+        
+        public int RegulatorTx(string cname, int qty) {
+            return base.Channel.RegulatorTx(cname, qty);
+        }
+        
+        public System.Threading.Tasks.Task<int> RegulatorTxAsync(string cname, int qty) {
+            return base.Channel.RegulatorTxAsync(cname, qty);
+        }
+        
+        public int StoveTx(string cname, string prod, int qty, int cmno) {
+            return base.Channel.StoveTx(cname, prod, qty, cmno);
+        }
+        
+        public System.Threading.Tasks.Task<int> StoveTxAsync(string cname, string prod, int qty, int cmno) {
+            return base.Channel.StoveTxAsync(cname, prod, qty, cmno);
         }
     }
 }

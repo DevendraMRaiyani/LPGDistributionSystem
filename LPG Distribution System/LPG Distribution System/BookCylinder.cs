@@ -98,10 +98,10 @@ namespace LPG_Distribution_System
                 button2.Enabled = false;
                 using(TransactionMgnt.TransactionMgntClient client = new TransactionMgnt.TransactionMgntClient())
                 {
-                    var msg = client.BookingCylinderTx(cid,tbQty);
-                    if (msg.Equals("OK"))
+                    int msg = client.BookingCylinderTx(cid,tbQty);
+                    if (msg>0)
                     {
-                        MessageBox.Show("Cylinder is Booked Successfully !!!");
+                        MessageBox.Show("Cylinder is Booked Successfully !!! \nCashmemo Number is "+msg);
                         button2.Visible = false;
                     }
                 }

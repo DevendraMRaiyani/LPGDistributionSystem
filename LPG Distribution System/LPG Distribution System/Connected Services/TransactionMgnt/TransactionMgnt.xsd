@@ -55,7 +55,39 @@
   <xs:element name="BookingCylinderTxResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="BookingCylinderTxResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BookingCylinderTxResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegulatorTx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="qty" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegulatorTxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegulatorTxResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StoveTx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="qty" type="xs:int" />
+        <xs:element minOccurs="0" name="cmno" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StoveTxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StoveTxResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
