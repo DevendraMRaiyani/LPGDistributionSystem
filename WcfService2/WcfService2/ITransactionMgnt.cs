@@ -22,7 +22,13 @@ namespace WcfService2
         string AddCylenderTx(string details, int qty);
 
         [OperationContract]
-        string BookingCylinderTx(int cid , int qty);
+        int BookingCylinderTx(int cid , int qty);
+
+        [OperationContract]
+        int RegulatorTx(string cname, int qty);
+
+        [OperationContract]
+        int StoveTx(string cname,string prod,int qty,int cmno);
     }
 
     [DataContract]
@@ -31,6 +37,8 @@ namespace WcfService2
         [DataMember]
         [Key]
         public int TxId { get; set; }
+        [DataMember]
+        public int CashMemoNo { get; set; }
         [DataMember]
         public int CustomerId { get; set; }
         [DataMember]
@@ -54,11 +62,13 @@ namespace WcfService2
     }
 
     [DataContract]
-    public class TxStove
+    public class TxStoveRegulator
     {
         [DataMember]
         [Key]
         public int TxId { get; set; }
+        [DataMember]
+        public int CashMemoNo { get; set; }
         [DataMember]
         public int CustomerId { get; set; }
         [DataMember]
@@ -87,6 +97,8 @@ namespace WcfService2
         [DataMember]
         [Key]
         public int TxId { get; set; }
+        [DataMember]
+        public int CashMemoNo { get; set; }
         [DataMember]
         public int CustomerId { get; set; }
         [DataMember]

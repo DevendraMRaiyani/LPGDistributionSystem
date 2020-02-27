@@ -27,6 +27,7 @@ namespace WcfService2
             tc.CGST = 0;
             tc.SGST = 0;
             tc.Total = tc.Amount;
+            tc.CashMemoNo = 0;
             db.txCylinders.Add(tc);
             db.SaveChanges();
             return "OK";
@@ -46,6 +47,7 @@ namespace WcfService2
             tr.CGST = 0;
             tr.SGST = 0;
             tr.Total = tr.Amount;
+            tr.CashMemoNo = 0;
             db.txRegulators.Add(tr);
             db.SaveChanges();
             return "OK";
@@ -54,7 +56,7 @@ namespace WcfService2
         public string AddStoveTx(string details, int qty)
         {
             DistributorUser du = db.DistributorUsers.FirstOrDefault();
-            TxStove ts = new TxStove();
+            TxStoveRegulator ts = new TxStoveRegulator();
             ts.CustomerId = du.DistributorCode;
             ts.CustomerName = du.DistributorName;
             ts.TxDate = DateTime.Now;
@@ -65,12 +67,13 @@ namespace WcfService2
             ts.CGST = 0;
             ts.SGST = 0;
             ts.Total = ts.Amount;
+            ts.CashMemoNo = 0;
             db.txStoves.Add(ts);
             db.SaveChanges();
             return "OK";
         }
 
-        public string BookingCylinderTx(int cid, int qty)
+        public int BookingCylinderTx(int cid, int qty)
         {
             Customer c = db.Customers.Where(x => x.CustomerId == cid).FirstOrDefault();
             DistributorUser du = db.DistributorUsers.FirstOrDefault();
@@ -116,7 +119,8 @@ namespace WcfService2
                 tc.CGST = (tc.Amount * gst.CGST) / 100;
                 tc.SGST = (tc.Amount * gst.SGST) / 100;
             }
-           
+            int cmn = db.txCylinders.Select(x => x.CashMemoNo).Max(m => m) + 1 ;
+            tc.CashMemoNo = cmn;
             tc.Total = tc.Amount + tc.CGST + tc.SGST;
             db.txCylinders.Add(tc);
             db.SaveChanges();
@@ -136,7 +140,87 @@ namespace WcfService2
                 dbo1.SaveChanges();
             }
 
-            return "OK";
+            return cmn;
+        }
+
+        public int RegulatorTx(string cname, int qty)
+        {
+            TxStoveRegulator tx = new TxStoveRegulator();
+            Customer c = null;
+            c = db.Customers.Where(x => x.CustomerName.Equals(cname)).FirstOrDefault();
+            if (c != null)
+            {
+                tx.CustomerId = c.CustomerId;
+                tx.CustomerName = c.CustomerName;
+            }
+            else
+            {
+                tx.CustomerId = 0;
+                tx.CustomerName = cname;
+            }
+            tx.TxDate = DateTime.Now;
+            tx.Details = "Regulator";
+            tx.Quentity = qty;
+            var reg = db.Stoves.Where(x => x.type.Equals("Regulator")).FirstOrDefault();
+            tx.Price = reg.Price;
+            tx.Amount = qty * tx.Price;
+            var gst = db.GSTRates.Where(x => x.Comodity.Equals("Regulator")).FirstOrDefault();
+            tx.CGST = tx.Amount * gst.CGST / 100;
+            tx.SGST = tx.Amount * gst.SGST / 100;
+            tx.Total = tx.Amount + tx.CGST + tx.SGST;
+            int cmn = db.txStoves.Select(x => x.CashMemoNo).Max(m => m) + 1;
+            tx.CashMemoNo = cmn;
+            db.txStoves.Add(tx);
+            db.SaveChanges();
+            using (LPGContext dbo = new LPGContext())
+            {
+                var result = dbo.Stoves.Where(x => x.type.Equals("Regulator")).FirstOrDefault();
+                result.Quentity = result.Quentity - qty;
+                dbo.SaveChanges();
+            }
+            return cmn;
+        }
+
+        public int StoveTx(string cname,string prod, int qty, int cmno)
+        {
+            TxStoveRegulator tx = new TxStoveRegulator();
+            Customer c = null;
+            c = db.Customers.Where(x => x.CustomerName.Equals(cname)).FirstOrDefault();
+            if (c != null)
+            {
+                tx.CustomerId = c.CustomerId;
+                tx.CustomerName = c.CustomerName;
+            }
+            else
+            {
+                tx.CustomerId = 0;
+                tx.CustomerName = cname;
+            }
+            tx.TxDate = DateTime.Now;
+            tx.Details = prod;
+            tx.Quentity = qty;
+            var reg = db.Stoves.Where(x => x.type.Equals(prod)).FirstOrDefault();
+            tx.Price = reg.Price;
+            tx.Amount = qty * tx.Price;
+            var gst = db.GSTRates.Where(x => x.Comodity.Equals("Stove")).FirstOrDefault();
+            tx.CGST = tx.Amount * gst.CGST / 100;
+            tx.SGST = tx.Amount * gst.SGST / 100;
+            tx.Total = tx.Amount + tx.CGST + tx.SGST;
+            int cmn = 0;
+            if (cmno == 0)
+                cmn = db.txStoves.Select(x => x.CashMemoNo).Max(m => m) + 1;
+            else
+                cmn = cmno;
+            tx.CashMemoNo = cmn;
+            db.txStoves.Add(tx);
+            db.SaveChanges();
+            using (LPGContext dbo = new LPGContext())
+            {
+                var result = dbo.Stoves.Where(x => x.type.Equals(prod)).FirstOrDefault();
+                result.Quentity = result.Quentity - qty;
+                dbo.SaveChanges();
+            }
+            return cmn;
         }
     }
 }

@@ -104,6 +104,22 @@
     <Compile Include="Migrations\202002261322210_v3.designer.cs">
       <DependentUpon>202002261322210_v3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002271105226_v4.cs" />
+    <Compile Include="Migrations\202002271105226_v4.designer.cs">
+      <DependentUpon>202002271105226_v4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002271108128_v41.cs" />
+    <Compile Include="Migrations\202002271108128_v41.designer.cs">
+      <DependentUpon>202002271108128_v41.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002271120292_v6.cs" />
+    <Compile Include="Migrations\202002271120292_v6.designer.cs">
+      <DependentUpon>202002271120292_v6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002271241053_v7.cs" />
+    <Compile Include="Migrations\202002271241053_v7.designer.cs">
+      <DependentUpon>202002271241053_v7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StockMgnt.svc.cs">
@@ -136,6 +152,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002261322210_v3.resx">
       <DependentUpon>202002261322210_v3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002271105226_v4.resx">
+      <DependentUpon>202002271105226_v4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002271108128_v41.resx">
+      <DependentUpon>202002271108128_v41.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002271120292_v6.resx">
+      <DependentUpon>202002271120292_v6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002271241053_v7.resx">
+      <DependentUpon>202002271241053_v7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

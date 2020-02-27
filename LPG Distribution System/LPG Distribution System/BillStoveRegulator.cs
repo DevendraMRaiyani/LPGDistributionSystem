@@ -17,7 +17,7 @@ namespace LPG_Distribution_System
         {
             InitializeComponent();
         }
-
+        string[] customersNames = null;
         private void BillStoveRegulator_Load(object sender, EventArgs e)
         {
             Location = new Point(-7, 50);
@@ -31,6 +31,15 @@ namespace LPG_Distribution_System
                 stoves = client.GetStoves().ToList();
                 List<StockMgntRef.Stove> stoveTypes = stoves.Where(x => x.Price != 0).Select(x => x).ToList();
                 dataGridView2.DataSource = stoveTypes;
+            }
+            using (CustomerMgntRef.CustomerMgntClient client1 = new CustomerMgntRef.CustomerMgntClient())
+            {
+                customersNames = client1.GetCustomersName();
+                AutoCompleteStringCollection acsc = new AutoCompleteStringCollection();
+                acsc.AddRange(customersNames);
+                textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
+                textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                textBox1.AutoCompleteCustomSource = acsc;
             }
         }
 
@@ -49,7 +58,102 @@ namespace LPG_Distribution_System
                 e.Handled = true;
             }
         }
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string rowcontent = "";
+            int f = 1;
+            foreach (DataGridViewRow row in dataGridView2.SelectedRows)
+            {
+                rowcontent = row.Cells[0].Value.ToString();
+
+                foreach (DataGridViewRow row1 in dataGridView1.Rows)
+                {
+                    if (row1.Cells[0].Value != null)
+                    {
+                        if (row1.Cells[0].Value.Equals(rowcontent))
+                        {
+                            f = 0;
+                            break;
+                        }
+                        else
+                            f = 1;
+                    }
+                }
+                if (f == 1)
+                {
+                    DataGridViewRow nrow = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    nrow.Cells[0].Value = rowcontent;
+                    nrow.Cells[1].Value = 0;
+                    dataGridView1.Rows.Add(nrow);
+                }
+                f = 1;
+            }
+            dataGridView1.Sort(dataGridView1.Columns["Product"], ListSortDirection.Descending);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row1 in dataGridView1.SelectedRows)
+            {
+                if(row1.Cells[0].Value!=null)
+                    dataGridView1.Rows.Remove(row1);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string cname = textBox1.Text.Trim();
+            int cmnum = 0;
+            string product = "";
+            int qty = 0;
+            if (cname.Length>0)
+            {
+                int imageWidth, tbQty = 0;
+                if (Int32.TryParse(textBox2.Text, out imageWidth))
+                {
+                    tbQty = imageWidth;
+                }
+                if (tbQty > 0)
+                {
+                    StockMgntRef.StockMgntClient stockMgntClient = new StockMgntRef.StockMgntClient();
+                    int regStock=stockMgntClient.GetRegulators().Quentity;
+                    if (regStock>=tbQty)
+                    {
+                        TransactionMgnt.TransactionMgntClient client = new TransactionMgnt.TransactionMgntClient();
+                        cmnum = client.RegulatorTx(cname, tbQty);
+                    }
+                    else
+                        MessageBox.Show("Not Enough Stock of Regulators!!!");
+                }
+                foreach (DataGridViewRow row1 in dataGridView1.Rows)
+                {
+                    if (row1.Cells[0].Value != null)
+                    {
+                        product = row1.Cells[0].Value.ToString();
+                        if (int.Parse(row1.Cells[1].Value.ToString()) > 0)
+                        {
+                            int stoveStock = stoves.Where(x => x.Product.Equals(product)).FirstOrDefault().Quentity;
+                            if (stoveStock >= qty)
+                            {
+                                qty = int.Parse(row1.Cells[1].Value.ToString());
+                                TransactionMgnt.TransactionMgntClient client1 = new TransactionMgnt.TransactionMgntClient();
+                                cmnum = client1.StoveTx(cname, product, qty, cmnum);
+                            }
+                            else
+                                MessageBox.Show("Not Enough Stock of Stove '"+product +"' !!!");
+                        }
+                    }
+                }
+                if (cmnum > 0)
+                {
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    dataGridView1.Rows.Clear();
+                    MessageBox.Show("Transaction is done Successfully !!! \nCashmemo Number is " + cmnum);
+                }
+            }
+        }
+
         /*protected override void WndProc(ref Message message)
         {
             const int WM_SYSCOMMAND = 0x0112;

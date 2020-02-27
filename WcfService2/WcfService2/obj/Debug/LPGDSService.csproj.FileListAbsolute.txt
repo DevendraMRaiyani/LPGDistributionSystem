@@ -36,5 +36,9 @@ C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\De
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.v1.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\LPGDSService.csproj.GenerateResource.cache
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.v2.resources
-C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\LPGDSService.csprojAssemblyReference.cache
 C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.v3.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.v4.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.v41.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.v6.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\WcfService2.Migrations.v7.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\WcfService2\WcfService2\obj\Debug\LPGDSService.csprojAssemblyReference.cache

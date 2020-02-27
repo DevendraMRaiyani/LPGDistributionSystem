@@ -30,6 +30,18 @@
   <wsdl:message name="ITransactionMgnt_BookingCylinderTx_OutputMessage">
     <wsdl:part name="parameters" element="tns:BookingCylinderTxResponse" />
   </wsdl:message>
+  <wsdl:message name="ITransactionMgnt_RegulatorTx_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegulatorTx" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionMgnt_RegulatorTx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegulatorTxResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionMgnt_StoveTx_InputMessage">
+    <wsdl:part name="parameters" element="tns:StoveTx" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionMgnt_StoveTx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StoveTxResponse" />
+  </wsdl:message>
   <wsdl:portType name="ITransactionMgnt">
     <wsdl:operation name="AddRegulatorTx">
       <wsdl:input wsaw:Action="http://tempuri.org/ITransactionMgnt/AddRegulatorTx" message="tns:ITransactionMgnt_AddRegulatorTx_InputMessage" />
@@ -46,6 +58,14 @@
     <wsdl:operation name="BookingCylinderTx">
       <wsdl:input wsaw:Action="http://tempuri.org/ITransactionMgnt/BookingCylinderTx" message="tns:ITransactionMgnt_BookingCylinderTx_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITransactionMgnt/BookingCylinderTxResponse" message="tns:ITransactionMgnt_BookingCylinderTx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegulatorTx">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionMgnt/RegulatorTx" message="tns:ITransactionMgnt_RegulatorTx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionMgnt/RegulatorTxResponse" message="tns:ITransactionMgnt_RegulatorTx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoveTx">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionMgnt/StoveTx" message="tns:ITransactionMgnt_StoveTx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionMgnt/StoveTxResponse" message="tns:ITransactionMgnt_StoveTx_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITransactionMgnt" type="tns:ITransactionMgnt">
@@ -79,6 +99,24 @@
     </wsdl:operation>
     <wsdl:operation name="BookingCylinderTx">
       <soap:operation soapAction="http://tempuri.org/ITransactionMgnt/BookingCylinderTx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegulatorTx">
+      <soap:operation soapAction="http://tempuri.org/ITransactionMgnt/RegulatorTx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoveTx">
+      <soap:operation soapAction="http://tempuri.org/ITransactionMgnt/StoveTx" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
