@@ -83,6 +83,24 @@
     <Compile Include="CustomerTx\PrintBillFroCylinder.Designer.cs">
       <DependentUpon>PrintBillFroCylinder.cs</DependentUpon>
     </Compile>
+    <Compile Include="File\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="File\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="File\DistributorInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="File\DistributorInfo.Designer.cs">
+      <DependentUpon>DistributorInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="StockMgnt\AddCylinder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +197,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerTx\PrintBillFroCylinder.resx">
       <DependentUpon>PrintBillFroCylinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="File\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="File\DistributorInfo.resx">
+      <DependentUpon>DistributorInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockMgnt\AddCylinder.resx">
       <DependentUpon>AddCylinder.cs</DependentUpon>
@@ -396,8 +423,6 @@
   <ItemGroup>
     <None Include="Connected Services\AccountingRef\Accounting.disco" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="File\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

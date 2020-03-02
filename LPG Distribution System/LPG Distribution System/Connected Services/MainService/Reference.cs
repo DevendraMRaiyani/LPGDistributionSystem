@@ -29,6 +29,12 @@ namespace LPG_Distribution_System.MainService {
         private string AgencyNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContectNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int DisIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -36,6 +42,12 @@ namespace LPG_Distribution_System.MainService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DistributorNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DistrictField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string GSTINField;
@@ -51,6 +63,12 @@ namespace LPG_Distribution_System.MainService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TalukaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UsernameField;
@@ -92,6 +110,32 @@ namespace LPG_Distribution_System.MainService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ContectNo {
+            get {
+                return this.ContectNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContectNoField, value) != true)) {
+                    this.ContectNoField = value;
+                    this.RaisePropertyChanged("ContectNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int DisId {
             get {
                 return this.DisIdField;
@@ -126,6 +170,32 @@ namespace LPG_Distribution_System.MainService {
                 if ((object.ReferenceEquals(this.DistributorNameField, value) != true)) {
                     this.DistributorNameField = value;
                     this.RaisePropertyChanged("DistributorName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string District {
+            get {
+                return this.DistrictField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DistrictField, value) != true)) {
+                    this.DistrictField = value;
+                    this.RaisePropertyChanged("District");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
                 }
             }
         }
@@ -196,6 +266,32 @@ namespace LPG_Distribution_System.MainService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string State {
+            get {
+                return this.StateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StateField, value) != true)) {
+                    this.StateField = value;
+                    this.RaisePropertyChanged("State");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Taluka {
+            get {
+                return this.TalukaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TalukaField, value) != true)) {
+                    this.TalukaField = value;
+                    this.RaisePropertyChanged("Taluka");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Username {
             get {
                 return this.UsernameField;
@@ -227,6 +323,24 @@ namespace LPG_Distribution_System.MainService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetDistributor", ReplyAction="http://tempuri.org/IMainService/GetDistributorResponse")]
         System.Threading.Tasks.Task<LPG_Distribution_System.MainService.DistributorUser> GetDistributorAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetPassword", ReplyAction="http://tempuri.org/IMainService/GetPasswordResponse")]
+        string GetPassword(int dcode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetPassword", ReplyAction="http://tempuri.org/IMainService/GetPasswordResponse")]
+        System.Threading.Tasks.Task<string> GetPasswordAsync(int dcode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/SetPassword", ReplyAction="http://tempuri.org/IMainService/SetPasswordResponse")]
+        string SetPassword(string newpass, int dcode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/SetPassword", ReplyAction="http://tempuri.org/IMainService/SetPasswordResponse")]
+        System.Threading.Tasks.Task<string> SetPasswordAsync(string newpass, int dcode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/Login", ReplyAction="http://tempuri.org/IMainService/LoginResponse")]
+        LPG_Distribution_System.MainService.DistributorUser Login(string unm, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/Login", ReplyAction="http://tempuri.org/IMainService/LoginResponse")]
+        System.Threading.Tasks.Task<LPG_Distribution_System.MainService.DistributorUser> LoginAsync(string unm, string pass);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -262,6 +376,30 @@ namespace LPG_Distribution_System.MainService {
         
         public System.Threading.Tasks.Task<LPG_Distribution_System.MainService.DistributorUser> GetDistributorAsync() {
             return base.Channel.GetDistributorAsync();
+        }
+        
+        public string GetPassword(int dcode) {
+            return base.Channel.GetPassword(dcode);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetPasswordAsync(int dcode) {
+            return base.Channel.GetPasswordAsync(dcode);
+        }
+        
+        public string SetPassword(string newpass, int dcode) {
+            return base.Channel.SetPassword(newpass, dcode);
+        }
+        
+        public System.Threading.Tasks.Task<string> SetPasswordAsync(string newpass, int dcode) {
+            return base.Channel.SetPasswordAsync(newpass, dcode);
+        }
+        
+        public LPG_Distribution_System.MainService.DistributorUser Login(string unm, string pass) {
+            return base.Channel.Login(unm, pass);
+        }
+        
+        public System.Threading.Tasks.Task<LPG_Distribution_System.MainService.DistributorUser> LoginAsync(string unm, string pass) {
+            return base.Channel.LoginAsync(unm, pass);
         }
     }
 }

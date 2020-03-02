@@ -1,6 +1,7 @@
 ﻿using LPG_Distribution_System.Accounting;
 using LPG_Distribution_System.CustomerMgnt;
 using LPG_Distribution_System.CustomerTx;
+using LPG_Distribution_System.File;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,11 +70,13 @@ namespace LPG_Distribution_System
 
         private void home_FormClosing(object sender, FormClosingEventArgs e)
         {
-            /*if (e.CloseReason == CloseReason.UserClosing)
+            if (e.CloseReason == CloseReason.UserClosing)
             {
                 if (MessageBox.Show("About to exit program?", "Confirm Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+                {
                     e.Cancel = true;
-            }*/
+                }
+            }
         }
 
         private void generateBillForStovesAndRegulatorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,12 +93,14 @@ namespace LPG_Distribution_System
 
         private void distributorInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            DistributorInfo distributorInfo = new DistributorInfo();
+            distributorInfo.Show();
         }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.Show();
         }
 
         private void printBillForCylinderToolStripMenuItem_Click(object sender, EventArgs e)
