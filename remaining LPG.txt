@@ -15,6 +15,7 @@
 15. Required Field Constraints in Customer mgnt
 16. Date in Customer table and Customer mgnt
 17. Accounting Export Records
+18. Globle Distributor User for a Application
 Uncomment: 1. in all forms a method for prevent drag and resizing
 		2. conformation hile closing home
 

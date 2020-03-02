@@ -87,6 +87,14 @@
     </Compile>
     <Compile Include="Accounting\IAccounting.cs" />
     <Compile Include="MainService\IMainService.cs" />
+    <Compile Include="Migrations\202003021557200_du.cs" />
+    <Compile Include="Migrations\202003021557200_du.designer.cs">
+      <DependentUpon>202003021557200_du.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003021614123_du1.cs" />
+    <Compile Include="Migrations\202003021614123_du1.designer.cs">
+      <DependentUpon>202003021614123_du1.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransactionMgnt\ITransactionMgnt.cs" />
     <Compile Include="LPGContext.cs" />
     <Compile Include="CustomerMgnt\CustomerMgnt.svc.cs">
@@ -167,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002271241053_v7.resx">
       <DependentUpon>202002271241053_v7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003021557200_du.resx">
+      <DependentUpon>202003021557200_du.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003021614123_du1.resx">
+      <DependentUpon>202003021614123_du1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

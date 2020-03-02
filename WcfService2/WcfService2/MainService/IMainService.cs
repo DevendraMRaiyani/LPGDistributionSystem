@@ -14,6 +14,15 @@ namespace WcfService2
     {
         [OperationContract]
         DistributorUser GetDistributor();
+
+        [OperationContract]
+        string GetPassword(int dcode);
+
+        [OperationContract]
+        string SetPassword(string newpass,int dcode);
+
+        [OperationContract]
+        DistributorUser Login(string unm,string pass);
     }
 
     [DataContract]
@@ -52,5 +61,23 @@ namespace WcfService2
 
         [DataMember]
         public string Address { get; set; }
+
+        [DataMember]
+        public string City { get; set; }
+
+        [DataMember]
+        public string Taluka { get; set; }
+
+        [DataMember]
+        public string District { get; set; }
+
+        [DataMember]
+        public string State { get; set; }
+
+        [DataMember]
+        public string ContectNo { get; set; }
+
+        [DataMember]
+        public string Email { get; set; }
     }
 }

@@ -13,16 +13,73 @@
   <wsdl:message name="IMainService_GetDistributor_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDistributorResponse" />
   </wsdl:message>
+  <wsdl:message name="IMainService_GetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_SetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_SetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMainService">
     <wsdl:operation name="GetDistributor">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetDistributor" message="tns:IMainService_GetDistributor_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetDistributorResponse" message="tns:IMainService_GetDistributor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetPassword" message="tns:IMainService_GetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetPasswordResponse" message="tns:IMainService_GetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/SetPassword" message="tns:IMainService_SetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/SetPasswordResponse" message="tns:IMainService_SetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/Login" message="tns:IMainService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/LoginResponse" message="tns:IMainService_Login_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMainService" type="tns:IMainService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetDistributor">
       <soap:operation soapAction="http://tempuri.org/IMainService/GetDistributor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <soap:operation soapAction="http://tempuri.org/IMainService/GetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPassword">
+      <soap:operation soapAction="http://tempuri.org/IMainService/SetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IMainService/Login" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

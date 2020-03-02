@@ -16,5 +16,25 @@ namespace WcfService2
         {
             return db.DistributorUsers.FirstOrDefault();
         }
+
+        public string GetPassword(int dcode)
+        {
+            return db.DistributorUsers.Where(x => x.DistributorCode == dcode).Select(s => s.Password).FirstOrDefault();
+        }
+
+        public DistributorUser Login(string unm, string pass)
+        {
+            DistributorUser duser = null;
+            duser = db.DistributorUsers.Where(x => x.Username.Equals(unm) && x.Password.Equals(pass)).FirstOrDefault();
+            return duser;
+        }
+
+        public string SetPassword(string newpass,int dcode)
+        {
+            var result = db.DistributorUsers.Where(x => x.DistributorCode == dcode).FirstOrDefault();
+            result.Password = newpass;
+            db.SaveChanges();
+            return "OK";
+        }
     }
 }
