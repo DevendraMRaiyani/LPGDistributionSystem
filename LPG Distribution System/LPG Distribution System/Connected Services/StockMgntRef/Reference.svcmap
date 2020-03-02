@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:54601/StockMgnt.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:54601/StockMgnt/StockMgnt.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="StockMgnt.xsd" MetadataType="Schema" ID="5e027468-64d2-4e7f-8e90-b696b52b93af" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt.svc?xsd=xsd0" />
-    <MetadataFile FileName="StockMgnt.wsdl" MetadataType="Wsdl" ID="68723bda-8cae-4355-b619-dec3c38cce62" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt.svc?wsdl" />
-    <MetadataFile FileName="StockMgnt1.xsd" MetadataType="Schema" ID="24c583e7-8f3b-41b4-b60d-a42941276823" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt.svc?xsd=xsd1" />
-    <MetadataFile FileName="StockMgnt.disco" MetadataType="Disco" ID="5e87fea8-063c-4dbf-96d7-648defa08238" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt.svc?disco" />
-    <MetadataFile FileName="StockMgnt11.xsd" MetadataType="Schema" ID="c1ff59ed-4413-46c7-8f94-dce8d220269d" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt.svc?xsd=xsd2" />
+    <MetadataFile FileName="StockMgnt2.xsd" MetadataType="Schema" ID="03670512-3657-4add-8cca-c703b32b86b9" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt/StockMgnt.svc?xsd=xsd0" />
+    <MetadataFile FileName="StockMgnt1.disco" MetadataType="Disco" ID="a5917908-a3a4-4d34-b56e-487af30a9acc" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt/StockMgnt.svc?disco" />
+    <MetadataFile FileName="StockMgnt21.xsd" MetadataType="Schema" ID="89e848f1-9f88-462d-95c4-9fe7474185c8" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt/StockMgnt.svc?xsd=xsd2" />
+    <MetadataFile FileName="StockMgnt1.wsdl" MetadataType="Wsdl" ID="39c6e0f6-e8a9-4875-834f-ce0e2752c593" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt/StockMgnt.svc?wsdl" />
+    <MetadataFile FileName="StockMgnt22.xsd" MetadataType="Schema" ID="46ae2dad-d942-4309-bf19-1f1b70c2f228" SourceId="1" SourceUrl="http://localhost:54601/StockMgnt/StockMgnt.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

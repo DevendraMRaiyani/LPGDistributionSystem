@@ -1,4 +1,7 @@
-﻿using System;
+﻿using LPG_Distribution_System.Accounting;
+using LPG_Distribution_System.CustomerMgnt;
+using LPG_Distribution_System.CustomerTx;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,12 +41,6 @@ namespace LPG_Distribution_System
         {
             CloseConnection removeCustomer = new CloseConnection();
             removeCustomer.Show();
-        }
-
-        private void transferCustomerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TransferCustomer transferCustomer = new TransferCustomer();
-            transferCustomer.Show();
         }
 
         private void addCylindersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,6 +86,46 @@ namespace LPG_Distribution_System
         {
             BookCylinder bookCylinder = new BookCylinder();
             bookCylinder.Show();
+        }
+
+        private void distributorInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void printBillForCylinderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintBillFroCylinder printBillFroCylinder = new PrintBillFroCylinder();
+            printBillFroCylinder.Show();
+        }
+
+        private void summaryReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SummaryReport summaryReport = new SummaryReport();
+            summaryReport.Show();
+        }
+
+        private void cylinderReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CylinderReport cylinderReport = new CylinderReport();
+            cylinderReport.Show();
+        }
+
+        private void stoveAndRegulatorReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StoveandRegulatorReport stoveandRegulatorReport = new StoveandRegulatorReport();
+            stoveandRegulatorReport.Show();
+        }
+
+        private void customerRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerRegister customerRegister = new CustomerRegister();
+            customerRegister.Show();
         }
     }
 }

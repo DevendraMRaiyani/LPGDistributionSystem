@@ -9,7 +9,86 @@
 //------------------------------------------------------------------------------
 
 namespace LPG_Distribution_System.TransactionMgnt {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GSTRates", Namespace="http://schemas.datacontract.org/2004/07/WcfService2")]
+    [System.SerializableAttribute()]
+    public partial class GSTRates : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double CGSTField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ComodityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double SGSTField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double CGST {
+            get {
+                return this.CGSTField;
+            }
+            set {
+                if ((this.CGSTField.Equals(value) != true)) {
+                    this.CGSTField = value;
+                    this.RaisePropertyChanged("CGST");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Comodity {
+            get {
+                return this.ComodityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ComodityField, value) != true)) {
+                    this.ComodityField = value;
+                    this.RaisePropertyChanged("Comodity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double SGST {
+            get {
+                return this.SGSTField;
+            }
+            set {
+                if ((this.SGSTField.Equals(value) != true)) {
+                    this.SGSTField = value;
+                    this.RaisePropertyChanged("SGST");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TransactionMgnt.ITransactionMgnt")]
@@ -50,6 +129,12 @@ namespace LPG_Distribution_System.TransactionMgnt {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/StoveTx", ReplyAction="http://tempuri.org/ITransactionMgnt/StoveTxResponse")]
         System.Threading.Tasks.Task<int> StoveTxAsync(string cname, string prod, int qty, int cmno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/GetGSTRates", ReplyAction="http://tempuri.org/ITransactionMgnt/GetGSTRatesResponse")]
+        LPG_Distribution_System.TransactionMgnt.GSTRates[] GetGSTRates();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/GetGSTRates", ReplyAction="http://tempuri.org/ITransactionMgnt/GetGSTRatesResponse")]
+        System.Threading.Tasks.Task<LPG_Distribution_System.TransactionMgnt.GSTRates[]> GetGSTRatesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -125,6 +210,14 @@ namespace LPG_Distribution_System.TransactionMgnt {
         
         public System.Threading.Tasks.Task<int> StoveTxAsync(string cname, string prod, int qty, int cmno) {
             return base.Channel.StoveTxAsync(cname, prod, qty, cmno);
+        }
+        
+        public LPG_Distribution_System.TransactionMgnt.GSTRates[] GetGSTRates() {
+            return base.Channel.GetGSTRates();
+        }
+        
+        public System.Threading.Tasks.Task<LPG_Distribution_System.TransactionMgnt.GSTRates[]> GetGSTRatesAsync() {
+            return base.Channel.GetGSTRatesAsync();
         }
     }
 }

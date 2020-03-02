@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="kL3wROpJuspYLLZe5Q1L6Uc4Qqk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Kv5MeZJMURqUGs+MzX8Z4RKJ3kw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IMainService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IMainService" contract="MainService.IMainService" bindingType="basicHttpBinding" address="http://localhost:54601/MainService.svc" bindingConfiguration="BasicHttpBinding_IMainService">
+    <endpoint name="BasicHttpBinding_IMainService" contract="MainService.IMainService" bindingType="basicHttpBinding" address="http://localhost:54601/MainService/MainService.svc" bindingConfiguration="BasicHttpBinding_IMainService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:54601/MainService.svc</serializedValue>
+          <serializedValue>http://localhost:54601/MainService/MainService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
