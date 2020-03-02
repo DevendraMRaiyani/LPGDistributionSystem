@@ -324,11 +324,29 @@ namespace LPG_Distribution_System.CustomerMgntRef {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/AddCustomer", ReplyAction="http://tempuri.org/ICustomerMgnt/AddCustomerResponse")]
         System.Threading.Tasks.Task<LPG_Distribution_System.CustomerMgntRef.Customer> AddCustomerAsync(LPG_Distribution_System.CustomerMgntRef.Customer customer);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/UpdateCustomer", ReplyAction="http://tempuri.org/ICustomerMgnt/UpdateCustomerResponse")]
+        string UpdateCustomer(LPG_Distribution_System.CustomerMgntRef.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/UpdateCustomer", ReplyAction="http://tempuri.org/ICustomerMgnt/UpdateCustomerResponse")]
+        System.Threading.Tasks.Task<string> UpdateCustomerAsync(LPG_Distribution_System.CustomerMgntRef.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/DeleteCustomer", ReplyAction="http://tempuri.org/ICustomerMgnt/DeleteCustomerResponse")]
+        string DeleteCustomer(int cid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/DeleteCustomer", ReplyAction="http://tempuri.org/ICustomerMgnt/DeleteCustomerResponse")]
+        System.Threading.Tasks.Task<string> DeleteCustomerAsync(int cid);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomer", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomerResponse")]
         LPG_Distribution_System.CustomerMgntRef.Customer GetCustomer(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomer", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomerResponse")]
         System.Threading.Tasks.Task<LPG_Distribution_System.CustomerMgntRef.Customer> GetCustomerAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomers", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomersResponse")]
+        LPG_Distribution_System.CustomerMgntRef.Customer[] GetCustomers(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomers", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomersResponse")]
+        System.Threading.Tasks.Task<LPG_Distribution_System.CustomerMgntRef.Customer[]> GetCustomersAsync(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerMgnt/GetCustomersName", ReplyAction="http://tempuri.org/ICustomerMgnt/GetCustomersNameResponse")]
         string[] GetCustomersName();
@@ -378,12 +396,36 @@ namespace LPG_Distribution_System.CustomerMgntRef {
             return base.Channel.AddCustomerAsync(customer);
         }
         
+        public string UpdateCustomer(LPG_Distribution_System.CustomerMgntRef.Customer customer) {
+            return base.Channel.UpdateCustomer(customer);
+        }
+        
+        public System.Threading.Tasks.Task<string> UpdateCustomerAsync(LPG_Distribution_System.CustomerMgntRef.Customer customer) {
+            return base.Channel.UpdateCustomerAsync(customer);
+        }
+        
+        public string DeleteCustomer(int cid) {
+            return base.Channel.DeleteCustomer(cid);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeleteCustomerAsync(int cid) {
+            return base.Channel.DeleteCustomerAsync(cid);
+        }
+        
         public LPG_Distribution_System.CustomerMgntRef.Customer GetCustomer(string name) {
             return base.Channel.GetCustomer(name);
         }
         
         public System.Threading.Tasks.Task<LPG_Distribution_System.CustomerMgntRef.Customer> GetCustomerAsync(string name) {
             return base.Channel.GetCustomerAsync(name);
+        }
+        
+        public LPG_Distribution_System.CustomerMgntRef.Customer[] GetCustomers(string name) {
+            return base.Channel.GetCustomers(name);
+        }
+        
+        public System.Threading.Tasks.Task<LPG_Distribution_System.CustomerMgntRef.Customer[]> GetCustomersAsync(string name) {
+            return base.Channel.GetCustomersAsync(name);
         }
         
         public string[] GetCustomersName() {

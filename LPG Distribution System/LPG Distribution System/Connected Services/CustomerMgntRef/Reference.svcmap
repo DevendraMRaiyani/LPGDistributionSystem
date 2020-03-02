@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:54601/CustomerMgnt.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:54601/CustomerMgnt/CustomerMgnt.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="8b773c61-8141-4d83-8842-91f2897aba50" SourceId="1" SourceUrl="http://localhost:54601/CustomerMgnt.svc?wsdl" />
-    <MetadataFile FileName="CustomerMgnt3.xsd" MetadataType="Schema" ID="0b11a413-8b38-47b7-9e24-da718d652301" SourceId="1" SourceUrl="http://localhost:54601/CustomerMgnt.svc?xsd=xsd3" />
-    <MetadataFile FileName="CustomerMgnt.xsd" MetadataType="Schema" ID="96d4cbca-8b59-47e0-9e49-479c09eaa5e9" SourceId="1" SourceUrl="http://localhost:54601/CustomerMgnt.svc?xsd=xsd1" />
-    <MetadataFile FileName="CustomerMgnt2.xsd" MetadataType="Schema" ID="38a7a8a1-fbc5-4d6c-96c5-b3b219cfe97a" SourceId="1" SourceUrl="http://localhost:54601/CustomerMgnt.svc?xsd=xsd0" />
-    <MetadataFile FileName="CustomerMgnt1.xsd" MetadataType="Schema" ID="cf4fb765-23d3-404a-b31a-1ea4573875d9" SourceId="1" SourceUrl="http://localhost:54601/CustomerMgnt.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="1ded6d21-eb78-4321-b35e-de158570073b" SourceId="1" SourceUrl="http://localhost:54601/CustomerMgnt/CustomerMgnt.svc?wsdl" />
+    <MetadataFile FileName="CustomerMgnt4.xsd" MetadataType="Schema" ID="d57fe4f8-5fc4-4cee-969f-a74f95ee24f7" SourceId="1" SourceUrl="http://localhost:54601/CustomerMgnt/CustomerMgnt.svc?xsd=xsd1" />
+    <MetadataFile FileName="CustomerMgnt41.xsd" MetadataType="Schema" ID="3b235114-0208-4340-b955-e11bb74e89ea" SourceId="1" SourceUrl="http://localhost:54601/CustomerMgnt/CustomerMgnt.svc?xsd=xsd0" />
+    <MetadataFile FileName="CustomerMgnt42.xsd" MetadataType="Schema" ID="4b87f131-4018-474e-b701-7f95245f61f5" SourceId="1" SourceUrl="http://localhost:54601/CustomerMgnt/CustomerMgnt.svc?xsd=xsd3" />
+    <MetadataFile FileName="CustomerMgnt43.xsd" MetadataType="Schema" ID="c901065c-e34f-4b48-98d5-a7b1fe7fc0b4" SourceId="1" SourceUrl="http://localhost:54601/CustomerMgnt/CustomerMgnt.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

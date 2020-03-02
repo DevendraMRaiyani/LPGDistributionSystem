@@ -48,34 +48,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCylinder.cs">
+    <Compile Include="Accounting\CylinderReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCylinder.Designer.cs">
+    <Compile Include="Accounting\CylinderReport.Designer.cs">
+      <DependentUpon>CylinderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\StoveandRegulatorReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\StoveandRegulatorReport.Designer.cs">
+      <DependentUpon>StoveandRegulatorReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\SummaryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\SummaryReport.Designer.cs">
+      <DependentUpon>SummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AccountingRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMgnt\CustomerRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerMgnt\CustomerRegister.Designer.cs">
+      <DependentUpon>CustomerRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerTx\PrintBillFroCylinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerTx\PrintBillFroCylinder.Designer.cs">
+      <DependentUpon>PrintBillFroCylinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockMgnt\AddCylinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockMgnt\AddCylinder.Designer.cs">
       <DependentUpon>AddCylinder.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewCustomer.cs">
+    <Compile Include="CustomerMgnt\AddNewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewCustomer.Designer.cs">
+    <Compile Include="CustomerMgnt\AddNewCustomer.Designer.cs">
       <DependentUpon>AddNewCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStoveRegulator.cs">
+    <Compile Include="StockMgnt\AddStoveRegulator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStoveRegulator.Designer.cs">
+    <Compile Include="StockMgnt\AddStoveRegulator.Designer.cs">
       <DependentUpon>AddStoveRegulator.cs</DependentUpon>
     </Compile>
-    <Compile Include="BillStoveRegulator.cs">
+    <Compile Include="CustomerTx\BillStoveRegulator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BillStoveRegulator.Designer.cs">
+    <Compile Include="CustomerTx\BillStoveRegulator.Designer.cs">
       <DependentUpon>BillStoveRegulator.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChangeCustomerDetails.cs">
+    <Compile Include="CustomerMgnt\ChangeCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangeCustomerDetails.Designer.cs">
+    <Compile Include="CustomerMgnt\ChangeCustomerDetails.Designer.cs">
       <DependentUpon>ChangeCustomerDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\CustomerMgntRef\Reference.cs">
@@ -98,10 +133,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="BookCylinder.cs">
+    <Compile Include="CustomerTx\BookCylinder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BookCylinder.Designer.cs">
+    <Compile Include="CustomerTx\BookCylinder.Designer.cs">
       <DependentUpon>BookCylinder.cs</DependentUpon>
     </Compile>
     <Compile Include="home.cs">
@@ -112,46 +147,55 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CloseConnection.cs">
+    <Compile Include="CustomerMgnt\CloseConnection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CloseConnection.Designer.cs">
+    <Compile Include="CustomerMgnt\CloseConnection.Designer.cs">
       <DependentUpon>CloseConnection.cs</DependentUpon>
     </Compile>
-    <Compile Include="SetPrice.cs">
+    <Compile Include="StockMgnt\SetPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SetPrice.Designer.cs">
+    <Compile Include="StockMgnt\SetPrice.Designer.cs">
       <DependentUpon>SetPrice.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransferCustomer.cs">
+    <Compile Include="StockMgnt\ViewStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransferCustomer.Designer.cs">
-      <DependentUpon>TransferCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewStock.Designer.cs">
+    <Compile Include="StockMgnt\ViewStock.Designer.cs">
       <DependentUpon>ViewStock.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddCylinder.resx">
+    <EmbeddedResource Include="Accounting\CylinderReport.resx">
+      <DependentUpon>CylinderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\StoveandRegulatorReport.resx">
+      <DependentUpon>StoveandRegulatorReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\SummaryReport.resx">
+      <DependentUpon>SummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerMgnt\CustomerRegister.resx">
+      <DependentUpon>CustomerRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerTx\PrintBillFroCylinder.resx">
+      <DependentUpon>PrintBillFroCylinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockMgnt\AddCylinder.resx">
       <DependentUpon>AddCylinder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNewCustomer.resx">
+    <EmbeddedResource Include="CustomerMgnt\AddNewCustomer.resx">
       <DependentUpon>AddNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStoveRegulator.resx">
+    <EmbeddedResource Include="StockMgnt\AddStoveRegulator.resx">
       <DependentUpon>AddStoveRegulator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BillStoveRegulator.resx">
+    <EmbeddedResource Include="CustomerTx\BillStoveRegulator.resx">
       <DependentUpon>BillStoveRegulator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCustomerDetails.resx">
+    <EmbeddedResource Include="CustomerMgnt\ChangeCustomerDetails.resx">
       <DependentUpon>ChangeCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BookCylinder.resx">
+    <EmbeddedResource Include="CustomerTx\BookCylinder.resx">
       <DependentUpon>BookCylinder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
@@ -167,45 +211,58 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="CloseConnection.resx">
+    <EmbeddedResource Include="CustomerMgnt\CloseConnection.resx">
       <DependentUpon>CloseConnection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SetPrice.resx">
+    <EmbeddedResource Include="StockMgnt\SetPrice.resx">
       <DependentUpon>SetPrice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransferCustomer.resx">
-      <DependentUpon>TransferCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewStock.resx">
+    <EmbeddedResource Include="StockMgnt\ViewStock.resx">
       <DependentUpon>ViewStock.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt.xsd">
+    <None Include="Connected Services\AccountingRef\Accounting.wsdl" />
+    <None Include="Connected Services\AccountingRef\Accounting.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt1.xsd">
+    <None Include="Connected Services\AccountingRef\Accounting1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt2.xsd">
+    <None Include="Connected Services\AccountingRef\Accounting2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt3.xsd">
+    <None Include="Connected Services\AccountingRef\LPG_Distribution_System.AccountingRef.TxCylinder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AccountingRef\LPG_Distribution_System.AccountingRef.TxStoveRegulator.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CustomerMgntRef\CustomerMgnt43.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CustomerMgntRef\LPG_Distribution_System.CustomerMgntRef.Customer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CustomerMgntRef\Service1.wsdl" />
+    <None Include="Connected Services\CustomerMgntRef\Service11.wsdl" />
     <None Include="Connected Services\MainService\LPG_Distribution_System.MainService.DistributorUser.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MainService\MainService.wsdl" />
-    <None Include="Connected Services\MainService\MainService.xsd">
+    <None Include="Connected Services\MainService\MainService1.wsdl" />
+    <None Include="Connected Services\MainService\MainService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MainService\MainService1.xsd">
+    <None Include="Connected Services\MainService\MainService31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MainService\MainService2.xsd">
+    <None Include="Connected Services\MainService\MainService32.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\StockMgntRef\LPG_Distribution_System.StockMgntRef.Cylinder.datasource">
@@ -214,21 +271,27 @@
     <None Include="Connected Services\StockMgntRef\LPG_Distribution_System.StockMgntRef.Stove.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\StockMgntRef\StockMgnt.wsdl" />
-    <None Include="Connected Services\StockMgntRef\StockMgnt.xsd">
+    <None Include="Connected Services\StockMgntRef\StockMgnt1.wsdl" />
+    <None Include="Connected Services\StockMgntRef\StockMgnt2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\StockMgntRef\StockMgnt1.xsd">
+    <None Include="Connected Services\StockMgntRef\StockMgnt21.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\StockMgntRef\StockMgnt11.xsd">
+    <None Include="Connected Services\StockMgntRef\StockMgnt22.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TransactionMgnt\TransactionMgnt.wsdl" />
-    <None Include="Connected Services\TransactionMgnt\TransactionMgnt.xsd">
+    <None Include="Connected Services\TransactionMgnt\LPG_Distribution_System.TransactionMgnt.GSTRates.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TransactionMgnt\TransactionMgnt1.wsdl" />
+    <None Include="Connected Services\TransactionMgnt\TransactionMgnt3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TransactionMgnt\TransactionMgnt1.xsd">
+    <None Include="Connected Services\TransactionMgnt\TransactionMgnt31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TransactionMgnt\TransactionMgnt32.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -255,6 +318,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AccountingRef\" />
     <WCFMetadataStorage Include="Connected Services\CustomerMgntRef\" />
     <WCFMetadataStorage Include="Connected Services\MainService\" />
     <WCFMetadataStorage Include="Connected Services\StockMgntRef\" />
@@ -273,9 +337,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\StockMgntRef\StockMgnt.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\StockMgntRef\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -286,9 +347,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\MainService\MainService.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\MainService\configuration91.svcinfo" />
@@ -303,9 +361,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TransactionMgnt\TransactionMgnt.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\TransactionMgnt\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -316,6 +371,33 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AccountingRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AccountingRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AccountingRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainService\MainService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StockMgntRef\StockMgnt1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TransactionMgnt\TransactionMgnt1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AccountingRef\Accounting.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="File\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

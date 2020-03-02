@@ -19,13 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:54601/TransactionMgnt.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:54601/TransactionMgnt/TransactionMgnt.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TransactionMgnt.wsdl" MetadataType="Wsdl" ID="5fd3ed33-49d4-404b-ad4a-7e19701137be" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt.svc?wsdl" />
-    <MetadataFile FileName="TransactionMgnt.disco" MetadataType="Disco" ID="cc29fe77-c94f-4605-af75-5d8aaecc485e" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt.svc?disco" />
-    <MetadataFile FileName="TransactionMgnt.xsd" MetadataType="Schema" ID="4d534575-7a8b-4a34-9972-350833b727c8" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt.svc?xsd=xsd0" />
-    <MetadataFile FileName="TransactionMgnt1.xsd" MetadataType="Schema" ID="c57e42a6-5877-47f6-97db-0c0926ad38f8" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt.svc?xsd=xsd1" />
+    <MetadataFile FileName="TransactionMgnt3.xsd" MetadataType="Schema" ID="48127f17-181a-48c1-b75b-041bfe5f68a9" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt/TransactionMgnt.svc?xsd=xsd1" />
+    <MetadataFile FileName="TransactionMgnt1.wsdl" MetadataType="Wsdl" ID="61128d2d-d798-470f-bcd0-d005ef1a27d1" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt/TransactionMgnt.svc?wsdl" />
+    <MetadataFile FileName="TransactionMgnt31.xsd" MetadataType="Schema" ID="2038fd07-54c2-4d23-a558-285b62d36bbe" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt/TransactionMgnt.svc?xsd=xsd2" />
+    <MetadataFile FileName="TransactionMgnt32.xsd" MetadataType="Schema" ID="7b8d2616-0711-4f64-8372-7915840a1dbb" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt/TransactionMgnt.svc?xsd=xsd0" />
+    <MetadataFile FileName="TransactionMgnt1.disco" MetadataType="Disco" ID="1548319b-b5e9-4025-ad29-5cb1e23a4860" SourceId="1" SourceUrl="http://localhost:54601/TransactionMgnt/TransactionMgnt.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

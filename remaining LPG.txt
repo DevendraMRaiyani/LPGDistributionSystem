@@ -9,13 +9,17 @@
 7. Deposite in New Customer
 8. PDF in Transections and close Connection
 9. help menu tool
-10.Add new Customer only digits field method (pincode contectnumber etc)
 11. Booking Cylinder Check for same day tx
 12. Testing for Mapping Table Id 10 & 11
 13. Singleton DP In Forms
+15. Required Field Constraints in Customer mgnt
+16. Date in Customer table and Customer mgnt
+17. Accounting Export Records
 Uncomment: 1. in all forms a method for prevent drag and resizing
 		2. conformation hile closing home
 
 Smit Bro:---
 PDF design improvement in "new Customer"
-BillForStoveAndRegulator form propertis
+BillForStoveAndRegulator,File folder all forms form propertis
+Change Password and Distributor info implementation
+In costomer mgnt (adhar no, rashan no, pin no, contect no , bak ac no) cant enter char
