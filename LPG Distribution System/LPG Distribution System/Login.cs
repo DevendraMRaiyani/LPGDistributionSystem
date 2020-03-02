@@ -15,19 +15,30 @@ namespace LPG_Distribution_System
         public Login()
         {
             InitializeComponent();
-            label3.Text = "";
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text=="admin"  && textBox2.Text=="admin")
+            CustomerMgntRef.CustomerMgntClient client = new CustomerMgntRef.CustomerMgntClient();
+            CustomerMgntRef.Customer c = new CustomerMgntRef.Customer();
+            //query for searching username and password... if found then inside if  or else wrong password !!
+            if(textBox1.Text=="user1" && textBox2.Text=="user1")
             {
-                home hm = new home();
-                hm.Show();
+                home h = new home();
+                h.Show();
             }
             else
             {
-                label3.Text = "Username or Password is incorrect.";
+                
+                label3.Text = "Username or Password is Wrong !!";
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
         }
     }
