@@ -2,25 +2,19 @@
 1. when textbox is empty then press save button , it will throw 	exception in stock mgnt All
 
 2. Check Connection to service
-3. login
-4. conformation messages in stock mgnt
-5. For SOC add Get Costomer Details
 6. Remove Icon from forms
 7. Deposite in New Customer
-8. PDF in Transections and close Connection
-9. help menu tool
 11. Booking Cylinder Check for same day tx
 12. Testing for Mapping Table Id 10 & 11
 13. Singleton DP In Forms
 15. Required Field Constraints in Customer mgnt
-16. Date in Customer table and Customer mgnt
 17. Accounting Export Records
 18. Globle Distributor User for a Application
 Uncomment: 1. in all forms a method for prevent drag and resizing
-		2. conformation hile closing home
+		2. login
 
 Smit Bro:---
-PDF design improvement in "new Customer"
-BillForStoveAndRegulator,File folder all forms form propertis
-Change Password and Distributor info implementation
-In costomer mgnt (adhar no, rashan no, pin no, contect no , bak ac no) cant enter char
+1.PDF design improvement in "new Customer", close customer
+BillForStoveAndRegulator,File, Login folder all forms form propertis
+2.In costomer mgnt (adhar no, rashan no, pin no, contect no , bak ac no) cant enter char
+3. PDF in Transections and close Connection
