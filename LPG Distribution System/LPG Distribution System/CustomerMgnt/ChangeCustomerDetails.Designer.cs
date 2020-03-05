@@ -93,6 +93,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(176, 26);
             this.textBox15.TabIndex = 201;
+            this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox15_KeyPress);
             // 
             // label19
             // 
@@ -112,6 +113,7 @@
             this.textBox14.ReadOnly = true;
             this.textBox14.Size = new System.Drawing.Size(259, 26);
             this.textBox14.TabIndex = 199;
+            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
             // 
             // label18
             // 
@@ -151,6 +153,7 @@
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(259, 26);
             this.textBox11.TabIndex = 195;
+            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox11_KeyPress);
             // 
             // label22
             // 
@@ -296,6 +299,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(176, 26);
             this.textBox8.TabIndex = 180;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // textBox7
             // 
@@ -337,6 +341,7 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(260, 26);
             this.textBox3.TabIndex = 175;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // button2
             // 
@@ -435,7 +440,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1312, 922);
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.textBox2);

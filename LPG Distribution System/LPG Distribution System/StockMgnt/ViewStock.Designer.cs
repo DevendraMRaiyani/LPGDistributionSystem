@@ -123,6 +123,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -135,6 +136,7 @@
             this.productDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
             this.productDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
             this.productDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -142,15 +144,19 @@
             // 
             this.quentityDataGridViewTextBoxColumn1.DataPropertyName = "Quentity";
             this.quentityDataGridViewTextBoxColumn1.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.quentityDataGridViewTextBoxColumn1.Name = "quentityDataGridViewTextBoxColumn1";
             this.quentityDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.quentityDataGridViewTextBoxColumn1.Width = 125;
             // 
             // priceDataGridViewTextBoxColumn1
             // 
             this.priceDataGridViewTextBoxColumn1.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn1.HeaderText = "Price (Rs.)";
+            this.priceDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
             this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn1.Width = 125;
             // 
             // stoveBindingSource4
             // 
@@ -204,6 +210,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -215,6 +222,7 @@
             this.cylinderTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.cylinderTypeDataGridViewTextBoxColumn.DataPropertyName = "CylinderType";
             this.cylinderTypeDataGridViewTextBoxColumn.HeaderText = "Cylinder Type";
+            this.cylinderTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cylinderTypeDataGridViewTextBoxColumn.Name = "cylinderTypeDataGridViewTextBoxColumn";
             this.cylinderTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -222,13 +230,16 @@
             // 
             this.quentityDataGridViewTextBoxColumn.DataPropertyName = "Quentity";
             this.quentityDataGridViewTextBoxColumn.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quentityDataGridViewTextBoxColumn.Name = "quentityDataGridViewTextBoxColumn";
             this.quentityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quentityDataGridViewTextBoxColumn.Width = 125;
             // 
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price (Rs.)";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             this.priceDataGridViewTextBoxColumn.Width = 120;
@@ -292,7 +303,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1509, 653);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -306,7 +318,9 @@
             this.Name = "ViewStock";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "View Stock & Price";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.ViewStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stoveBindingSource4)).EndInit();

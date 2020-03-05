@@ -35,9 +35,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.customerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.distributorCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +52,9 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bankIFSCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bankAccountNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -139,10 +139,164 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1896, 661);
             this.dataGridView1.TabIndex = 49;
+            // 
+            // customerIdDataGridViewTextBoxColumn
+            // 
+            this.customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
+            this.customerIdDataGridViewTextBoxColumn.HeaderText = "CustomerId";
+            this.customerIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
+            this.customerIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // distributorCodeDataGridViewTextBoxColumn
+            // 
+            this.distributorCodeDataGridViewTextBoxColumn.DataPropertyName = "DistributorCode";
+            this.distributorCodeDataGridViewTextBoxColumn.HeaderText = "DistributorCode";
+            this.distributorCodeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.distributorCodeDataGridViewTextBoxColumn.Name = "distributorCodeDataGridViewTextBoxColumn";
+            this.distributorCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.distributorCodeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerNameDataGridViewTextBoxColumn
+            // 
+            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
+            this.customerNameDataGridViewTextBoxColumn.HeaderText = "CustomerName";
+            this.customerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+            this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerTypeDataGridViewTextBoxColumn
+            // 
+            this.customerTypeDataGridViewTextBoxColumn.DataPropertyName = "CustomerType";
+            this.customerTypeDataGridViewTextBoxColumn.HeaderText = "CustomerType";
+            this.customerTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerTypeDataGridViewTextBoxColumn.Name = "customerTypeDataGridViewTextBoxColumn";
+            this.customerTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerTypeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
+            this.genderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // aadharNoDataGridViewTextBoxColumn
+            // 
+            this.aadharNoDataGridViewTextBoxColumn.DataPropertyName = "AadharNo";
+            this.aadharNoDataGridViewTextBoxColumn.HeaderText = "AadharNo";
+            this.aadharNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.aadharNoDataGridViewTextBoxColumn.Name = "aadharNoDataGridViewTextBoxColumn";
+            this.aadharNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aadharNoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // rashanCardNoDataGridViewTextBoxColumn
+            // 
+            this.rashanCardNoDataGridViewTextBoxColumn.DataPropertyName = "RashanCardNo";
+            this.rashanCardNoDataGridViewTextBoxColumn.HeaderText = "RashanCardNo";
+            this.rashanCardNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.rashanCardNoDataGridViewTextBoxColumn.Name = "rashanCardNoDataGridViewTextBoxColumn";
+            this.rashanCardNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rashanCardNoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cityDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // pinNoDataGridViewTextBoxColumn
+            // 
+            this.pinNoDataGridViewTextBoxColumn.DataPropertyName = "PinNo";
+            this.pinNoDataGridViewTextBoxColumn.HeaderText = "PinNo";
+            this.pinNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pinNoDataGridViewTextBoxColumn.Name = "pinNoDataGridViewTextBoxColumn";
+            this.pinNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pinNoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // talukaDataGridViewTextBoxColumn
+            // 
+            this.talukaDataGridViewTextBoxColumn.DataPropertyName = "Taluka";
+            this.talukaDataGridViewTextBoxColumn.HeaderText = "Taluka";
+            this.talukaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.talukaDataGridViewTextBoxColumn.Name = "talukaDataGridViewTextBoxColumn";
+            this.talukaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.talukaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // districtDataGridViewTextBoxColumn
+            // 
+            this.districtDataGridViewTextBoxColumn.DataPropertyName = "District";
+            this.districtDataGridViewTextBoxColumn.HeaderText = "District";
+            this.districtDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.districtDataGridViewTextBoxColumn.Name = "districtDataGridViewTextBoxColumn";
+            this.districtDataGridViewTextBoxColumn.ReadOnly = true;
+            this.districtDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.stateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // contactNoDataGridViewTextBoxColumn
+            // 
+            this.contactNoDataGridViewTextBoxColumn.DataPropertyName = "ContactNo";
+            this.contactNoDataGridViewTextBoxColumn.HeaderText = "ContactNo";
+            this.contactNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.contactNoDataGridViewTextBoxColumn.Name = "contactNoDataGridViewTextBoxColumn";
+            this.contactNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.contactNoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bankIFSCDataGridViewTextBoxColumn
+            // 
+            this.bankIFSCDataGridViewTextBoxColumn.DataPropertyName = "BankIFSC";
+            this.bankIFSCDataGridViewTextBoxColumn.HeaderText = "BankIFSC";
+            this.bankIFSCDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bankIFSCDataGridViewTextBoxColumn.Name = "bankIFSCDataGridViewTextBoxColumn";
+            this.bankIFSCDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bankIFSCDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bankAccountNoDataGridViewTextBoxColumn
+            // 
+            this.bankAccountNoDataGridViewTextBoxColumn.DataPropertyName = "BankAccountNo";
+            this.bankAccountNoDataGridViewTextBoxColumn.HeaderText = "BankAccountNo";
+            this.bankAccountNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bankAccountNoDataGridViewTextBoxColumn.Name = "bankAccountNoDataGridViewTextBoxColumn";
+            this.bankAccountNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bankAccountNoDataGridViewTextBoxColumn.Width = 125;
             // 
             // customerBindingSource
             // 
@@ -167,138 +321,26 @@
             this.label4.TabIndex = 50;
             this.label4.Text = "Total Records:";
             // 
-            // customerIdDataGridViewTextBoxColumn
-            // 
-            this.customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
-            this.customerIdDataGridViewTextBoxColumn.HeaderText = "CustomerId";
-            this.customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
-            this.customerIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // distributorCodeDataGridViewTextBoxColumn
-            // 
-            this.distributorCodeDataGridViewTextBoxColumn.DataPropertyName = "DistributorCode";
-            this.distributorCodeDataGridViewTextBoxColumn.HeaderText = "DistributorCode";
-            this.distributorCodeDataGridViewTextBoxColumn.Name = "distributorCodeDataGridViewTextBoxColumn";
-            this.distributorCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // customerNameDataGridViewTextBoxColumn
-            // 
-            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
-            this.customerNameDataGridViewTextBoxColumn.HeaderText = "CustomerName";
-            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
-            this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // customerTypeDataGridViewTextBoxColumn
-            // 
-            this.customerTypeDataGridViewTextBoxColumn.DataPropertyName = "CustomerType";
-            this.customerTypeDataGridViewTextBoxColumn.HeaderText = "CustomerType";
-            this.customerTypeDataGridViewTextBoxColumn.Name = "customerTypeDataGridViewTextBoxColumn";
-            this.customerTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aadharNoDataGridViewTextBoxColumn
-            // 
-            this.aadharNoDataGridViewTextBoxColumn.DataPropertyName = "AadharNo";
-            this.aadharNoDataGridViewTextBoxColumn.HeaderText = "AadharNo";
-            this.aadharNoDataGridViewTextBoxColumn.Name = "aadharNoDataGridViewTextBoxColumn";
-            this.aadharNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rashanCardNoDataGridViewTextBoxColumn
-            // 
-            this.rashanCardNoDataGridViewTextBoxColumn.DataPropertyName = "RashanCardNo";
-            this.rashanCardNoDataGridViewTextBoxColumn.HeaderText = "RashanCardNo";
-            this.rashanCardNoDataGridViewTextBoxColumn.Name = "rashanCardNoDataGridViewTextBoxColumn";
-            this.rashanCardNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pinNoDataGridViewTextBoxColumn
-            // 
-            this.pinNoDataGridViewTextBoxColumn.DataPropertyName = "PinNo";
-            this.pinNoDataGridViewTextBoxColumn.HeaderText = "PinNo";
-            this.pinNoDataGridViewTextBoxColumn.Name = "pinNoDataGridViewTextBoxColumn";
-            this.pinNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // talukaDataGridViewTextBoxColumn
-            // 
-            this.talukaDataGridViewTextBoxColumn.DataPropertyName = "Taluka";
-            this.talukaDataGridViewTextBoxColumn.HeaderText = "Taluka";
-            this.talukaDataGridViewTextBoxColumn.Name = "talukaDataGridViewTextBoxColumn";
-            this.talukaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // districtDataGridViewTextBoxColumn
-            // 
-            this.districtDataGridViewTextBoxColumn.DataPropertyName = "District";
-            this.districtDataGridViewTextBoxColumn.HeaderText = "District";
-            this.districtDataGridViewTextBoxColumn.Name = "districtDataGridViewTextBoxColumn";
-            this.districtDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            this.stateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contactNoDataGridViewTextBoxColumn
-            // 
-            this.contactNoDataGridViewTextBoxColumn.DataPropertyName = "ContactNo";
-            this.contactNoDataGridViewTextBoxColumn.HeaderText = "ContactNo";
-            this.contactNoDataGridViewTextBoxColumn.Name = "contactNoDataGridViewTextBoxColumn";
-            this.contactNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bankIFSCDataGridViewTextBoxColumn
-            // 
-            this.bankIFSCDataGridViewTextBoxColumn.DataPropertyName = "BankIFSC";
-            this.bankIFSCDataGridViewTextBoxColumn.HeaderText = "BankIFSC";
-            this.bankIFSCDataGridViewTextBoxColumn.Name = "bankIFSCDataGridViewTextBoxColumn";
-            this.bankIFSCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bankAccountNoDataGridViewTextBoxColumn
-            // 
-            this.bankAccountNoDataGridViewTextBoxColumn.DataPropertyName = "BankAccountNo";
-            this.bankAccountNoDataGridViewTextBoxColumn.HeaderText = "BankAccountNo";
-            this.bankAccountNoDataGridViewTextBoxColumn.Name = "bankAccountNoDataGridViewTextBoxColumn";
-            this.bankAccountNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // CustomerRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 819);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label12);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CustomerRegister";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Customer Register";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.CustomerRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();

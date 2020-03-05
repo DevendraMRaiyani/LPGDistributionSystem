@@ -206,6 +206,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(337, 199);
             this.dataGridView1.TabIndex = 12;
@@ -214,6 +215,7 @@
             // 
             this.Product.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Product.HeaderText = "Product";
+            this.Product.MinimumWidth = 6;
             this.Product.Name = "Product";
             this.Product.ReadOnly = true;
             this.Product.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -222,7 +224,9 @@
             // Quentity
             // 
             this.Quentity.HeaderText = "Quentity";
+            this.Quentity.MinimumWidth = 6;
             this.Quentity.Name = "Quentity";
+            this.Quentity.Width = 125;
             // 
             // dataGridView2
             // 
@@ -257,6 +261,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(337, 199);
@@ -267,6 +272,7 @@
             this.productDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
             this.productDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
             this.productDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -274,8 +280,10 @@
             // 
             this.Price.DataPropertyName = "Price";
             this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
+            this.Price.Width = 125;
             // 
             // stoveBindingSource
             // 
@@ -354,6 +362,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView3.Size = new System.Drawing.Size(526, 199);
@@ -364,12 +373,14 @@
             this.Prod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Prod.FillWeight = 76.38889F;
             this.Prod.HeaderText = "Product";
+            this.Prod.MinimumWidth = 6;
             this.Prod.Name = "Prod";
             this.Prod.ReadOnly = true;
             // 
             // Qty
             // 
             this.Qty.HeaderText = "Quentity";
+            this.Qty.MinimumWidth = 6;
             this.Qty.Name = "Qty";
             this.Qty.ReadOnly = true;
             this.Qty.Width = 70;
@@ -377,6 +388,7 @@
             // Pri
             // 
             this.Pri.HeaderText = "Price";
+            this.Pri.MinimumWidth = 6;
             this.Pri.Name = "Pri";
             this.Pri.ReadOnly = true;
             this.Pri.Width = 80;
@@ -384,6 +396,7 @@
             // Amount
             // 
             this.Amount.HeaderText = "Amount";
+            this.Amount.MinimumWidth = 6;
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
             this.Amount.Width = 90;
@@ -445,7 +458,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1880, 750);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -468,8 +482,14 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "BillStoveRegulator";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Bill for Stoves and Regulator";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.BillStoveRegulator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

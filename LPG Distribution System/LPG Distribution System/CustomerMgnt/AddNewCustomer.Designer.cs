@@ -89,6 +89,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(260, 26);
             this.textBox3.TabIndex = 2;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox4
             // 
@@ -129,6 +130,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(136, 26);
             this.textBox8.TabIndex = 7;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // textBox9
             // 
@@ -273,6 +275,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(197, 26);
             this.textBox11.TabIndex = 38;
+            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox11_KeyPress);
             // 
             // button1
             // 
@@ -458,6 +461,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(259, 26);
             this.textBox14.TabIndex = 57;
+            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
             // 
             // contextMenuStrip1
             // 
@@ -482,13 +486,14 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(136, 26);
             this.textBox15.TabIndex = 59;
+            this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox15_KeyPress);
             // 
             // AddNewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1279, 762);
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.textBox14);

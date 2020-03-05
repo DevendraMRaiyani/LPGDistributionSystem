@@ -123,7 +123,7 @@
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Margin = new System.Windows.Forms.Padding(4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(4, 554);
+            this.splitter1.Size = new System.Drawing.Size(4, 753);
             this.splitter1.TabIndex = 9;
             this.splitter1.TabStop = false;
             // 
@@ -176,6 +176,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.Size = new System.Drawing.Size(431, 270);
@@ -186,6 +187,7 @@
             this.cylinderTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.cylinderTypeDataGridViewTextBoxColumn.DataPropertyName = "CylinderType";
             this.cylinderTypeDataGridViewTextBoxColumn.HeaderText = "CylinderType";
+            this.cylinderTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cylinderTypeDataGridViewTextBoxColumn.Name = "cylinderTypeDataGridViewTextBoxColumn";
             this.cylinderTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -193,8 +195,10 @@
             // 
             this.quentityDataGridViewTextBoxColumn.DataPropertyName = "Quentity";
             this.quentityDataGridViewTextBoxColumn.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quentityDataGridViewTextBoxColumn.Name = "quentityDataGridViewTextBoxColumn";
             this.quentityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quentityDataGridViewTextBoxColumn.Width = 125;
             // 
             // cylinderBindingSource1
             // 
@@ -219,7 +223,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1201, 554);
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
@@ -238,6 +242,7 @@
             this.RightToLeftLayout = true;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Add Cylinder Stock";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AddCylinder_Load);
