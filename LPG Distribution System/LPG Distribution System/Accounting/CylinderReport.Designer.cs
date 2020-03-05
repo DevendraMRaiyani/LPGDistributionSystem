@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -138,14 +138,14 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.txIdDataGridViewTextBoxColumn,
@@ -164,15 +164,16 @@
             this.dataGridView1.Location = new System.Drawing.Point(88, 132);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1773, 684);
@@ -182,13 +183,16 @@
             // 
             this.txIdDataGridViewTextBoxColumn.DataPropertyName = "TxId";
             this.txIdDataGridViewTextBoxColumn.HeaderText = "Tx Id";
+            this.txIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.txIdDataGridViewTextBoxColumn.Name = "txIdDataGridViewTextBoxColumn";
             this.txIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.txIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // cashMemoNoDataGridViewTextBoxColumn
             // 
             this.cashMemoNoDataGridViewTextBoxColumn.DataPropertyName = "CashMemoNo";
             this.cashMemoNoDataGridViewTextBoxColumn.HeaderText = "Cashmemo No";
+            this.cashMemoNoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cashMemoNoDataGridViewTextBoxColumn.Name = "cashMemoNoDataGridViewTextBoxColumn";
             this.cashMemoNoDataGridViewTextBoxColumn.ReadOnly = true;
             this.cashMemoNoDataGridViewTextBoxColumn.Width = 125;
@@ -197,6 +201,7 @@
             // 
             this.customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
             this.customerIdDataGridViewTextBoxColumn.HeaderText = "Customer Id";
+            this.customerIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
             this.customerIdDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerIdDataGridViewTextBoxColumn.Width = 110;
@@ -205,6 +210,7 @@
             // 
             this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
             this.customerNameDataGridViewTextBoxColumn.HeaderText = "Customer Name";
+            this.customerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
             this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerNameDataGridViewTextBoxColumn.Width = 150;
@@ -213,14 +219,17 @@
             // 
             this.txDateDataGridViewTextBoxColumn.DataPropertyName = "TxDate";
             this.txDateDataGridViewTextBoxColumn.HeaderText = "Tx Date";
+            this.txDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.txDateDataGridViewTextBoxColumn.Name = "txDateDataGridViewTextBoxColumn";
             this.txDateDataGridViewTextBoxColumn.ReadOnly = true;
             this.txDateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.txDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // cylinderDetailsDataGridViewTextBoxColumn
             // 
             this.cylinderDetailsDataGridViewTextBoxColumn.DataPropertyName = "CylinderDetails";
             this.cylinderDetailsDataGridViewTextBoxColumn.HeaderText = "Cylinder Details";
+            this.cylinderDetailsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cylinderDetailsDataGridViewTextBoxColumn.Name = "cylinderDetailsDataGridViewTextBoxColumn";
             this.cylinderDetailsDataGridViewTextBoxColumn.ReadOnly = true;
             this.cylinderDetailsDataGridViewTextBoxColumn.Width = 150;
@@ -229,43 +238,55 @@
             // 
             this.quentityDataGridViewTextBoxColumn.DataPropertyName = "Quentity";
             this.quentityDataGridViewTextBoxColumn.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quentityDataGridViewTextBoxColumn.Name = "quentityDataGridViewTextBoxColumn";
             this.quentityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quentityDataGridViewTextBoxColumn.Width = 125;
             // 
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn.Width = 125;
             // 
             // amountDataGridViewTextBoxColumn
             // 
             this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
             this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
             this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.amountDataGridViewTextBoxColumn.Width = 125;
             // 
             // cGSTDataGridViewTextBoxColumn
             // 
             this.cGSTDataGridViewTextBoxColumn.DataPropertyName = "CGST";
             this.cGSTDataGridViewTextBoxColumn.HeaderText = "CGST";
+            this.cGSTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cGSTDataGridViewTextBoxColumn.Name = "cGSTDataGridViewTextBoxColumn";
             this.cGSTDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cGSTDataGridViewTextBoxColumn.Width = 125;
             // 
             // sGSTDataGridViewTextBoxColumn
             // 
             this.sGSTDataGridViewTextBoxColumn.DataPropertyName = "SGST";
             this.sGSTDataGridViewTextBoxColumn.HeaderText = "SGST";
+            this.sGSTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.sGSTDataGridViewTextBoxColumn.Name = "sGSTDataGridViewTextBoxColumn";
             this.sGSTDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sGSTDataGridViewTextBoxColumn.Width = 125;
             // 
             // totalDataGridViewTextBoxColumn
             // 
             this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
             this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn.Width = 125;
             // 
             // txCylinderBindingSource
             // 
@@ -320,7 +341,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1873, 903);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label5);
@@ -333,8 +355,14 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CylinderReport";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "CylinderReport";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.CylinderReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txCylinderBindingSource)).EndInit();

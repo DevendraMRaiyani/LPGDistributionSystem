@@ -212,6 +212,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -222,6 +223,7 @@
             // 
             this.cylinderDetailsDataGridViewTextBoxColumn.DataPropertyName = "CylinderDetails";
             this.cylinderDetailsDataGridViewTextBoxColumn.HeaderText = "CylinderDetails";
+            this.cylinderDetailsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cylinderDetailsDataGridViewTextBoxColumn.Name = "cylinderDetailsDataGridViewTextBoxColumn";
             this.cylinderDetailsDataGridViewTextBoxColumn.ReadOnly = true;
             this.cylinderDetailsDataGridViewTextBoxColumn.Width = 170;
@@ -230,6 +232,7 @@
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             this.priceDataGridViewTextBoxColumn.Width = 90;
@@ -238,6 +241,7 @@
             // 
             this.quentityDataGridViewTextBoxColumn.DataPropertyName = "Quentity";
             this.quentityDataGridViewTextBoxColumn.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quentityDataGridViewTextBoxColumn.Name = "quentityDataGridViewTextBoxColumn";
             this.quentityDataGridViewTextBoxColumn.ReadOnly = true;
             this.quentityDataGridViewTextBoxColumn.Width = 90;
@@ -246,8 +250,10 @@
             // 
             this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
             this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn.Width = 125;
             // 
             // txCylinderBindingSource
             // 
@@ -296,6 +302,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -306,6 +313,7 @@
             // 
             this.detailsDataGridViewTextBoxColumn1.DataPropertyName = "Details";
             this.detailsDataGridViewTextBoxColumn1.HeaderText = "Details";
+            this.detailsDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.detailsDataGridViewTextBoxColumn1.Name = "detailsDataGridViewTextBoxColumn1";
             this.detailsDataGridViewTextBoxColumn1.ReadOnly = true;
             this.detailsDataGridViewTextBoxColumn1.Width = 170;
@@ -314,6 +322,7 @@
             // 
             this.priceDataGridViewTextBoxColumn2.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn2.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn2.Name = "priceDataGridViewTextBoxColumn2";
             this.priceDataGridViewTextBoxColumn2.ReadOnly = true;
             this.priceDataGridViewTextBoxColumn2.Width = 90;
@@ -322,6 +331,7 @@
             // 
             this.quentityDataGridViewTextBoxColumn2.DataPropertyName = "Quentity";
             this.quentityDataGridViewTextBoxColumn2.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.quentityDataGridViewTextBoxColumn2.Name = "quentityDataGridViewTextBoxColumn2";
             this.quentityDataGridViewTextBoxColumn2.ReadOnly = true;
             this.quentityDataGridViewTextBoxColumn2.Width = 90;
@@ -330,8 +340,10 @@
             // 
             this.totalDataGridViewTextBoxColumn2.DataPropertyName = "Total";
             this.totalDataGridViewTextBoxColumn2.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.totalDataGridViewTextBoxColumn2.Name = "totalDataGridViewTextBoxColumn2";
             this.totalDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn2.Width = 125;
             // 
             // txStoveRegulatorBindingSource4
             // 
@@ -379,6 +391,7 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -389,6 +402,7 @@
             // 
             this.cylinderDetailsDataGridViewTextBoxColumn1.DataPropertyName = "CylinderDetails";
             this.cylinderDetailsDataGridViewTextBoxColumn1.HeaderText = "CylinderDetails";
+            this.cylinderDetailsDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.cylinderDetailsDataGridViewTextBoxColumn1.Name = "cylinderDetailsDataGridViewTextBoxColumn1";
             this.cylinderDetailsDataGridViewTextBoxColumn1.ReadOnly = true;
             this.cylinderDetailsDataGridViewTextBoxColumn1.Width = 170;
@@ -397,6 +411,7 @@
             // 
             this.priceDataGridViewTextBoxColumn1.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn1.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
             this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
             this.priceDataGridViewTextBoxColumn1.Width = 90;
@@ -405,6 +420,7 @@
             // 
             this.quentityDataGridViewTextBoxColumn1.DataPropertyName = "Quentity";
             this.quentityDataGridViewTextBoxColumn1.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.quentityDataGridViewTextBoxColumn1.Name = "quentityDataGridViewTextBoxColumn1";
             this.quentityDataGridViewTextBoxColumn1.ReadOnly = true;
             this.quentityDataGridViewTextBoxColumn1.Width = 90;
@@ -413,8 +429,10 @@
             // 
             this.totalDataGridViewTextBoxColumn1.DataPropertyName = "Total";
             this.totalDataGridViewTextBoxColumn1.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.totalDataGridViewTextBoxColumn1.Name = "totalDataGridViewTextBoxColumn1";
             this.totalDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridView4
             // 
@@ -459,6 +477,7 @@
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView4.RowHeadersVisible = false;
+            this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 24;
             this.dataGridView4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -469,6 +488,7 @@
             // 
             this.detailsDataGridViewTextBoxColumn.DataPropertyName = "Details";
             this.detailsDataGridViewTextBoxColumn.HeaderText = "Details";
+            this.detailsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.detailsDataGridViewTextBoxColumn.Name = "detailsDataGridViewTextBoxColumn";
             this.detailsDataGridViewTextBoxColumn.ReadOnly = true;
             this.detailsDataGridViewTextBoxColumn.Width = 170;
@@ -477,6 +497,7 @@
             // 
             this.priceDataGridViewTextBoxColumn3.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn3.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn3.Name = "priceDataGridViewTextBoxColumn3";
             this.priceDataGridViewTextBoxColumn3.ReadOnly = true;
             this.priceDataGridViewTextBoxColumn3.Width = 90;
@@ -485,6 +506,7 @@
             // 
             this.quentityDataGridViewTextBoxColumn3.DataPropertyName = "Quentity";
             this.quentityDataGridViewTextBoxColumn3.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.quentityDataGridViewTextBoxColumn3.Name = "quentityDataGridViewTextBoxColumn3";
             this.quentityDataGridViewTextBoxColumn3.ReadOnly = true;
             this.quentityDataGridViewTextBoxColumn3.Width = 90;
@@ -493,8 +515,10 @@
             // 
             this.totalDataGridViewTextBoxColumn3.DataPropertyName = "Total";
             this.totalDataGridViewTextBoxColumn3.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.totalDataGridViewTextBoxColumn3.Name = "totalDataGridViewTextBoxColumn3";
             this.totalDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn3.Width = 125;
             // 
             // txStoveRegulatorBindingSource2
             // 
@@ -536,7 +560,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1729, 799);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView4);
@@ -552,8 +577,14 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SummaryReport";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Summary Report";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.SummaryReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txCylinderBindingSource)).EndInit();

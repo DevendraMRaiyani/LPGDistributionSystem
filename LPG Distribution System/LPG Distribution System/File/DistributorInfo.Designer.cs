@@ -357,7 +357,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1459, 837);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox16);
@@ -387,8 +388,14 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DistributorInfo";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Distributor Information";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.DistributorInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

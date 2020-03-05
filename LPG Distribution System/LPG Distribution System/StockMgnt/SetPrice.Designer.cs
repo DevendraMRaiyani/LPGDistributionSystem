@@ -244,7 +244,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1867, 742);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -270,7 +271,9 @@
             this.Name = "SetPrice";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Set Price";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.SetPrice_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

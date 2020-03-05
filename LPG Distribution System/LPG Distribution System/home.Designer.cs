@@ -71,7 +71,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1354, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(1390, 31);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -263,12 +263,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = global::LPG_Distribution_System.Properties.Resources.bgimg;
-            this.ClientSize = new System.Drawing.Size(1354, 720);
+            this.ClientSize = new System.Drawing.Size(1390, 753);
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
             this.Name = "home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "LPG Distribution System";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.home_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

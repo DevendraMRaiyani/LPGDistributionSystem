@@ -197,6 +197,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1272, 555);
@@ -206,13 +207,16 @@
             // 
             this.txIdDataGridViewTextBoxColumn.DataPropertyName = "TxId";
             this.txIdDataGridViewTextBoxColumn.HeaderText = "Tx Id";
+            this.txIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.txIdDataGridViewTextBoxColumn.Name = "txIdDataGridViewTextBoxColumn";
             this.txIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.txIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // cashMemoNoDataGridViewTextBoxColumn
             // 
             this.cashMemoNoDataGridViewTextBoxColumn.DataPropertyName = "CashMemoNo";
             this.cashMemoNoDataGridViewTextBoxColumn.HeaderText = "CashMemo No";
+            this.cashMemoNoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cashMemoNoDataGridViewTextBoxColumn.Name = "cashMemoNoDataGridViewTextBoxColumn";
             this.cashMemoNoDataGridViewTextBoxColumn.ReadOnly = true;
             this.cashMemoNoDataGridViewTextBoxColumn.Width = 120;
@@ -221,6 +225,7 @@
             // 
             this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
             this.customerNameDataGridViewTextBoxColumn.HeaderText = "Customer Name";
+            this.customerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
             this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerNameDataGridViewTextBoxColumn.Width = 150;
@@ -229,57 +234,73 @@
             // 
             this.txDateDataGridViewTextBoxColumn.DataPropertyName = "TxDate";
             this.txDateDataGridViewTextBoxColumn.HeaderText = "Tx Date";
+            this.txDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.txDateDataGridViewTextBoxColumn.Name = "txDateDataGridViewTextBoxColumn";
             this.txDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.txDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // detailsDataGridViewTextBoxColumn
             // 
             this.detailsDataGridViewTextBoxColumn.DataPropertyName = "Details";
             this.detailsDataGridViewTextBoxColumn.HeaderText = "Details";
+            this.detailsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.detailsDataGridViewTextBoxColumn.Name = "detailsDataGridViewTextBoxColumn";
             this.detailsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.detailsDataGridViewTextBoxColumn.Width = 125;
             // 
             // quentityDataGridViewTextBoxColumn
             // 
             this.quentityDataGridViewTextBoxColumn.DataPropertyName = "Quentity";
             this.quentityDataGridViewTextBoxColumn.HeaderText = "Quentity";
+            this.quentityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quentityDataGridViewTextBoxColumn.Name = "quentityDataGridViewTextBoxColumn";
             this.quentityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quentityDataGridViewTextBoxColumn.Width = 125;
             // 
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn.Width = 125;
             // 
             // amountDataGridViewTextBoxColumn
             // 
             this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
             this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
             this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.amountDataGridViewTextBoxColumn.Width = 125;
             // 
             // cGSTDataGridViewTextBoxColumn
             // 
             this.cGSTDataGridViewTextBoxColumn.DataPropertyName = "CGST";
             this.cGSTDataGridViewTextBoxColumn.HeaderText = "CGST";
+            this.cGSTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cGSTDataGridViewTextBoxColumn.Name = "cGSTDataGridViewTextBoxColumn";
             this.cGSTDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cGSTDataGridViewTextBoxColumn.Width = 125;
             // 
             // sGSTDataGridViewTextBoxColumn
             // 
             this.sGSTDataGridViewTextBoxColumn.DataPropertyName = "SGST";
             this.sGSTDataGridViewTextBoxColumn.HeaderText = "SGST";
+            this.sGSTDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.sGSTDataGridViewTextBoxColumn.Name = "sGSTDataGridViewTextBoxColumn";
             this.sGSTDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sGSTDataGridViewTextBoxColumn.Width = 125;
             // 
             // totalDataGridViewTextBoxColumn
             // 
             this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
             this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn.Width = 125;
             // 
             // txStoveRegulatorBindingSource3
             // 
@@ -315,7 +336,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1877, 818);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dataGridView1);
@@ -329,8 +351,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StoveandRegulatorReport";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Stove and Regulator Report";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.StoveandRegulatorReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txStoveRegulatorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txStoveRegulatorBindingSource1)).EndInit();
