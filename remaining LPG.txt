@@ -14,7 +14,5 @@ Uncomment: 1. in all forms a method for prevent drag and resizing
 		2. login
 
 Smit Bro:---
-1.PDF design improvement in "new Customer", close customer
-BillForStoveAndRegulator,File, Login folder all forms form propertis
-2.In costomer mgnt (adhar no, rashan no, pin no, contect no , bak ac no) cant enter char
+1.PDF design improvement in "new Customer", close customer,BillForStoveAndRegulator
 3. PDF in Transections and close Connection
