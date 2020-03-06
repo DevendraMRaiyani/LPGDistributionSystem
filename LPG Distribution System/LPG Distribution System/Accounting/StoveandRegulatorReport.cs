@@ -55,6 +55,47 @@ namespace LPG_Distribution_System.Accounting
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
+                Microsoft.Office.Interop.Excel.Workbook wb = xcelApp.Application.Workbooks.Add(Type.Missing);
+
+                for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+                {
+                    xcelApp.Cells[1, i].EntireRow.Font.Bold = true;
+                    xcelApp.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    {
+                        xcelApp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+
+                xcelApp.Columns.AutoFit();
+
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.InitialDirectory = @"C:\";
+                sfd.RestoreDirectory = true;
+                sfd.FileName = "*.xlsx";
+                sfd.DefaultExt = "xlsx";
+                sfd.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string path = sfd.FileName;
+                    wb.SaveAs(path);
+                    wb.Close();
+                    xcelApp.Quit();
+                    MessageBox.Show("Report is exported successfully!!!");
+                }
+               
+            }
+        }
+
 
         /*protected override void WndProc(ref Message message)
         {
