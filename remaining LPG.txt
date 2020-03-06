@@ -1,14 +1,12 @@
 
-1. when textbox is empty then press save button , it will throw 	exception in stock mgnt All
-
+1. Constrains in all the fields in all forms
 2. Check Connection to service
-6. Remove Icon from forms
 7. Deposite in New Customer
 11. Booking Cylinder Check for same day tx
 12. Testing for Mapping Table Id 10 & 11
 13. Singleton DP In Forms
-15. Required Field Constraints in Customer mgnt
-17. Accounting Export Records
+14. Print bill for Cylinders
+15. Syncronixation
 18. Globle Distributor User for a Application
 Uncomment: 1. in all forms a method for prevent drag and resizing
 		2. login
