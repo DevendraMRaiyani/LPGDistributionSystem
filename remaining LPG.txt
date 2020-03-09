@@ -8,6 +8,7 @@
 14. Print bill for Cylinders
 15. Syncronixation
 18. Globle Distributor User for a Application
+19. Async and await in login and Syncro
 Uncomment: 1. in all forms a method for prevent drag and resizing
 		2. login
 
