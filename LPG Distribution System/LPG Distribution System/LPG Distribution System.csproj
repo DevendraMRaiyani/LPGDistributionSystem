@@ -75,17 +75,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\SynchroRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="CustomerMgnt\CustomerRegister.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerMgnt\CustomerRegister.Designer.cs">
       <DependentUpon>CustomerRegister.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerTx\PrintBillFroCylinder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerTx\PrintBillFroCylinder.Designer.cs">
-      <DependentUpon>PrintBillFroCylinder.cs</DependentUpon>
     </Compile>
     <Compile Include="File\ChangePassword.cs">
       <SubType>Form</SubType>
@@ -187,6 +186,12 @@
     <Compile Include="StockMgnt\ViewStock.Designer.cs">
       <DependentUpon>ViewStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Synchronization\Synchronization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Synchronization\Synchronization.Designer.cs">
+      <DependentUpon>Synchronization.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Accounting\CylinderReport.resx">
       <DependentUpon>CylinderReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,9 +203,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerMgnt\CustomerRegister.resx">
       <DependentUpon>CustomerRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerTx\PrintBillFroCylinder.resx">
-      <DependentUpon>PrintBillFroCylinder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="File\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
@@ -250,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StockMgnt\ViewStock.resx">
       <DependentUpon>ViewStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Synchronization\Synchronization.resx">
+      <DependentUpon>Synchronization.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Connected Services\AccountingRef\Accounting.wsdl" />
     <None Include="Connected Services\AccountingRef\Accounting.xsd">
@@ -312,6 +317,19 @@
     <None Include="Connected Services\StockMgntRef\StockMgnt22.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\SynchroRef\LPG_Distribution_System.SynchroRef.Synchro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SynchroRef\Synchronization.wsdl" />
+    <None Include="Connected Services\SynchroRef\Synchronization.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SynchroRef\Synchronization1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SynchroRef\Synchronization2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\TransactionMgnt\LPG_Distribution_System.TransactionMgnt.GSTRates.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -353,6 +371,7 @@
     <WCFMetadataStorage Include="Connected Services\CustomerMgntRef\" />
     <WCFMetadataStorage Include="Connected Services\MainService\" />
     <WCFMetadataStorage Include="Connected Services\StockMgntRef\" />
+    <WCFMetadataStorage Include="Connected Services\SynchroRef\" />
     <WCFMetadataStorage Include="Connected Services\TransactionMgnt\" />
   </ItemGroup>
   <ItemGroup>
@@ -427,6 +446,20 @@
   <ItemGroup>
     <None Include="Connected Services\AccountingRef\Accounting.disco" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Connected Services\SynchroRef\Synchronization.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SynchroRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SynchroRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SynchroRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

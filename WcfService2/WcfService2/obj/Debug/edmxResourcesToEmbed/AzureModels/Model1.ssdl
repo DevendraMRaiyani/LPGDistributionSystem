@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lpgModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="DistributorCode" Type="int" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar(max)" />
+    <Property Name="CustomerType" Type="nvarchar(max)" />
+    <Property Name="AadharNo" Type="nvarchar(max)" />
+    <Property Name="RashanCardNo" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="PinNo" Type="int" Nullable="false" />
+    <Property Name="Taluka" Type="nvarchar(max)" />
+    <Property Name="District" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="ContactNo" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="BankIFSC" Type="nvarchar(max)" />
+    <Property Name="BankAccountNo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="DistributorCode" Type="int" Nullable="false" />
+    <Property Name="14.2 KG With Subsidy (E)" Type="int" Nullable="false" />
+    <Property Name="14.2 KG With Subsidy (F)" Type="int" Nullable="false" />
+    <Property Name="14.2 KG Without Subsidy (E)" Type="int" Nullable="false" />
+    <Property Name="14.2 KG Without Subsidy (F)" Type="int" Nullable="false" />
+    <Property Name="19 KG Industrial (E)" Type="int" Nullable="false" />
+    <Property Name="19 KG Industrial (F)" Type="int" Nullable="false" />
+    <Property Name="5 KG (E)" Type="int" Nullable="false" />
+    <Property Name="5 KG (F)" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TxCylinders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TxId" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="DistributorCode" Type="int" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar(max)" />
+    <Property Name="TxDate" Type="datetime" Nullable="false" />
+    <Property Name="CylinderDetails" Type="nvarchar(max)" />
+    <Property Name="Quentity" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="CGST" Type="float" Nullable="false" />
+    <Property Name="SGST" Type="float" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+    <Property Name="CashMemoNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="lpgModelStoreContainer">
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TxCylinders" EntityType="Self.TxCylinders" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using WcfService2.Synchronization;
 
 namespace WcfService2
 {
@@ -30,6 +31,8 @@ namespace WcfService2
             tc.CashMemoNo = 0;
             db.txCylinders.Add(tc);
             db.SaveChanges();
+            Synchronization.Synchronization syn = new Synchronization.Synchronization();
+            syn.AddRecord("TxCylinders", "Add", db.txCylinders.Last().TxId);
             return "OK";
         }
 
@@ -122,9 +125,10 @@ namespace WcfService2
             int cmn = db.txCylinders.Select(x => x.CashMemoNo).Max(m => m) + 1 ;
             tc.CashMemoNo = cmn;
             tc.Total = tc.Amount + tc.CGST + tc.SGST;
-            db.txCylinders.Add(tc);
+            var rec = db.txCylinders.Add(tc);
             db.SaveChanges();
-
+            Synchronization.Synchronization syn = new Synchronization.Synchronization();
+            syn.AddRecord("TxCylinders", "Add", rec.TxId);
             using (LPGContext dbo = new LPGContext())
             {
                 var result = dbo.Cylinders.Where(x => x.type.Equals(details)).FirstOrDefault();
@@ -139,7 +143,7 @@ namespace WcfService2
                 result.Quentity = result.Quentity + q;
                 dbo1.SaveChanges();
             }
-
+           
             return cmn;
         }
 

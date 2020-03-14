@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2331bc28-8425-4564-8e7f-626d7071025e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54601/Synchro/Synchronization.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Synchronization.disco" MetadataType="Disco" ID="dce0fa4d-5d8f-47b1-a1fa-1aaf12910dac" SourceId="1" SourceUrl="http://localhost:54601/Synchro/Synchronization.svc?disco" />
+    <MetadataFile FileName="Synchronization.wsdl" MetadataType="Wsdl" ID="7b871434-da87-4ec5-968f-6cdac53f0086" SourceId="1" SourceUrl="http://localhost:54601/Synchro/Synchronization.svc?wsdl" />
+    <MetadataFile FileName="Synchronization.xsd" MetadataType="Schema" ID="848b3c06-4aba-4457-a0c7-675ff9c82200" SourceId="1" SourceUrl="http://localhost:54601/Synchro/Synchronization.svc?xsd=xsd1" />
+    <MetadataFile FileName="Synchronization1.xsd" MetadataType="Schema" ID="133b3bee-86d5-4396-9249-5ccb3e95c1fa" SourceId="1" SourceUrl="http://localhost:54601/Synchro/Synchronization.svc?xsd=xsd2" />
+    <MetadataFile FileName="Synchronization2.xsd" MetadataType="Schema" ID="5cbfb15a-1426-467a-803b-46b72f30c0ce" SourceId="1" SourceUrl="http://localhost:54601/Synchro/Synchronization.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

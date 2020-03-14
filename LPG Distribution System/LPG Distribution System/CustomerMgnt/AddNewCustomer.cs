@@ -64,8 +64,9 @@ namespace LPG_Distribution_System
                     value = radioButton3.Text;
 
                 CustomerMgntRef.Customer c = new CustomerMgntRef.Customer();
-                
+
                 //c.CustomerId = 2;
+                c.DistributorCode = 292029;
                 c.CustomerName = textBox1.Text + " " + textBox2.Text + " " + textBox12.Text;
                 c.CustomerType = comboBox1.Text;
                 c.AadharNo = textBox3.Text;

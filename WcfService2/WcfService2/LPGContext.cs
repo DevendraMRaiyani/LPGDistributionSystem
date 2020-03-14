@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using WcfService2.Synchronization;
 
 namespace WcfService2
 {
@@ -20,5 +21,6 @@ namespace WcfService2
         public DbSet<TxRegulator> txRegulators { get; set; }
         public DbSet<GSTRates> GSTRates { get; set; }
         public DbSet<CylCustMapping> CylCustMappings { get; set; }
+        public DbSet<Synchro> Synchros { get; set; }
     }
 }
