@@ -1,6 +1,5 @@
 ﻿using LPG_Distribution_System.Accounting;
 using LPG_Distribution_System.CustomerMgnt;
-using LPG_Distribution_System.CustomerTx;
 using LPG_Distribution_System.File;
 using System;
 using System.Collections.Generic;
@@ -20,11 +19,11 @@ namespace LPG_Distribution_System
         public home()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void createCustomerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,12 +103,6 @@ namespace LPG_Distribution_System
             changePassword.Show();
         }
 
-        private void printBillForCylinderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PrintBillFroCylinder printBillFroCylinder = new PrintBillFroCylinder();
-            printBillFroCylinder.Show();
-        }
-
         private void summaryReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SummaryReport summaryReport = new SummaryReport();
@@ -138,6 +131,12 @@ namespace LPG_Distribution_System
         {
             ProcessStartInfo sInfo = new ProcessStartInfo("http://google.com/");
             Process.Start(sInfo);
+        }
+
+        private void sToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Synchronization.Synchronization synchronization= new Synchronization.Synchronization();
+            synchronization.Show();
         }
     }
 }

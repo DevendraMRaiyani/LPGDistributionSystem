@@ -106,12 +106,12 @@ C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Di
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.pdb
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.exe
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.pdb
-C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.CustomerTx.PrintBillFroCylinder.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Accounting.SummaryReport.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Accounting.CylinderReport.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Accounting.StoveandRegulatorReport.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.CustomerMgnt.CustomerRegister.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.File.ChangePassword.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.File.DistributorInfo.resources
-C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csprojAssemblyReference.cache
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Login.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csprojAssemblyReference.cache
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Synchronization.Synchronization.resources

@@ -46,7 +46,6 @@
             this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookCylinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printBillForCylinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateBillForStovesAndRegulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.summaryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -189,12 +188,12 @@
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
             this.sToolStripMenuItem.Size = new System.Drawing.Size(144, 27);
             this.sToolStripMenuItem.Text = "Synchronization";
+            this.sToolStripMenuItem.Click += new System.EventHandler(this.sToolStripMenuItem_Click);
             // 
             // customerTransactionToolStripMenuItem
             // 
             this.customerTransactionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bookCylinderToolStripMenuItem,
-            this.printBillForCylinderToolStripMenuItem,
             this.generateBillForStovesAndRegulatorToolStripMenuItem});
             this.customerTransactionToolStripMenuItem.Name = "customerTransactionToolStripMenuItem";
             this.customerTransactionToolStripMenuItem.Size = new System.Drawing.Size(188, 27);
@@ -206,13 +205,6 @@
             this.bookCylinderToolStripMenuItem.Size = new System.Drawing.Size(375, 28);
             this.bookCylinderToolStripMenuItem.Text = "Book Cylinder";
             this.bookCylinderToolStripMenuItem.Click += new System.EventHandler(this.bookCylinderToolStripMenuItem_Click);
-            // 
-            // printBillForCylinderToolStripMenuItem
-            // 
-            this.printBillForCylinderToolStripMenuItem.Name = "printBillForCylinderToolStripMenuItem";
-            this.printBillForCylinderToolStripMenuItem.Size = new System.Drawing.Size(375, 28);
-            this.printBillForCylinderToolStripMenuItem.Text = "Print Bill for Cylinder";
-            this.printBillForCylinderToolStripMenuItem.Click += new System.EventHandler(this.printBillForCylinderToolStripMenuItem_Click);
             // 
             // generateBillForStovesAndRegulatorToolStripMenuItem
             // 
@@ -298,7 +290,6 @@
         private System.Windows.Forms.ToolStripMenuItem sToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerTransactionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookCylinderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printBillForCylinderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generateBillForStovesAndRegulatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem summaryReportToolStripMenuItem;

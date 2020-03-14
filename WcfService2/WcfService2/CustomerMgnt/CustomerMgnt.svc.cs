@@ -17,6 +17,8 @@ namespace WcfService2
         {
             Customer c = cc.Customers.Add(customer);
             cc.SaveChanges();
+            Synchronization.Synchronization syn = new Synchronization.Synchronization();
+            syn.AddRecord("Customers", "Add", c.CustomerId);
             return c;
         }
 
@@ -25,6 +27,8 @@ namespace WcfService2
             var result = cc.Customers.Where(x => x.CustomerId == cid).FirstOrDefault();
             cc.Customers.Remove(result);
             cc.SaveChanges();
+            Synchronization.Synchronization syn = new Synchronization.Synchronization();
+            syn.AddRecord("Customers", "Delete"+result.DistributorCode , cid);
             return "OK";
         }
 
@@ -65,6 +69,8 @@ namespace WcfService2
             c.ContactNo = customer.ContactNo;
             c.Email = customer.Email;
             cc.SaveChanges();
+            Synchronization.Synchronization syn = new Synchronization.Synchronization();
+            syn.AddRecord("Customers", "Update", c.CustomerId);
             return "OK";
         }
     }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54601/Synchro/Synchronization.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService2.Synchronization" />
+  <xs:element name="AddRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="op" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRecordResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecords">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService2.Synchronization" minOccurs="0" name="GetRecordsResult" nillable="true" type="q1:ArrayOfSynchro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchroToCentralDB">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchroToCentralDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SynchroToCentralDBResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
