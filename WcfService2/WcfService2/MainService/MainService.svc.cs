@@ -36,5 +36,20 @@ namespace WcfService2
             db.SaveChanges();
             return "OK";
         }
+
+        public string TestConnection()
+        {
+            using (LPGContext test = new LPGContext())
+            {
+                try
+                {
+                    return test.DistributorUsers.FirstOrDefault().ToString(); 
+                }
+                catch (Exception e)
+                {
+                    return "FAIL";
+                }
+            }
+        }
     }
 }

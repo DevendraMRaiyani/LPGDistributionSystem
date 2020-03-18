@@ -16,6 +16,9 @@ namespace WcfService2
         DistributorUser GetDistributor();
 
         [OperationContract]
+        string TestConnection();
+
+        [OperationContract]
         string GetPassword(int dcode);
 
         [OperationContract]
