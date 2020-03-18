@@ -13,6 +13,12 @@
   <wsdl:message name="IMainService_GetDistributor_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDistributorResponse" />
   </wsdl:message>
+  <wsdl:message name="IMainService_TestConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnection" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_TestConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
+  </wsdl:message>
   <wsdl:message name="IMainService_GetPassword_InputMessage">
     <wsdl:part name="parameters" element="tns:GetPassword" />
   </wsdl:message>
@@ -36,6 +42,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetDistributor" message="tns:IMainService_GetDistributor_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetDistributorResponse" message="tns:IMainService_GetDistributor_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/TestConnection" message="tns:IMainService_TestConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/TestConnectionResponse" message="tns:IMainService_TestConnection_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetPassword">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetPassword" message="tns:IMainService_GetPassword_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetPasswordResponse" message="tns:IMainService_GetPassword_OutputMessage" />
@@ -53,6 +63,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetDistributor">
       <soap:operation soapAction="http://tempuri.org/IMainService/GetDistributor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://tempuri.org/IMainService/TestConnection" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -324,6 +324,12 @@ namespace LPG_Distribution_System.MainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetDistributor", ReplyAction="http://tempuri.org/IMainService/GetDistributorResponse")]
         System.Threading.Tasks.Task<LPG_Distribution_System.MainService.DistributorUser> GetDistributorAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/TestConnection", ReplyAction="http://tempuri.org/IMainService/TestConnectionResponse")]
+        string TestConnection();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/TestConnection", ReplyAction="http://tempuri.org/IMainService/TestConnectionResponse")]
+        System.Threading.Tasks.Task<string> TestConnectionAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetPassword", ReplyAction="http://tempuri.org/IMainService/GetPasswordResponse")]
         string GetPassword(int dcode);
         
@@ -376,6 +382,14 @@ namespace LPG_Distribution_System.MainService {
         
         public System.Threading.Tasks.Task<LPG_Distribution_System.MainService.DistributorUser> GetDistributorAsync() {
             return base.Channel.GetDistributorAsync();
+        }
+        
+        public string TestConnection() {
+            return base.Channel.TestConnection();
+        }
+        
+        public System.Threading.Tasks.Task<string> TestConnectionAsync() {
+            return base.Channel.TestConnectionAsync();
         }
         
         public string GetPassword(int dcode) {
