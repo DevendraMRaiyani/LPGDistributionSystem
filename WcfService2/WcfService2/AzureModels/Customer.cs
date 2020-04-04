@@ -14,7 +14,6 @@ namespace WcfService2.AzureModels
     
     public partial class Customer
     {
-        public int Id { get; set; }
         public int CustomerId { get; set; }
         public int DistributorCode { get; set; }
         public string CustomerName { get; set; }
@@ -32,5 +31,6 @@ namespace WcfService2.AzureModels
         public string Email { get; set; }
         public string BankIFSC { get; set; }
         public string BankAccountNo { get; set; }
+        public int Id { get; set; }
     }
 }

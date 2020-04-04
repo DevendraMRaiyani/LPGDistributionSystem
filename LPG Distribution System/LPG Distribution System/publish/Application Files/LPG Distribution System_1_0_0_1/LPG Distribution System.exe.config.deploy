@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+    </startup>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_ICustomerMgnt" />
+                <binding name="BasicHttpBinding_IStockMgnt" />
+                <binding name="BasicHttpBinding_IMainService" />
+                <binding name="BasicHttpBinding_ITransactionMgnt" />
+                <binding name="BasicHttpBinding_IAccounting" />
+                <binding name="BasicHttpBinding_ISynchronization" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:54601/CustomerMgnt/CustomerMgnt.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ICustomerMgnt"
+                contract="CustomerMgntRef.ICustomerMgnt" name="BasicHttpBinding_ICustomerMgnt" />
+            <endpoint address="http://localhost:54601/MainService/MainService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IMainService"
+                contract="MainService.IMainService" name="BasicHttpBinding_IMainService" />
+            <endpoint address="http://localhost:54601/StockMgnt/StockMgnt.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IStockMgnt"
+                contract="StockMgntRef.IStockMgnt" name="BasicHttpBinding_IStockMgnt" />
+            <endpoint address="http://localhost:54601/TransactionMgnt/TransactionMgnt.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITransactionMgnt"
+                contract="TransactionMgnt.ITransactionMgnt" name="BasicHttpBinding_ITransactionMgnt" />
+            <endpoint address="http://localhost:54601/Accounting/Accounting.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IAccounting"
+                contract="AccountingRef.IAccounting" name="BasicHttpBinding_IAccounting" />
+            <endpoint address="http://localhost:54601/Synchro/Synchronization.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISynchronization"
+                contract="SynchroRef.ISynchronization" name="BasicHttpBinding_ISynchronization" />
+        </client>
+    </system.serviceModel>
+</configuration>

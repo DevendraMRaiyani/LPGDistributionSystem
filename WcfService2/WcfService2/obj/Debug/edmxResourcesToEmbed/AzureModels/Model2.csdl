@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LPGDSCentralDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="DistributorCode" Type="Int32" Nullable="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AadharNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RashanCardNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PinNo" Type="Int32" Nullable="false" />
+    <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BankIFSC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BankAccountNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DistributorCode" Type="Int32" Nullable="false" />
+    <Property Name="C14_2_KG_With_Subsidy__E_" Type="Int32" Nullable="false" />
+    <Property Name="C14_2_KG_With_Subsidy__F_" Type="Int32" Nullable="false" />
+    <Property Name="C14_2_KG_Without_Subsidy__E_" Type="Int32" Nullable="false" />
+    <Property Name="C14_2_KG_Without_Subsidy__F_" Type="Int32" Nullable="false" />
+    <Property Name="C19_KG_Industrial__E_" Type="Int32" Nullable="false" />
+    <Property Name="C19_KG_Industrial__F_" Type="Int32" Nullable="false" />
+    <Property Name="C5_KG__E_" Type="Int32" Nullable="false" />
+    <Property Name="C5_KG__F_" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TxCylinder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="TxId" Type="Int32" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TxDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CylinderDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Quentity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <Property Name="CGST" Type="Double" Nullable="false" />
+    <Property Name="SGST" Type="Double" Nullable="false" />
+    <Property Name="Total" Type="Double" Nullable="false" />
+    <Property Name="CashMemoNo" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DistributorCode" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="LPGDSCentralDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Stocks" EntityType="Self.Stock" />
+    <EntitySet Name="TxCylinders" EntityType="Self.TxCylinder" />
+  </EntityContainer>
+</Schema>

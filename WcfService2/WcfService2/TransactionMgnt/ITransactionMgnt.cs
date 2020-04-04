@@ -22,7 +22,7 @@ namespace WcfService2
         string AddCylenderTx(string details, int qty);
 
         [OperationContract]
-        int BookingCylinderTx(int cid , int qty);
+        TxCylinder BookingCylinderTx(int cid , int qty);
 
         [OperationContract]
         int RegulatorTx(string cname, int qty);
@@ -32,6 +32,9 @@ namespace WcfService2
 
         [OperationContract]
         List<GSTRates> GetGSTRates();
+
+        [OperationContract]
+        List<TxCylinder> GetLastTxs(int cid);
     }
 
     [DataContract]

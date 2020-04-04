@@ -15,10 +15,19 @@ namespace WcfService2.Accounting
         {
             using (LPGContext sc = new LPGContext())
             {
-                if (cyType.Length > 0)
-                    return sc.txCylinders.Where(x => x.TxDate >= from && x.TxDate <= to && x.CylinderDetails.Equals(cyType)).ToList();
+                List<TxCylinder> res = null;
+                if (from == to)
+                {
+                    res = sc.txCylinders.Where(x => x.TxDate >= from.Date).ToList();
+                }
                 else
-                    return sc.txCylinders.Where(x => x.TxDate >= from && x.TxDate <= to).ToList();
+                {
+                    res = sc.txCylinders.Where(x => x.TxDate >= from.Date && x.TxDate<=to.Date).ToList();
+                }
+                if (cyType.Length > 0)
+                    return res.Where(x => x.CylinderDetails.Equals(cyType)).ToList();
+                else
+                    return res;
             }
         }
 
@@ -26,10 +35,19 @@ namespace WcfService2.Accounting
         {
             using (LPGContext sc = new LPGContext())
             {
-                if (cyType.Length > 0)
-                    return sc.txStoves.Where(x => x.TxDate >= from && x.TxDate <= to && x.Details.Equals(cyType)).ToList();
+                List<TxStoveRegulator> res = null;
+                if (from == to)
+                {
+                    res = sc.txStoves.Where(x => x.TxDate >= from.Date).ToList();
+                }
                 else
-                    return sc.txStoves.Where(x => x.TxDate >= from && x.TxDate <= to).ToList();
+                {
+                    res = sc.txStoves.Where(x => x.TxDate >= from.Date && x.TxDate <= to.Date).ToList();
+                }
+                if (cyType.Length > 0)
+                    return res.Where(x => x.Details.Equals(cyType)).ToList();
+                else
+                    return res;
             }
         }
     }
