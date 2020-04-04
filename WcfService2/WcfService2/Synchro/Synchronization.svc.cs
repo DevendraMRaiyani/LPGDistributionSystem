@@ -54,7 +54,7 @@ namespace WcfService2.Synchronization
             SqlCommand cmd = new SqlCommand();
             */
             LPGContext db = new LPGContext();
-            lpgEntities le = new lpgEntities();
+            LPGDSCentralDBEntities1 le = new LPGDSCentralDBEntities1();
             List<Synchro> cs = db.Synchros.Where(x=>x.TableName.Equals("Customers")).ToList();
             foreach (var ts in cs)
             {

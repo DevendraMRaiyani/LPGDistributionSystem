@@ -15,6 +15,227 @@ namespace LPG_Distribution_System.TransactionMgnt {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TxCylinder", Namespace="http://schemas.datacontract.org/2004/07/WcfService2")]
+    [System.SerializableAttribute()]
+    public partial class TxCylinder : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double AmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double CGSTField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CashMemoNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CustomerIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CylinderDetailsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuentityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double SGSTField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double TotalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime TxDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TxIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Amount {
+            get {
+                return this.AmountField;
+            }
+            set {
+                if ((this.AmountField.Equals(value) != true)) {
+                    this.AmountField = value;
+                    this.RaisePropertyChanged("Amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double CGST {
+            get {
+                return this.CGSTField;
+            }
+            set {
+                if ((this.CGSTField.Equals(value) != true)) {
+                    this.CGSTField = value;
+                    this.RaisePropertyChanged("CGST");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CashMemoNo {
+            get {
+                return this.CashMemoNoField;
+            }
+            set {
+                if ((this.CashMemoNoField.Equals(value) != true)) {
+                    this.CashMemoNoField = value;
+                    this.RaisePropertyChanged("CashMemoNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CustomerId {
+            get {
+                return this.CustomerIdField;
+            }
+            set {
+                if ((this.CustomerIdField.Equals(value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CylinderDetails {
+            get {
+                return this.CylinderDetailsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CylinderDetailsField, value) != true)) {
+                    this.CylinderDetailsField = value;
+                    this.RaisePropertyChanged("CylinderDetails");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Quentity {
+            get {
+                return this.QuentityField;
+            }
+            set {
+                if ((this.QuentityField.Equals(value) != true)) {
+                    this.QuentityField = value;
+                    this.RaisePropertyChanged("Quentity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double SGST {
+            get {
+                return this.SGSTField;
+            }
+            set {
+                if ((this.SGSTField.Equals(value) != true)) {
+                    this.SGSTField = value;
+                    this.RaisePropertyChanged("SGST");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Total {
+            get {
+                return this.TotalField;
+            }
+            set {
+                if ((this.TotalField.Equals(value) != true)) {
+                    this.TotalField = value;
+                    this.RaisePropertyChanged("Total");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime TxDate {
+            get {
+                return this.TxDateField;
+            }
+            set {
+                if ((this.TxDateField.Equals(value) != true)) {
+                    this.TxDateField = value;
+                    this.RaisePropertyChanged("TxDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TxId {
+            get {
+                return this.TxIdField;
+            }
+            set {
+                if ((this.TxIdField.Equals(value) != true)) {
+                    this.TxIdField = value;
+                    this.RaisePropertyChanged("TxId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GSTRates", Namespace="http://schemas.datacontract.org/2004/07/WcfService2")]
     [System.SerializableAttribute()]
     public partial class GSTRates : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -113,10 +334,10 @@ namespace LPG_Distribution_System.TransactionMgnt {
         System.Threading.Tasks.Task<string> AddCylenderTxAsync(string details, int qty);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/BookingCylinderTx", ReplyAction="http://tempuri.org/ITransactionMgnt/BookingCylinderTxResponse")]
-        int BookingCylinderTx(int cid, int qty);
+        LPG_Distribution_System.TransactionMgnt.TxCylinder BookingCylinderTx(int cid, int qty);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/BookingCylinderTx", ReplyAction="http://tempuri.org/ITransactionMgnt/BookingCylinderTxResponse")]
-        System.Threading.Tasks.Task<int> BookingCylinderTxAsync(int cid, int qty);
+        System.Threading.Tasks.Task<LPG_Distribution_System.TransactionMgnt.TxCylinder> BookingCylinderTxAsync(int cid, int qty);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/RegulatorTx", ReplyAction="http://tempuri.org/ITransactionMgnt/RegulatorTxResponse")]
         int RegulatorTx(string cname, int qty);
@@ -135,6 +356,12 @@ namespace LPG_Distribution_System.TransactionMgnt {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/GetGSTRates", ReplyAction="http://tempuri.org/ITransactionMgnt/GetGSTRatesResponse")]
         System.Threading.Tasks.Task<LPG_Distribution_System.TransactionMgnt.GSTRates[]> GetGSTRatesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/GetLastTxs", ReplyAction="http://tempuri.org/ITransactionMgnt/GetLastTxsResponse")]
+        LPG_Distribution_System.TransactionMgnt.TxCylinder[] GetLastTxs(int cid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransactionMgnt/GetLastTxs", ReplyAction="http://tempuri.org/ITransactionMgnt/GetLastTxsResponse")]
+        System.Threading.Tasks.Task<LPG_Distribution_System.TransactionMgnt.TxCylinder[]> GetLastTxsAsync(int cid);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -188,11 +415,11 @@ namespace LPG_Distribution_System.TransactionMgnt {
             return base.Channel.AddCylenderTxAsync(details, qty);
         }
         
-        public int BookingCylinderTx(int cid, int qty) {
+        public LPG_Distribution_System.TransactionMgnt.TxCylinder BookingCylinderTx(int cid, int qty) {
             return base.Channel.BookingCylinderTx(cid, qty);
         }
         
-        public System.Threading.Tasks.Task<int> BookingCylinderTxAsync(int cid, int qty) {
+        public System.Threading.Tasks.Task<LPG_Distribution_System.TransactionMgnt.TxCylinder> BookingCylinderTxAsync(int cid, int qty) {
             return base.Channel.BookingCylinderTxAsync(cid, qty);
         }
         
@@ -218,6 +445,14 @@ namespace LPG_Distribution_System.TransactionMgnt {
         
         public System.Threading.Tasks.Task<LPG_Distribution_System.TransactionMgnt.GSTRates[]> GetGSTRatesAsync() {
             return base.Channel.GetGSTRatesAsync();
+        }
+        
+        public LPG_Distribution_System.TransactionMgnt.TxCylinder[] GetLastTxs(int cid) {
+            return base.Channel.GetLastTxs(cid);
+        }
+        
+        public System.Threading.Tasks.Task<LPG_Distribution_System.TransactionMgnt.TxCylinder[]> GetLastTxsAsync(int cid) {
+            return base.Channel.GetLastTxsAsync(cid);
         }
     }
 }

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LPGDSCentralDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="DistributorCode" Type="int" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar(max)" />
+          <Property Name="Gender" Type="nvarchar(max)" />
+          <Property Name="CustomerType" Type="nvarchar(max)" />
+          <Property Name="AadharNo" Type="nvarchar(max)" />
+          <Property Name="RashanCardNo" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="PinNo" Type="int" Nullable="false" />
+          <Property Name="Taluka" Type="nvarchar(max)" />
+          <Property Name="District" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="ContactNo" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="BankIFSC" Type="nvarchar(max)" />
+          <Property Name="BankAccountNo" Type="nvarchar(max)" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DistributorCode" Type="int" Nullable="false" />
+          <Property Name="C14_2_KG_With_Subsidy__E_" Type="int" Nullable="false" />
+          <Property Name="C14_2_KG_With_Subsidy__F_" Type="int" Nullable="false" />
+          <Property Name="C14_2_KG_Without_Subsidy__E_" Type="int" Nullable="false" />
+          <Property Name="C14_2_KG_Without_Subsidy__F_" Type="int" Nullable="false" />
+          <Property Name="C19_KG_Industrial__E_" Type="int" Nullable="false" />
+          <Property Name="C19_KG_Industrial__F_" Type="int" Nullable="false" />
+          <Property Name="C5_KG__E_" Type="int" Nullable="false" />
+          <Property Name="C5_KG__F_" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TxCylinder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TxId" Type="int" Nullable="false" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar(max)" />
+          <Property Name="TxDate" Type="datetime" Nullable="false" />
+          <Property Name="CylinderDetails" Type="nvarchar(max)" />
+          <Property Name="Quentity" Type="int" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="Amount" Type="float" Nullable="false" />
+          <Property Name="CGST" Type="float" Nullable="false" />
+          <Property Name="SGST" Type="float" Nullable="false" />
+          <Property Name="Total" Type="float" Nullable="false" />
+          <Property Name="CashMemoNo" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DistributorCode" Type="int" />
+        </EntityType>
+        <EntityContainer Name="LPGDSCentralDBModelStoreContainer">
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TxCylinder" EntityType="Self.TxCylinder" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LPGDSCentralDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="DistributorCode" Type="Int32" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AadharNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RashanCardNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PinNo" Type="Int32" Nullable="false" />
+          <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BankIFSC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BankAccountNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DistributorCode" Type="Int32" Nullable="false" />
+          <Property Name="C14_2_KG_With_Subsidy__E_" Type="Int32" Nullable="false" />
+          <Property Name="C14_2_KG_With_Subsidy__F_" Type="Int32" Nullable="false" />
+          <Property Name="C14_2_KG_Without_Subsidy__E_" Type="Int32" Nullable="false" />
+          <Property Name="C14_2_KG_Without_Subsidy__F_" Type="Int32" Nullable="false" />
+          <Property Name="C19_KG_Industrial__E_" Type="Int32" Nullable="false" />
+          <Property Name="C19_KG_Industrial__F_" Type="Int32" Nullable="false" />
+          <Property Name="C5_KG__E_" Type="Int32" Nullable="false" />
+          <Property Name="C5_KG__F_" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TxCylinder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TxId" Type="Int32" Nullable="false" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TxDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CylinderDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Quentity" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="Amount" Type="Double" Nullable="false" />
+          <Property Name="CGST" Type="Double" Nullable="false" />
+          <Property Name="SGST" Type="Double" Nullable="false" />
+          <Property Name="Total" Type="Double" Nullable="false" />
+          <Property Name="CashMemoNo" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DistributorCode" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="LPGDSCentralDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Stocks" EntityType="Self.Stock" />
+          <EntitySet Name="TxCylinders" EntityType="Self.TxCylinder" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LPGDSCentralDBModelStoreContainer" CdmEntityContainer="LPGDSCentralDBEntities1">
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="LPGDSCentralDBModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="DistributorCode" ColumnName="DistributorCode" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+                <ScalarProperty Name="AadharNo" ColumnName="AadharNo" />
+                <ScalarProperty Name="RashanCardNo" ColumnName="RashanCardNo" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="PinNo" ColumnName="PinNo" />
+                <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="BankIFSC" ColumnName="BankIFSC" />
+                <ScalarProperty Name="BankAccountNo" ColumnName="BankAccountNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stocks">
+            <EntityTypeMapping TypeName="LPGDSCentralDBModel.Stock">
+              <MappingFragment StoreEntitySet="Stock">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DistributorCode" ColumnName="DistributorCode" />
+                <ScalarProperty Name="C14_2_KG_With_Subsidy__E_" ColumnName="C14_2_KG_With_Subsidy__E_" />
+                <ScalarProperty Name="C14_2_KG_With_Subsidy__F_" ColumnName="C14_2_KG_With_Subsidy__F_" />
+                <ScalarProperty Name="C14_2_KG_Without_Subsidy__E_" ColumnName="C14_2_KG_Without_Subsidy__E_" />
+                <ScalarProperty Name="C14_2_KG_Without_Subsidy__F_" ColumnName="C14_2_KG_Without_Subsidy__F_" />
+                <ScalarProperty Name="C19_KG_Industrial__E_" ColumnName="C19_KG_Industrial__E_" />
+                <ScalarProperty Name="C19_KG_Industrial__F_" ColumnName="C19_KG_Industrial__F_" />
+                <ScalarProperty Name="C5_KG__E_" ColumnName="C5_KG__E_" />
+                <ScalarProperty Name="C5_KG__F_" ColumnName="C5_KG__F_" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TxCylinders">
+            <EntityTypeMapping TypeName="LPGDSCentralDBModel.TxCylinder">
+              <MappingFragment StoreEntitySet="TxCylinder">
+                <ScalarProperty Name="TxId" ColumnName="TxId" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="TxDate" ColumnName="TxDate" />
+                <ScalarProperty Name="CylinderDetails" ColumnName="CylinderDetails" />
+                <ScalarProperty Name="Quentity" ColumnName="Quentity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="CGST" ColumnName="CGST" />
+                <ScalarProperty Name="SGST" ColumnName="SGST" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="CashMemoNo" ColumnName="CashMemoNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DistributorCode" ColumnName="DistributorCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

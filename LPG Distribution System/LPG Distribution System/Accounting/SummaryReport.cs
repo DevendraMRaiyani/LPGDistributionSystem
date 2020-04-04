@@ -31,9 +31,8 @@ namespace LPG_Distribution_System.Accounting
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DateTime from = dateTimePicker1.Value;
-            DateTime to = dateTimePicker2.Value;
-
+            DateTime from = dateTimePicker1.Value.Date;
+            DateTime to = dateTimePicker2.Value.Date;
             using (AccountingRef.AccountingClient client = new AccountingRef.AccountingClient())
             {
                 var result = client.GetTxCylinders(from, to, "");

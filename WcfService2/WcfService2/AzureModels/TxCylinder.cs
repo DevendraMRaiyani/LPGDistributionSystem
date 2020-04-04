@@ -14,10 +14,8 @@ namespace WcfService2.AzureModels
     
     public partial class TxCylinder
     {
-        public int Id { get; set; }
         public int TxId { get; set; }
         public int CustomerId { get; set; }
-        public int DistributorCode { get; set; }
         public string CustomerName { get; set; }
         public System.DateTime TxDate { get; set; }
         public string CylinderDetails { get; set; }
@@ -28,5 +26,7 @@ namespace WcfService2.AzureModels
         public double SGST { get; set; }
         public double Total { get; set; }
         public int CashMemoNo { get; set; }
+        public int Id { get; set; }
+        public Nullable<int> DistributorCode { get; set; }
     }
 }

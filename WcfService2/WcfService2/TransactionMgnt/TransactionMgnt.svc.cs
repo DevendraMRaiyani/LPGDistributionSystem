@@ -76,7 +76,7 @@ namespace WcfService2
             return "OK";
         }
 
-        public int BookingCylinderTx(int cid, int qty)
+        public TxCylinder BookingCylinderTx(int cid, int qty)
         {
             Customer c = db.Customers.Where(x => x.CustomerId == cid).FirstOrDefault();
             DistributorUser du = db.DistributorUsers.FirstOrDefault();
@@ -144,12 +144,17 @@ namespace WcfService2
                 dbo1.SaveChanges();
             }
            
-            return cmn;
+            return rec;
         }
 
         public List<GSTRates> GetGSTRates()
         {
             return db.GSTRates.Select(x => x).ToList();
+        }
+
+        public List<TxCylinder> GetLastTxs(int cid)
+        {
+            return db.txCylinders.Where(x => x.CustomerId == cid).OrderByDescending(o=>o.TxDate).Take(5).ToList();
         }
 
         public int RegulatorTx(string cname, int qty)

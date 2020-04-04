@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="LPG Distribution System.exe" version="1.0.0.0" publicKeyToken="1a7d58fcbf66f964" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="LPG Distribution System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="LPG Distribution System.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IronPdf.dll" size="13392384">
+      <assemblyIdentity name="IronPdf" version="2020.3.1.0" publicKeyToken="94E1C31412563C75" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>2umPOChcxgcVlXg8198sawGzC1fKwpO55niGgUh1hJA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IronPdf.Assets.Rendering.Windows.dll" size="36273664">
+      <assemblyIdentity name="IronPdf.Assets.Rendering.Windows" version="17.0.0.0" publicKeyToken="94E1C31412563C75" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>K0BlY+o7Zq8OZF5zm+jYZpjSgeZ/pyz4op0uHXKFTb4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LPG Distribution System.exe" size="1242096">
+      <assemblyIdentity name="LPG Distribution System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>mrCYT0q/AiVjcbn4SvStc4OmeLTyLGHXSSVi6SQMV1A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="LPG Distribution System.exe.config" size="2465">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Tft0QZGau3hCb9eS+6eoBWq1FD+l81SoPqv8J24iL1w=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-JASTJQ5\Devendra" issuerKeyHash="e480a5825b84fd5f1791dd7bdbc31803ea74891c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Jr2p2Z+q/y0iEj7T2y1gtjGEyLRC983lrD5oUA+c1es=</DigestValue></Reference></SignedInfo><SignatureValue>Gu3nAPxKIwIepMvRA+A5n5GwVsQwU1CVNixiTlr2i5xDwbN1VtoDojHjrlweIUtUwIIryFylA0slYwjhfPcSgxqCr6LnHbYW6brkuG+xqsfdoT+4IdqHvkNJYL13ph7pN8/wy8JAfNCm0qwtYgnfZxvxXDHGIEJn0c2GGHH4ogI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>spX9pq3ZKVCfM4PEkoqXkFT7HhBXgW/aTPuG0bXdYq9IhxsW4Oz2aiRA3I8Ym9696cVitkWa8JYOYZWeQRvEyxGYIyJMqIxgIQhnVA7TAn43W4qT7JKgiBnQNjW0yN+aXdqmdEO1LUOcsbM4/lTgY7W+VeZ7nwR1s9oxgWaSm30=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ebd59c0f50683eace5cdf742b4c88431b6602ddbd33e12222dffaa9fd9a9bd26" Description="" Url=""><as:assemblyIdentity name="LPG Distribution System.exe" version="1.0.0.0" publicKeyToken="1a7d58fcbf66f964" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-JASTJQ5\Devendra</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>mNBfc7l0Eri2BptYYMUf6+QwASbVks5UlAcgP3NDEyE=</DigestValue></Reference></SignedInfo><SignatureValue>m/DnsGXHKHQoT+cbOWX2hpWPUMifepn+W/9HQh59Fpbf8emiCxw1Ud0NO7Pa1Mue0whGucyXPkyYXxrpoeW0MiMg2htiU8MLmFZGdxJV4gkXbgyHW++j7LFjcqbxjCppAHH5mxKwr4obQNarUU8nfPGXDP9Qw05pUUO9kKqvDC0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>spX9pq3ZKVCfM4PEkoqXkFT7HhBXgW/aTPuG0bXdYq9IhxsW4Oz2aiRA3I8Ym9696cVitkWa8JYOYZWeQRvEyxGYIyJMqIxgIQhnVA7TAn43W4qT7JKgiBnQNjW0yN+aXdqmdEO1LUOcsbM4/lTgY7W+VeZ7nwR1s9oxgWaSm30=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB+TCCAWKgAwIBAgIQHv7no/kezatCnPfBpIS6jDANBgkqhkiG9w0BAQsFADA7MTkwNwYDVQQDHjAARABFAFMASwBUAE8AUAAtAEoAQQBTAFQASgBRADUAXABEAGUAdgBlAG4AZAByAGEwHhcNMjAwMzE4MTYxODM4WhcNMjEwMzE4MjIxODM4WjA7MTkwNwYDVQQDHjAARABFAFMASwBUAE8AUAAtAEoAQQBTAFQASgBRADUAXABEAGUAdgBlAG4AZAByAGEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALKV/aat2SlQnzODxJKKl5BU+x4QV4Fv2kz7htG13WKvSIcbFuDs9mokQNyPGJvevenFYrZFmvCWDmGVnkEbxMsRmCMiTKiMYCEIZ1QO0wJ+N1uKk+ySoIgZ0DY1tMjfml3apnRDtS1DnLGzOP5U4GO1vlXme58EdbPaMYFmkpt9AgMBAAEwDQYJKoZIhvcNAQELBQADgYEAkyhTP6ww+H8PyBR9EVacq5pOueJ6mDaNozocDUEwo6hvGCJuKa5iQp1N1tYKwIsA5muEzDnCw4/8IFV6QNIQhrsCC45MlEw67l5fyoUAQFxHpYkORsSerb0NndHBhb/lkXmofwjW+vBtWtZT1FncV6nnQkOeBlRTOW3RJUyDMSQ=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

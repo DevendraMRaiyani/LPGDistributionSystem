@@ -94,7 +94,6 @@ C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Di
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.BillStoveRegulator.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.ChangeCustomerDetails.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.BookCylinder.resources
-C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.home.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Properties.Resources.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.CloseConnection.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.SetPrice.resources
@@ -116,3 +115,10 @@ C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Di
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csprojAssemblyReference.cache
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Synchronization.Synchronization.resources
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Start.resources
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csproj.CopyComplete
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.exe.manifest
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.application
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.exe.manifest
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.application
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\itextsharp.dll
+C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\itextsharp.xml
