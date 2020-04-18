@@ -122,3 +122,37 @@ C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Di
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.application
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\itextsharp.dll
 C:\Users\Devendra\Downloads\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\itextsharp.xml
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.exe.config
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.exe.manifest
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.application
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.exe
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\LPG Distribution System.pdb
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\itextsharp.dll
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\bin\Debug\itextsharp.xml
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csprojAssemblyReference.cache
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Accounting.CylinderReport.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Accounting.StoveandRegulatorReport.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Accounting.SummaryReport.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.CustomerMgnt.CustomerRegister.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.File.ChangePassword.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.File.DistributorInfo.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Login.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Start.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.AddCylinder.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.AddNewCustomer.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.AddStoveRegulator.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.BillStoveRegulator.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.ChangeCustomerDetails.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.BookCylinder.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Properties.Resources.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.CloseConnection.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.SetPrice.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.ViewStock.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG_Distribution_System.Synchronization.Synchronization.resources
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csproj.GenerateResource.cache
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csproj.CoreCompileInputs.cache
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.exe.manifest
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.application
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.csproj.CopyComplete
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.exe
+C:\Users\Devendra\Desktop\PROJECTS SEM-VI\LPGDistributionSystem\LPG Distribution System\LPG Distribution System\obj\Debug\LPG Distribution System.pdb
