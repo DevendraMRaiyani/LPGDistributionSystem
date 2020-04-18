@@ -88,7 +88,7 @@
             this.textBox3.Location = new System.Drawing.Point(332, 231);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(260, 26);
-            this.textBox3.TabIndex = 2;
+            this.textBox3.TabIndex = 7;
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox4
@@ -97,7 +97,7 @@
             this.textBox4.Location = new System.Drawing.Point(332, 350);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(136, 26);
-            this.textBox4.TabIndex = 3;
+            this.textBox4.TabIndex = 10;
             // 
             // textBox5
             // 
@@ -105,7 +105,7 @@
             this.textBox5.Location = new System.Drawing.Point(332, 433);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(136, 26);
-            this.textBox5.TabIndex = 4;
+            this.textBox5.TabIndex = 12;
             // 
             // textBox6
             // 
@@ -113,7 +113,7 @@
             this.textBox6.Location = new System.Drawing.Point(332, 472);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(136, 26);
-            this.textBox6.TabIndex = 5;
+            this.textBox6.TabIndex = 13;
             // 
             // textBox7
             // 
@@ -121,7 +121,7 @@
             this.textBox7.Location = new System.Drawing.Point(332, 512);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(136, 26);
-            this.textBox7.TabIndex = 6;
+            this.textBox7.TabIndex = 14;
             // 
             // textBox8
             // 
@@ -129,7 +129,7 @@
             this.textBox8.Location = new System.Drawing.Point(332, 549);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(136, 26);
-            this.textBox8.TabIndex = 7;
+            this.textBox8.TabIndex = 15;
             this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // textBox9
@@ -138,7 +138,7 @@
             this.textBox9.Location = new System.Drawing.Point(332, 585);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(197, 26);
-            this.textBox9.TabIndex = 8;
+            this.textBox9.TabIndex = 16;
             // 
             // textBox10
             // 
@@ -146,7 +146,7 @@
             this.textBox10.Location = new System.Drawing.Point(332, 624);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(136, 26);
-            this.textBox10.TabIndex = 9;
+            this.textBox10.TabIndex = 17;
             // 
             // label1
             // 
@@ -274,7 +274,7 @@
             this.textBox11.Location = new System.Drawing.Point(332, 663);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(197, 26);
-            this.textBox11.TabIndex = 38;
+            this.textBox11.TabIndex = 18;
             this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox11_KeyPress);
             // 
             // button1
@@ -283,7 +283,7 @@
             this.button1.Location = new System.Drawing.Point(452, 712);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 29);
-            this.button1.TabIndex = 42;
+            this.button1.TabIndex = 19;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -294,7 +294,7 @@
             this.button2.Location = new System.Drawing.Point(619, 712);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 29);
-            this.button2.TabIndex = 43;
+            this.button2.TabIndex = 20;
             this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -320,7 +320,7 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(259, 28);
-            this.comboBox1.TabIndex = 45;
+            this.comboBox1.TabIndex = 6;
             this.comboBox1.Tag = "";
             // 
             // textBox2
@@ -330,7 +330,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(164, 26);
-            this.textBox2.TabIndex = 46;
+            this.textBox2.TabIndex = 1;
             // 
             // textBox12
             // 
@@ -339,7 +339,7 @@
             this.textBox12.Margin = new System.Windows.Forms.Padding(2);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(164, 26);
-            this.textBox12.TabIndex = 47;
+            this.textBox12.TabIndex = 2;
             // 
             // textBox13
             // 
@@ -348,7 +348,7 @@
             this.textBox13.Margin = new System.Windows.Forms.Padding(2);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(260, 26);
-            this.textBox13.TabIndex = 48;
+            this.textBox13.TabIndex = 9;
             // 
             // label14
             // 
@@ -402,7 +402,7 @@
             this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(66, 24);
-            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Male";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -415,7 +415,7 @@
             this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(85, 24);
-            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabIndex = 4;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Female";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -428,7 +428,7 @@
             this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(72, 24);
-            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabIndex = 5;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Other";
             this.radioButton3.UseVisualStyleBackColor = true;
@@ -442,7 +442,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(244, 49);
-            this.panel1.TabIndex = 55;
+            this.panel1.TabIndex = 3;
             // 
             // label18
             // 
@@ -460,7 +460,7 @@
             this.textBox14.Location = new System.Drawing.Point(332, 272);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(259, 26);
-            this.textBox14.TabIndex = 57;
+            this.textBox14.TabIndex = 8;
             this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
             // 
             // contextMenuStrip1
@@ -485,7 +485,7 @@
             this.textBox15.Location = new System.Drawing.Point(332, 394);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(136, 26);
-            this.textBox15.TabIndex = 59;
+            this.textBox15.TabIndex = 11;
             this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox15_KeyPress);
             // 
             // AddNewCustomer
@@ -570,7 +570,7 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
-       
+
 
 
         private System.Windows.Forms.Label label1;
