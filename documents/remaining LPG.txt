@@ -2,6 +2,3 @@
 //14. Singleton DP In Forms
 
 Uncomment: 1. in all forms a method for prevent drag and resizing
-
-Smit Bro:- Tab Sequence in New Customer
-		Wcf Service Hosting		
